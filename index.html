@@ -1,256 +1,435 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Grand Mandola Resorts | Luxury Resort & Wedding Destination in Lucknow</title>
+    <title>सन शाइन पब्लिक स्कूल निचलौल | उज्जवल भविष्य की नींव</title>
     
     <!-- SEO Meta Tags -->
-    <meta name="description" content="Grand Mandola Resorts in Jankipuram, Lucknow offers luxury rooms, swimming pool, fine dining restaurant, and perfect wedding destination. Book now for parties and events.">
-    <meta name="keywords" content="grand mandola, resort in lucknow, jankipuram resort, wedding venue lucknow, party lawn lucknow, luxury resort, swimming pool resort">
-    <meta name="author" content="Grand Mandola Resorts">
+    <meta name="description" content="सन शाइन पब्लिक स्कूल निचलौल, महराजगंज में सर्वश्रेष्ठ शिक्षा, आधुनिक सुविधाएं, स्मार्ट क्लास, प्रयोगशाला, पुस्तकालय और खेल मैदान। 2026-27 प्रवेश शुरू।">
+    <meta name="keywords" content="sun shine public school nichlaul, best school in maharajganj, school near nichlaul, english medium school, admission 2026">
+    <meta name="author" content="Sun Shine Public School">
     
     <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-    
-    <!-- Calendar CSS for Date Picker -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-        }
-        
-        body {
             font-family: 'Poppins', sans-serif;
-            background: #faf9f7;
-            color: #2d2d2d;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: #f4f7fc;
+            color: #333;
             line-height: 1.6;
         }
-        
-        h1, h2, h3, h4 {
-            font-family: 'Playfair Display', serif;
-        }
-        
-        /* Header */
-        header {
-            background: linear-gradient(135deg, #1a2a1f 0%, #2d4a2e 100%);
+
+        /* Header & Navigation */
+        .header {
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
             color: white;
-            padding: 1rem 0;
+            padding: 0.8rem 0;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
             position: sticky;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
         }
-        
-        .header-content {
+
+        .nav-container {
             max-width: 1300px;
             margin: 0 auto;
-            padding: 0 2rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            padding: 0 2rem;
         }
-        
+
         .logo h1 {
-            font-size: 2.2rem;
+            font-size: 1.8rem;
             font-weight: 700;
-            letter-spacing: 1px;
-            font-family: 'Playfair Display', serif;
+            line-height: 1.2;
+            color: #ffd700;
         }
-        
         .logo span {
             font-size: 0.9rem;
             font-weight: 300;
-            display: block;
             opacity: 0.9;
-            font-family: 'Poppins', sans-serif;
+            display: block;
+            color: white;
         }
-        
-        nav ul {
+
+        .nav-menu {
             display: flex;
             list-style: none;
-            gap: 2rem;
+            gap: 1.5rem;
         }
-        
-        nav ul li a {
+
+        .nav-menu a {
             color: white;
             text-decoration: none;
             font-weight: 500;
-            font-size: 1rem;
-            transition: all 0.3s;
-            position: relative;
+            transition: 0.3s;
+            font-size: 0.95rem;
+            padding: 0.5rem 0;
         }
-        
-        nav ul li a::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: #d4af37;
-            transition: width 0.3s;
+
+        .nav-menu a:hover, .nav-menu a.active {
+            color: #ffd700;
+            border-bottom: 2px solid #ffd700;
         }
-        
-        nav ul li a:hover::after {
-            width: 100%;
+
+        .mobile-menu-btn {
+            display: none;
+            font-size: 1.8rem;
+            cursor: pointer;
         }
-        
-        .book-now-btn {
-            background: #d4af37;
-            color: #1a2a1f !important;
-            padding: 0.5rem 1.5rem !important;
-            border-radius: 50px;
-            font-weight: 600 !important;
-        }
-        
-        .book-now-btn::after {
-            display: none !important;
-        }
-        
-        .book-now-btn:hover {
-            background: #e5c25c;
-            transform: translateY(-2px);
-        }
-        
-        /* Main Container */
-        .container {
-            max-width: 1300px;
-            margin: 2rem auto;
-            padding: 0 2rem;
-        }
-        
+
         /* Hero Section */
         .hero {
-            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
-            url('https://lh3.googleusercontent.com/gps-cs-s/AHVAwepMIIlcssgAIZI8FQ0nPtPP2lhaNRel_AS1nBEywhlJAyVeDD5qSuvG2zGOyqdM48N0WaTisGHjhJQEEbVOwQXELClcjKgQ2bR6-P_qVlLD2KhB0-eA5CVjeg-ee65OjCOEwSyPdRNvf0Bd=s1360-w1360-h1020-rw');
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+            url('sun home.jpg');
             background-size: cover;
             background-position: center;
-            border-radius: 30px;
-            padding: 5rem 3rem;
-            color: white;
+            min-height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             text-align: center;
-            margin-bottom: 3rem;
+            color: white;
+            padding: 2rem;
         }
-        
-        .hero h1 {
-            font-size: 3.8rem;
-            font-weight: 700;
+
+        .hero-content h1 {
+            font-size: 3rem;
             margin-bottom: 1rem;
-            text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+            text-shadow: 2px 2px 5px black;
         }
-        
-        .hero .tagline {
+
+        .hero-content p {
             font-size: 1.4rem;
             margin-bottom: 2rem;
-            opacity: 0.95;
+            text-shadow: 1px 1px 3px black;
         }
-        
-        .hero-address {
-            background: rgba(255,255,255,0.15);
-            backdrop-filter: blur(10px);
-            padding: 1.5rem;
-            border-radius: 15px;
-            display: inline-block;
-            margin-top: 1rem;
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
         }
-        
-        .btn-book {
+
+        .btn {
             display: inline-block;
-            background: #d4af37;
-            color: #1a2a1f;
-            padding: 1.2rem 3.5rem;
-            font-size: 1.4rem;
-            font-weight: 600;
-            text-decoration: none;
+            background: #ffd700;
+            color: #1e3c72;
+            padding: 12px 30px;
             border-radius: 50px;
-            box-shadow: 0 8px 25px rgba(212,175,55,0.4);
-            transition: all 0.3s;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: 0.3s;
             border: none;
             cursor: pointer;
-            letter-spacing: 1px;
-            margin: 1rem 0;
         }
-        
-        .btn-book:hover {
-            background: #e5c25c;
+
+        .btn:hover {
+            background: #ffc800;
             transform: scale(1.05);
-            box-shadow: 0 12px 30px rgba(212,175,55,0.5);
+            box-shadow: 0 5px 15px rgba(255, 215, 0, 0.4);
         }
-        
-        .btn-small {
-            padding: 0.8rem 2rem;
-            font-size: 1.1rem;
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid white;
+            color: white;
         }
-        
-        /* Section Styling */
-        section {
+        .btn-outline:hover {
             background: white;
-            border-radius: 30px;
-            padding: 3rem;
-            margin-bottom: 3rem;
-            box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+            color: #1e3c72;
         }
-        
-        h2 {
-            font-size: 2.5rem;
+
+        /* Announcement Bar */
+        .announcement {
+            background: #ffd700;
+            color: #1e3c72;
+            padding: 1rem;
+            text-align: center;
             font-weight: 600;
-            color: #1a2a1f;
-            margin-bottom: 2rem;
-            position: relative;
-            padding-bottom: 1rem;
+            font-size: 1.1rem;
+            animation: blink 1s infinite;
         }
-        
-        h2::after {
+
+        @keyframes blink {
+            0% { opacity: 1; }
+            50% { opacity: 0.9; background: #ffc800; }
+            100% { opacity: 1; }
+        }
+
+        .announcement i {
+            margin-right: 10px;
+            animation: bellRing 1s infinite;
+        }
+
+        @keyframes bellRing {
+            0% { transform: rotate(0deg); }
+            10% { transform: rotate(15deg); }
+            20% { transform: rotate(-15deg); }
+            30% { transform: rotate(10deg); }
+            40% { transform: rotate(-10deg); }
+            50% { transform: rotate(5deg); }
+            60% { transform: rotate(-5deg); }
+            100% { transform: rotate(0deg); }
+        }
+
+        /* Container */
+        .container {
+            max-width: 1300px;
+            margin: 3rem auto;
+            padding: 0 2rem;
+        }
+
+        /* Section Headings */
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #1e3c72;
+            margin-bottom: 3rem;
+            position: relative;
+            padding-bottom: 15px;
+        }
+        .section-title::after {
             content: '';
             position: absolute;
             bottom: 0;
-            left: 0;
-            width: 100px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
             height: 4px;
-            background: #d4af37;
+            background: #ffd700;
             border-radius: 2px;
         }
-        
-        h3 {
+
+        /* Notice Board */
+        .notice-board {
+            background: white;
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            margin-bottom: 3rem;
+            border-left: 5px solid #ffd700;
+        }
+
+        .notice-title {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #1e3c72;
             font-size: 1.8rem;
-            color: #2d4a2e;
             margin-bottom: 1.5rem;
         }
-        
-        /* Gallery Grid */
+
+        .notice-list {
+            list-style: none;
+        }
+
+        .notice-list li {
+            padding: 1rem;
+            border-bottom: 1px dashed #ddd;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            transition: 0.3s;
+        }
+
+        .notice-list li:hover {
+            background: #f0f7ff;
+            padding-left: 1.5rem;
+        }
+
+        .notice-list li:last-child {
+            border-bottom: none;
+        }
+
+        .notice-list i {
+            color: #ffd700;
+        }
+
+        .notice-date {
+            background: #1e3c72;
+            color: white;
+            padding: 0.3rem 1rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            margin-left: auto;
+        }
+
+        /* About Section */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .about-image {
+            position: relative;
+        }
+
+        .about-image img {
+            width: 100%;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            transition: 0.5s;
+        }
+
+        .about-image:hover img {
+            transform: scale(1.02);
+        }
+
+        .about-image::before {
+            content: '';
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            width: 100%;
+            height: 100%;
+            border: 3px solid #ffd700;
+            border-radius: 20px;
+            z-index: -1;
+        }
+
+        .about-text h3 {
+            font-size: 2rem;
+            color: #2a5298;
+            margin-bottom: 1rem;
+        }
+
+        .about-text p {
+            margin-bottom: 1.5rem;
+            color: #555;
+        }
+
+        .features-list {
+            list-style: none;
+        }
+
+        .features-list li {
+            margin: 1rem 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .features-list i {
+            color: #ffd700;
+            font-size: 1.3rem;
+        }
+
+        /* Facilities Grid */
+        .facilities-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .facility-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            transition: 0.3s;
+        }
+
+        .facility-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+        }
+
+        .facility-img {
+            height: 220px;
+            background-size: cover;
+            background-position: center;
+            transition: 0.5s;
+        }
+
+        .facility-card:hover .facility-img {
+            transform: scale(1.05);
+        }
+
+        .facility-content {
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .facility-content h4 {
+            font-size: 1.4rem;
+            color: #1e3c72;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Academic Programs */
+        .programs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .program-card {
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: white;
+            padding: 2rem;
+            border-radius: 20px;
+            text-align: center;
+            transition: 0.3s;
+        }
+
+        .program-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(30,60,114,0.4);
+        }
+
+        .program-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: #ffd700;
+        }
+
+        /* Gallery */
         .gallery-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 1.5rem;
-            margin: 2rem 0;
+            margin-top: 2rem;
         }
-        
+
         .gallery-item {
-            border-radius: 20px;
-            overflow: hidden;
             height: 250px;
-            position: relative;
+            border-radius: 15px;
+            overflow: hidden;
             cursor: pointer;
-            transition: transform 0.3s;
+            transition: 0.3s;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
-        
+
         .gallery-item:hover {
             transform: scale(1.03);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
         }
-        
-        .gallery-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        
+
         .gallery-caption {
             position: absolute;
             bottom: 0;
@@ -261,383 +440,121 @@
             padding: 1rem;
             text-align: center;
             font-weight: 500;
+            transform: translateY(100%);
+            transition: 0.4s;
         }
-        
-        /* Booking Section */
-        .booking-section {
-            background: linear-gradient(135deg, #1a2a1f, #2d4a2e);
-            color: white;
+
+        .gallery-item:hover .gallery-caption {
+            transform: translateY(0);
         }
-        
-        .booking-section h2 {
-            color: white;
-        }
-        
-        .booking-section h2::after {
-            background: #d4af37;
-        }
-        
-        .booking-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-        
-        .booking-card {
-            background: rgba(255,255,255,0.1);
-            backdrop-filter: blur(10px);
-            padding: 2rem;
-            border-radius: 20px;
-            border: 1px solid rgba(255,255,255,0.2);
-        }
-        
-        .booking-card h3 {
-            color: #d4af37;
-            font-size: 1.8rem;
-            margin-bottom: 1.5rem;
-        }
-        
-        .form-group {
-            margin-bottom: 1.5rem;
-        }
-        
-        .form-group label {
-            display: block;
-            margin-bottom: 0.5rem;
-            color: white;
-            font-weight: 500;
-        }
-        
-        .form-group input,
-        .form-group select,
-        .form-group textarea {
-            width: 100%;
-            padding: 0.8rem;
-            border: none;
-            border-radius: 10px;
-            font-family: 'Poppins', sans-serif;
-            background: rgba(255,255,255,0.9);
-        }
-        
-        .form-group input:focus,
-        .form-group select:focus,
-        .form-group textarea:focus {
-            outline: 2px solid #d4af37;
-        }
-        
-        .btn-submit {
-            background: #d4af37;
-            color: #1a2a1f;
-            padding: 1rem 2rem;
-            border: none;
-            border-radius: 50px;
-            font-weight: 600;
-            font-size: 1.1rem;
-            cursor: pointer;
-            transition: all 0.3s;
-            width: 100%;
-        }
-        
-        .btn-submit:hover {
-            background: #e5c25c;
-            transform: translateY(-2px);
-        }
-        
-        .room-price {
-            font-size: 1.5rem;
-            color: #d4af37;
-            font-weight: 700;
-            margin: 1rem 0;
-        }
-        
-        .room-price span {
-            font-size: 1rem;
-            color: rgba(255,255,255,0.8);
-            font-weight: normal;
-        }
-        
-        /* Google Review Summary */
-        .review-summary {
-            background: linear-gradient(135deg, #f8f4e9, #f0e9d8);
-            padding: 2rem;
-            border-radius: 20px;
-            margin-bottom: 2rem;
-            border: 1px solid #e5d5b5;
-        }
-        
-        .rating-box {
-            display: flex;
-            align-items: center;
-            gap: 2rem;
-            flex-wrap: wrap;
-        }
-        
-        .rating-number {
-            font-size: 4rem;
-            font-weight: 700;
-            color: #1a2a1f;
-        }
-        
-        .rating-stars {
-            color: #d4af37;
-            font-size: 1.8rem;
-        }
-        
-        .rating-text {
-            font-size: 1.2rem;
-            color: #4a4a4a;
-        }
-        
-        .review-highlights {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1.5rem;
-            margin-top: 2rem;
-        }
-        
-        .highlight-item {
-            text-align: center;
-            background: white;
-            padding: 1rem;
-            border-radius: 12px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-        }
-        
-        .highlight-item i {
-            color: #d4af37;
-            font-size: 1.8rem;
-            margin-bottom: 0.5rem;
-        }
-        
-        .highlight-item span {
-            font-weight: 600;
-            color: #1a2a1f;
-        }
-        
-        /* Testimonials Slider */
-        .testimonials-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-        
-        .testimonial-card {
-            background: #f8f4e9;
-            padding: 2rem;
-            border-radius: 20px;
-            border-left: 5px solid #d4af37;
-            transition: transform 0.3s;
-        }
-        
-        .testimonial-card:hover {
-            transform: translateY(-5px);
-        }
-        
-        .testimonial-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 1rem;
-        }
-        
-        .testimonial-name {
-            font-weight: 600;
-            font-size: 1.2rem;
-        }
-        
-        .testimonial-date {
-            color: #888;
-            font-size: 0.9rem;
-        }
-        
-        .testimonial-rating {
-            color: #d4af37;
-            margin-bottom: 1rem;
-        }
-        
-        .testimonial-text {
-            font-style: italic;
-            color: #4a4a4a;
-        }
-        
-        .testimonial-footer {
-            margin-top: 1rem;
-            display: flex;
-            gap: 1rem;
-            color: #1a2a1f;
-            font-size: 0.9rem;
-        }
-        
-        /* Amenities Grid */
-        .amenities-highlight {
+
+        /* Achievements */
+        .achievements-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 2rem;
             margin: 2rem 0;
         }
-        
-        .amenity-block {
-            background: #f8f4e9;
+
+        .achievement-card {
+            background: white;
             padding: 2rem;
-            border-radius: 20px;
+            border-radius: 15px;
             text-align: center;
-            transition: all 0.3s;
+            border-left: 5px solid #ffd700;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: 0.3s;
         }
-        
-        .amenity-block:hover {
-            background: #1a2a1f;
-            color: white;
+
+        .achievement-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
         }
-        
-        .amenity-block:hover i {
-            color: #d4af37;
-        }
-        
-        .amenity-block i {
+
+        .achievement-card i {
             font-size: 3rem;
-            color: #2d4a2e;
+            color: #ffd700;
             margin-bottom: 1rem;
         }
-        
-        .amenity-block h4 {
-            font-size: 1.4rem;
-            margin-bottom: 0.5rem;
-        }
-        
-        /* Wedding & Party Section */
-        .wedding-showcase {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-            background: #f8f4e9;
-            border-radius: 30px;
-            overflow: hidden;
-            margin: 2rem 0;
-        }
-        
-        .wedding-content {
-            padding: 3rem;
-        }
-        
-        .wedding-content h3 {
-            color: #1a2a1f;
-        }
-        
-        .wedding-highlights {
-            list-style: none;
-            margin: 2rem 0;
-        }
-        
-        .wedding-highlights li {
-            margin: 1rem 0;
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-        }
-        
-        .wedding-highlights i {
-            color: #d4af37;
-            font-size: 1.2rem;
-        }
-        
-        .wedding-image {
-            height: 100%;
-            min-height: 400px;
-            background: url('https://lh3.googleusercontent.com/gps-cs-s/AHVAweqgfxBp7v1YwZhi9VXgW24ac73yT5DBJJhAZxFCfP3C3MWH4NBcLFTAJgFHUJZ87Va5ivT0yTpTjU818NfAlFxJf_xD8_pNkYpP0gD_PC_QIi5Uvrf4_vn_SMgeWp5crWcGmLr_tpUKAbm1=s1360-w1360-h1020-rw');
-            background-size: cover;
-            background-position: center;
-        }
-        
-        /* Location & Map */
-        .map-container {
-            border-radius: 20px;
-            overflow: hidden;
-            margin: 2rem 0;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-        }
-        
-        .map-container iframe {
-            width: 100%;
-            height: 400px;
-            border: 0;
-        }
-        
-        .location-grid {
+
+        /* Admission Process */
+        .process-steps {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 2rem;
-            margin-top: 2rem;
+            margin: 3rem 0;
         }
-        
-        .location-card {
-            background: #f8f4e9;
+
+        .step {
+            text-align: center;
+            padding: 2rem;
+            background: white;
+            border-radius: 15px;
+            position: relative;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        .step-number {
+            width: 50px;
+            height: 50px;
+            background: #ffd700;
+            color: #1e3c72;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin: 0 auto 1rem;
+        }
+
+        /* Download Section */
+        .download-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .download-card {
+            background: white;
             padding: 1.5rem;
             border-radius: 15px;
             text-align: center;
+            text-decoration: none;
+            color: #1e3c72;
+            transition: 0.3s;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
         }
-        
-        .distance {
-            font-size: 1.2rem;
-            font-weight: 600;
-            color: #d4af37;
-        }
-        
-        /* Restaurant Menu Preview */
-        .restaurant-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-        
-        .food-item {
-            background: #f8f4e9;
-            border-radius: 15px;
-            overflow: hidden;
-            transition: transform 0.3s;
-        }
-        
-        .food-item:hover {
+
+        .download-card:hover {
+            background: #1e3c72;
+            color: white;
             transform: translateY(-5px);
         }
-        
-        .food-image {
-            height: 200px;
-            background-size: cover;
-            background-position: center;
+
+        .download-card i {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
         }
-        
-        .food-details {
-            padding: 1.5rem;
-        }
-        
-        .food-details h4 {
-            font-size: 1.3rem;
-            margin-bottom: 0.5rem;
-        }
-        
-        .food-details p {
-            color: #666;
-            font-size: 0.95rem;
-        }
-        
+
         /* Contact Section */
         .contact-wrapper {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 3rem;
+            margin-top: 2rem;
         }
-        
-        .contact-info-card {
-            background: #1a2a1f;
+
+        .contact-info {
+            background: #1e3c72;
             color: white;
-            padding: 3rem;
-            border-radius: 30px;
+            padding: 2.5rem;
+            border-radius: 25px;
+            box-shadow: 0 10px 30px rgba(30,60,114,0.3);
         }
-        
-        .contact-item {
+
+        .info-item {
             display: flex;
             align-items: center;
             gap: 1.5rem;
@@ -645,33 +562,152 @@
             padding: 1rem;
             background: rgba(255,255,255,0.1);
             border-radius: 15px;
+            transition: 0.3s;
         }
-        
-        .contact-item i {
-            font-size: 2rem;
-            width: 50px;
-            height: 50px;
-            background: #d4af37;
+
+        .info-item:hover {
+            background: rgba(255,215,0,0.2);
+            transform: translateX(10px);
+        }
+
+        .info-item i {
+            font-size: 1.8rem;
+            color: #ffd700;
+        }
+
+        .contact-form {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 25px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            font-size: 1rem;
+            transition: 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #2a5298;
+            box-shadow: 0 0 0 3px rgba(42,82,152,0.1);
+        }
+
+        /* Map */
+        .map-container {
+            margin: 2rem 0;
+            border-radius: 20px;
+            overflow: hidden;
+            height: 400px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        /* Student Portal & Teacher Section */
+        .portal-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .portal-card {
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: white;
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            text-decoration: none;
+            transition: 0.3s;
+            box-shadow: 0 10px 25px rgba(30,60,114,0.3);
+        }
+
+        .portal-card:hover {
+            transform: translateY(-5px);
+            background: #ffd700;
+            color: #1e3c72;
+        }
+
+        .portal-card i {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Footer */
+        footer {
+            background: #1e3c72;
+            color: white;
+            padding: 4rem 0 1rem;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .footer-logo {
+            max-width: 100px;
+            margin-top: 0.5rem;
+        }
+
+        .footer-logo img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-links a {
+            color: white;
+            background: rgba(255,255,255,0.1);
+            width: 40px;
+            height: 40px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: #1a2a1f;
+            text-decoration: none;
+            transition: 0.3s;
         }
-        
-        .timing-card {
-            background: #f8f4e9;
-            padding: 3rem;
-            border-radius: 30px;
+
+        .social-links a:hover {
+            background: #ffd700;
+            color: #1e3c72;
+            transform: translateY(-3px);
         }
-        
-        .timing-row {
-            display: flex;
-            justify-content: space-between;
-            padding: 1rem 0;
-            border-bottom: 1px dashed #d4af37;
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            margin-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
         }
-        
+
         /* Floating Buttons */
         .float-buttons {
             position: fixed;
@@ -682,960 +718,647 @@
             gap: 15px;
             z-index: 999;
         }
-        
-        .float-wa {
-            background: #25d366;
-            color: white;
-            width: 65px;
-            height: 65px;
+
+        .float-btn {
+            width: 60px;
+            height: 60px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 35px;
-            box-shadow: 0 8px 25px rgba(37,211,102,0.4);
-            transition: all 0.3s;
+            font-size: 28px;
+            color: white;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+            transition: 0.3s;
             text-decoration: none;
             animation: pulse 2s infinite;
         }
-        
-        .float-call {
-            background: #d4af37;
-            color: #1a2a1f;
-            width: 65px;
-            height: 65px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 30px;
-            box-shadow: 0 8px 25px rgba(212,175,55,0.4);
-            transition: all 0.3s;
-            text-decoration: none;
+
+        .float-btn.whatsapp {
+            background: #25d366;
         }
-        
-        .float-wa:hover, .float-call:hover {
-            transform: scale(1.15);
+
+        .float-btn.call {
+            background: #2a5298;
         }
-        
+
+        .float-btn:hover {
+            transform: scale(1.1);
+            animation: none;
+        }
+
         @keyframes pulse {
-            0% { box-shadow: 0 0 0 0 rgba(37,211,102,0.7); }
-            70% { box-shadow: 0 0 0 15px rgba(37,211,102,0); }
-            100% { box-shadow: 0 0 0 0 rgba(37,211,102,0); }
+            0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
         }
-        
-        /* Footer */
-        footer {
-            background: #1a2a1f;
+
+        /* Success Message */
+        .success-message {
+            background: #4CAF50;
             color: white;
-            padding: 4rem 0 2rem;
-            margin-top: 4rem;
-        }
-        
-        .footer-content {
-            max-width: 1300px;
-            margin: 0 auto;
-            padding: 0 2rem;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 3rem;
-        }
-        
-        .footer-logo h2 {
-            color: white;
-            font-size: 2rem;
-        }
-        
-        .footer-logo::after {
+            padding: 1rem;
+            border-radius: 10px;
+            text-align: center;
+            margin-bottom: 1rem;
             display: none;
         }
-        
-        .copyright {
-            text-align: center;
-            padding-top: 3rem;
-            margin-top: 3rem;
-            border-top: 1px solid rgba(255,255,255,0.1);
-        }
-        
-        /* Modal for Booking Confirmation */
-        .modal {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0,0,0,0.7);
-            z-index: 2000;
-            justify-content: center;
-            align-items: center;
-        }
-        
-        .modal-content {
-            background: white;
-            padding: 3rem;
-            border-radius: 30px;
-            max-width: 500px;
-            text-align: center;
-            animation: slideIn 0.3s;
-        }
-        
-        @keyframes slideIn {
-            from {
-                transform: translateY(-50px);
-                opacity: 0;
-            }
-            to {
-                transform: translateY(0);
-                opacity: 1;
-            }
-        }
-        
-        .modal-content i {
-            font-size: 5rem;
-            color: #28a745;
-            margin-bottom: 1rem;
-        }
-        
-        .modal-content h3 {
-            color: #1a2a1f;
-            margin-bottom: 1rem;
-        }
-        
-        .modal-content p {
-            margin-bottom: 2rem;
-            color: #666;
-        }
-        
-        .modal-content .btn-book {
-            display: inline-block;
-            padding: 0.8rem 2rem;
-            font-size: 1rem;
-        }
-        
+
         /* Mobile Responsive */
         @media (max-width: 968px) {
-            .header-content {
-                flex-direction: column;
-                text-align: center;
+            .nav-menu {
+                display: none;
             }
-            
-            nav ul {
-                flex-wrap: wrap;
-                justify-content: center;
+            .mobile-menu-btn {
+                display: block;
             }
-            
-            .hero h1 {
-                font-size: 2.5rem;
+            .hero-content h1 {
+                font-size: 2.2rem;
             }
-            
-            .wedding-showcase {
-                grid-template-columns: 1fr;
+            .hero-content p {
+                font-size: 1.1rem;
             }
-            
+            .about-grid,
             .contact-wrapper {
                 grid-template-columns: 1fr;
             }
-            
-            h2 {
+            .section-title {
                 font-size: 2rem;
             }
-            
-            .booking-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-        
-        @media (max-width: 768px) {
-            .container {
-                padding: 0 1rem;
-            }
-            
-            section {
-                padding: 1.5rem;
-            }
-            
-            .gallery-grid {
-                grid-template-columns: 1fr;
+            .about-image::before {
+                display: none;
             }
         }
     </style>
-    
-    <!-- Flatpickr for Date Picker -->
-    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 </head>
 <body>
     <!-- Header -->
-    <header>
-        <div class="header-content">
+    <header class="header">
+        <div class="nav-container">
             <div class="logo">
-                <h1>Grand Mandola</h1>
-                <span>Luxury Resort & Wedding Destination</span>
+                <h1>सन शाइन पब्लिक स्कूल</h1>
+                <span>निचलौल, महराजगंज | Est. 2015</span>
             </div>
             <nav>
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#amenities">Amenities</a></li>
-                    <li><a href="#wedding">Wedding</a></li>
-                    <li><a href="#gallery">Gallery</a></li>
-                    <li><a href="#location">Location</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <li><a href="#booking" class="book-now-btn">Book Now</a></li>
+                <ul class="nav-menu">
+                    <li><a href="#home" class="active">होम</a></li>
+                    <li><a href="#about">हमारे बारे में</a></li>
+                    <li><a href="#academics">शिक्षा</a></li>
+                    <li><a href="#facilities">सुविधाएं</a></li>
+                    <li><a href="#gallery">गैलरी</a></li>
+                    <li><a href="#admission">प्रवेश</a></li>
+                    <li><a href="#notice">नोटिस</a></li>
+                    <li><a href="#contact">संपर्क</a></li>
                 </ul>
             </nav>
+            <div class="mobile-menu-btn">☰</div>
         </div>
     </header>
-    
-    <!-- Main Content -->
-    <div class="container">
-        <!-- Home Section -->
-        <section id="home">
-            <div class="hero">
-                <h1>Grand Mandola Resorts</h1>
-                <p class="tagline">Experience Luxury, Celebrate Life</p>
-                <div class="hero-address">
-                    <i class="fas fa-map-marker-alt"></i> 
-                    CLUB HOUSE FANTSY PARK, Sahara States Rd, Jankipuram, Lucknow
-                </div>
-                <div style="margin: 2rem 0;">
-                    <a href="tel:+919559936444" class="btn-book">
-                        <i class="fas fa-phone-alt"></i> Book Now: +91 9559936444
-                    </a>
-                </div>
-                <div class="rating-box" style="justify-content: center;">
-                    <div class="rating-number">4.8</div>
-                    <div class="rating-stars">
-                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                    </div>
-                    <div class="rating-text">(45+ Google Reviews)</div>
-                </div>
-            </div>
-        </section>
-        
-        <!-- Booking Section -->
-        <section id="booking" class="booking-section">
-            <h2><i class="fas fa-calendar-check"></i> Book Your Stay</h2>
-            
-            <div class="booking-grid">
-                <!-- Room Booking Card -->
-                <div class="booking-card">
-                    <h3>🏨 Book a Room</h3>
-                    <form id="roomBookingForm">
-                        <div class="form-group">
-                            <label>Check-in Date</label>
-                            <input type="text" id="checkin" class="datepicker" placeholder="Select date" required>
-                        </div>
-                        <div class="form-group">
-                            <label>Check-out Date</label>
-                            <input type="text" id="checkout" class="datepicker" placeholder="Select date" required>
-                        </div>
-                        <div class="form-group">
-                            <label>Room Type</label>
-                            <select id="roomType" required>
-                                <option value="">Select Room Type</option>
-                                <option value="deluxe">Deluxe Room - ₹5,999/night</option>
-                                <option value="premium">Premium Suite - ₹8,999/night</option>
-                                <option value="executive">Executive Villa - ₹12,999/night</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label>Guests</label>
-                            <select id="guests" required>
-                                <option value="1">1 Guest</option>
-                                <option value="2" selected>2 Guests</option>
-                                <option value="3">3 Guests</option>
-                                <option value="4">4 Guests</option>
-                                <option value="5">5+ Guests</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label>Your Name</label>
-                            <input type="text" id="name" placeholder="Enter your name" required>
-                        </div>
-                        <div class="form-group">
-                            <label>Phone Number</label>
-                            <input type="tel" id="phone" placeholder="Enter phone number" required>
-                        </div>
-                        <div class="form-group">
-                            <label>Email</label>
-                            <input type="email" id="email" placeholder="Enter email" required>
-                        </div>
-                        <div class="room-price" id="roomPriceDisplay">
-                            Total: ₹5,999
-                        </div>
-                        <button type="submit" class="btn-submit">Confirm Room Booking</button>
-                    </form>
-                </div>
-                
-                <!-- Event Booking Card -->
-                <div class="booking-card">
-                    <h3>🎉 Book an Event</h3>
-                    <form id="eventBookingForm">
-                        <div class="form-group">
-                            <label>Event Date</label>
-                            <input type="text" id="eventDate" class="datepicker" placeholder="Select date" required>
-                        </div>
-                        <div class="form-group">
-                            <label>Event Type</label>
-                            <select id="eventType" required>
-                                <option value="">Select Event Type</option>
-                                <option value="wedding">Wedding</option>
-                                <option value="engagement">Engagement</option>
-                                <option value="birthday">Birthday Party</option>
-                                <option value="corporate">Corporate Event</option>
-                                <option value="other">Other</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label>Number of Guests</label>
-                            <select id="eventGuests" required>
-                                <option value="50-100">50-100 Guests</option>
-                                <option value="100-200">100-200 Guests</option>
-                                <option value="200-300">200-300 Guests</option>
-                                <option value="300+">300+ Guests</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label>Your Name</label>
-                            <input type="text" id="eventName" placeholder="Enter your name" required>
-                        </div>
-                        <div class="form-group">
-                            <label>Phone Number</label>
-                            <input type="tel" id="eventPhone" placeholder="Enter phone number" required>
-                        </div>
-                        <div class="form-group">
-                            <label>Email</label>
-                            <input type="email" id="eventEmail" placeholder="Enter email" required>
-                        </div>
-                        <div class="form-group">
-                            <label>Special Requests</label>
-                            <textarea id="eventRequests" rows="3" placeholder="Tell us about your event..."></textarea>
-                        </div>
-                        <button type="submit" class="btn-submit">Submit Event Inquiry</button>
-                    </form>
-                </div>
-                
-                <!-- Quick Contact Card -->
-                <div class="booking-card">
-                    <h3>📞 Quick Contact</h3>
-                    <div style="text-align: center; margin: 2rem 0;">
-                        <i class="fas fa-phone" style="font-size: 3rem; color: #d4af37;"></i>
-                        <p style="font-size: 2rem; font-weight: bold; margin: 1rem 0;">+91 9559936444</p>
-                        <p>24/7 Availability</p>
-                    </div>
-                    
-                    <div style="margin: 2rem 0;">
-                        <div style="display: flex; align-items: center; gap: 1rem; margin: 1rem 0; background: rgba(255,255,255,0.1); padding: 1rem; border-radius: 10px;">
-                            <i class="fab fa-whatsapp" style="font-size: 2rem; color: #25d366;"></i>
-                            <div>
-                                <strong>WhatsApp</strong>
-                                <p>+91 9559936444</p>
-                            </div>
-                        </div>
-                        
-                        <div style="display: flex; align-items: center; gap: 1rem; margin: 1rem 0; background: rgba(255,255,255,0.1); padding: 1rem; border-radius: 10px;">
-                            <i class="fas fa-envelope" style="font-size: 2rem; color: #d4af37;"></i>
-                            <div>
-                                <strong>Email</strong>
-                                <p>booking@grandmandola.com</p>
-                            </div>
-                        </div>
-                        
-                        <div style="display: flex; align-items: center; gap: 1rem; margin: 1rem 0; background: rgba(255,255,255,0.1); padding: 1rem; border-radius: 10px;">
-                            <i class="fas fa-clock" style="font-size: 2rem; color: #d4af37;"></i>
-                            <div>
-                                <strong>Reception</strong>
-                                <p>24x7 Open</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div style="background: #d4af37; color: #1a2a1f; padding: 1rem; border-radius: 10px; text-align: center;">
-                        <p><strong>✨ Special Offer</strong></p>
-                        <p>10% off on early bookings</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <!-- Google Reviews Section -->
-        <section id="about">
-            <h2><i class="fas fa-star" style="color: #d4af37;"></i> Guest Reviews</h2>
-            
-            <div class="review-summary">
-                <div class="rating-box">
-                    <div class="rating-number">4.8 ★</div>
-                    <div>
-                        <div class="rating-stars">
-                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                        </div>
-                        <p>Based on 45+ Google reviews</p>
-                    </div>
-                </div>
-                
-                <div class="review-highlights">
-                    <div class="highlight-item">
-                        <i class="fas fa-utensils"></i>
-                        <div><span>100%</span> Positive for Food</div>
-                    </div>
-                    <div class="highlight-item">
-                        <i class="fas fa-concierge-bell"></i>
-                        <div><span>100%</span> Positive for Service</div>
-                    </div>
-                    <div class="highlight-item">
-                        <i class="fas fa-tree"></i>
-                        <div><span>100%</span> Positive for Ambience</div>
-                    </div>
-                    <div class="highlight-item">
-                        <i class="fas fa-wedding"></i>
-                        <div><span>Perfect</span> Wedding Venue</div>
-                    </div>
-                </div>
-            </div>
-            
-            <h3>What Our Guests Say</h3>
-            <div class="testimonials-grid">
-                <!-- Deepak Srivastava's Review -->
-                <div class="testimonial-card">
-                    <div class="testimonial-header">
-                        <span class="testimonial-name">Deepak Srivastava</span>
-                        <span class="testimonial-date">2 months ago</span>
-                    </div>
-                    <div class="testimonial-rating">
-                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                    </div>
-                    <p class="testimonial-text">"My daughter's wedding and haldi was at Grand Mandola. Venue, decoration and food was great. Pool side haldi and mehendi venue is giving cinematic beauty. Guest have enjoyed mouth watering snacks and food especially mutton and gazar ka halua."</p>
-                    <div class="testimonial-footer">
-                        <span><i class="fas fa-calendar-alt"></i> Wedding Event</span>
-                        <span><i class="fas fa-users"></i> Family</span>
-                    </div>
-                </div>
-                
-                <!-- Shobhit Mishra's Review -->
-                <div class="testimonial-card">
-                    <div class="testimonial-header">
-                        <span class="testimonial-name">Shobhit Mishra</span>
-                        <span class="testimonial-date">5 months ago</span>
-                    </div>
-                    <div class="testimonial-rating">
-                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                    </div>
-                    <p class="testimonial-text">"We hosted a party at Grand Mandola and it was an end-to-end great experience. Seamless booking, value for money price, courteous staff, nice ambience and good food. Overall a fantastic experience!"</p>
-                    <div class="testimonial-footer">
-                        <span><i class="fas fa-glass-cheers"></i> Party</span>
-                        <span><i class="fas fa-tag"></i> Value for Money</span>
-                    </div>
-                </div>
-                
-                <!-- Shivam V Srivastava's Review -->
-                <div class="testimonial-card">
-                    <div class="testimonial-header">
-                        <span class="testimonial-name">Shivam V Srivastava</span>
-                        <span class="testimonial-date">10 months ago</span>
-                    </div>
-                    <div class="testimonial-rating">
-                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                    </div>
-                    <p class="testimonial-text">"What an amazing splash of freshness! Paneer 65 was out of this world. Butter Chicken - to crack a recipe like butter chicken speaks volumes for the kitchen. This place has the potential to become a weekly favourite."</p>
-                    <div class="testimonial-footer">
-                        <span><i class="fas fa-utensils"></i> Food Review</span>
-                        <span><i class="fas fa-clock"></i> Weekly Visit</span>
-                    </div>
-                </div>
-                
-                <!-- Greeshm Sinha's Review -->
-                <div class="testimonial-card">
-                    <div class="testimonial-header">
-                        <span class="testimonial-name">Greeshm Sinha</span>
-                        <span class="testimonial-date">11 months ago</span>
-                    </div>
-                    <div class="testimonial-rating">
-                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                    </div>
-                    <p class="testimonial-text">"The lush green lawns at Mandola have a touch of British taste and class. You get the feeling of privacy of a club. Almost unlimited parking. Worth a visit."</p>
-                    <div class="testimonial-footer">
-                        <span><i class="fas fa-tree"></i> Lawns</span>
-                        <span><i class="fas fa-parking"></i> Free Parking</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <!-- Gallery Section -->
-        <section id="gallery">
-            <h2><i class="fas fa-images"></i> Resort Gallery</h2>
-            
-            <div class="gallery-grid">
-                <div class="gallery-item">
-                    <img src="https://lh3.googleusercontent.com/gps-cs-s/AHVAwepMIIlcssgAIZI8FQ0nPtPP2lhaNRel_AS1nBEywhlJAyVeDD5qSuvG2zGOyqdM48N0WaTisGHjhJQEEbVOwQXELClcjKgQ2bR6-P_qVlLD2KhB0-eA5CVjeg-ee65OjCOEwSyPdRNvf0Bd=s1360-w1360-h1020-rw" alt="Grand Mandola Resort Exterior">
-                    <div class="gallery-caption">Main Entrance & Lawn</div>
-                </div>
-                
-                <div class="gallery-item">
-                    <img src="https://lh3.googleusercontent.com/gps-cs-s/AHVAweoePfiSBeVCNvgZ-E9I8U4lr75dkw6zVgr0KrMpMVqjx5LZ8ShGOM0Cz_3IiknAOP7rpdrEZZy8J7WtX08KV7oQiUfy1h-27Y-EbkdSjeGn3dc3F206oS3offHO2IuDlO5TI1507mAbrFDn=s1360-w1360-h1020-rw" alt="Grand Mandola Swimming Pool">
-                    <div class="gallery-caption">Swimming Pool Area</div>
-                </div>
-                
-                <div class="gallery-item">
-                    <img src="https://lh3.googleusercontent.com/gps-cs-s/AHVAwepImKuOa5lx97ihh7lYoDzDx9kcf7incXIg-62lgocadr5Ifq6D0204gvrfV7iwWglJ97Jf-FiC7g83Rh_DzkXe3ir1roNmqGojhGuoJFSYQ6EJwqvLScogiMMEym3PGB07-ovzQS4dRzSK=s1360-w1360-h1020-rw" alt="Grand Mandola Lawn Area">
-                    <div class="gallery-caption">Lush Green Lawns</div>
-                </div>
-                
-                <div class="gallery-item">
-                    <img src="https://lh3.googleusercontent.com/gps-cs-s/AHVAweoXAL1no1lhgMnOAJF33kx-sq-zmUnXFufIW5aZTR3n0_JzlkcNlzmPujksyBCaXLxQM8Fyre0MFhQABhM3T25b05pBCN36YzsKzHzcW-AG7ULaVwTnWvdbiFM3VkSjuGKzoXRyCw8ASzTg=s1360-w1360-h1020-rw" alt="Grand Mandola Event Setup">
-                    <div class="gallery-caption">Event & Wedding Setup</div>
-                </div>
-                
-                <div class="gallery-item">
-                    <img src="https://lh3.googleusercontent.com/gps-cs-s/AHVAweqgfxBp7v1YwZhi9VXgW24ac73yT5DBJJhAZxFCfP3C3MWH4NBcLFTAJgFHUJZ87Va5ivT0yTpTjU818NfAlFxJf_xD8_pNkYpP0gD_PC_QIi5Uvrf4_vn_SMgeWp5crWcGmLr_tpUKAbm1=s1360-w1360-h1020-rw" alt="Grand Mandola Wedding Decoration">
-                    <div class="gallery-caption">Wedding Decoration</div>
-                </div>
-                
-                <div class="gallery-item">
-                    <img src="https://lh3.googleusercontent.com/gps-cs-s/AHVAwerl4E5MvyXnJ6R3Gh_QfVHGS0Luu89wmkNNN-ZwuXzYXNsrHZtgW5VVXWm51MFmK1RaARE0kzVUfcnSge_1zaHpV9CxtV3AGeTqWvIrD_oyTEYvHT9u1VrhQUlJIS1nPbF-FOtF4ofd_Coy=s1360-w1360-h1020-rw" alt="Grand Mandola Evening View">
-                    <div class="gallery-caption">Evening Ambience</div>
-                </div>
-                
-                <div class="gallery-item">
-                    <img src="https://lh3.googleusercontent.com/gps-cs-s/AHVAwerLiDTdtOToIyv8zVoZ5PH5qv5dCXExJKZJ5KlEGkP_AqC03ym0ru1C769Y9Vay5Sp7SQ3KJUXjqgt9l4ASETka-wC3r2CZVoBkx1BW9Smpkas9_TdMN8N1hCdhJJ9jM6swB0r8rfs1QO7e=w141-h101-n-k-no-nu" alt="Grand Mandola Interior">
-                    <div class="gallery-caption">Restaurant Interior</div>
-                </div>
-            </div>
-        </section>
-        
-        <!-- Amenities Section -->
-        <section id="amenities">
-            <h2><i class="fas fa-concierge-bell"></i> Resort Amenities</h2>
-            
-            <div class="amenities-highlight">
-                <div class="amenity-block">
-                    <i class="fas fa-swimming-pool"></i>
-                    <h4>Swimming Pool</h4>
-                    <p>Perfect for poolside events</p>
-                </div>
-                
-                <div class="amenity-block">
-                    <i class="fas fa-utensils"></i>
-                    <h4>Fine Dining</h4>
-                    <p>Multi-cuisine Restaurant</p>
-                </div>
-                
-                <div class="amenity-block">
-                    <i class="fas fa-tree"></i>
-                    <h4>Lush Lawns</h4>
-                    <p>Perfect for weddings & parties</p>
-                </div>
-                
-                <div class="amenity-block">
-                    <i class="fas fa-parking"></i>
-                    <h4>Free Parking</h4>
-                    <p>Unlimited parking space</p>
-                </div>
-                
-                <div class="amenity-block">
-                    <i class="fas fa-wifi"></i>
-                    <h4>Free WiFi</h4>
-                    <p>High-speed internet</p>
-                </div>
-                
-                <div class="amenity-block">
-                    <i class="fas fa-banquet-hall"></i>
-                    <h4>Banquet Hall</h4>
-                    <p>For events & parties</p>
-                </div>
-            </div>
-            
-            <div style="background: #f8f4e9; padding: 2rem; border-radius: 20px; margin-top: 2rem;">
-                <h3 style="color: #1a2a1f;">Popular Amenities</h3>
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-top: 1rem;">
-                    <div><i class="fas fa-check-circle" style="color: #2d4a2e;"></i> Swimming Pool</div>
-                    <div><i class="fas fa-check-circle" style="color: #2d4a2e;"></i> Restaurant</div>
-                    <div><i class="fas fa-check-circle" style="color: #2d4a2e;"></i> Smoking Rooms</div>
-                    <div><i class="fas fa-check-circle" style="color: #2d4a2e;"></i> LAN Available</div>
-                    <div><i class="fas fa-check-circle" style="color: #2d4a2e;"></i> Room Service</div>
-                    <div><i class="fas fa-check-circle" style="color: #2d4a2e;"></i> 24/7 Front Desk</div>
-                </div>
-            </div>
-        </section>
-        
-        <!-- Wedding & Party Section -->
-        <section id="wedding">
-            <h2><i class="fas fa-ring"></i> Weddings & Parties</h2>
-            
-            <div class="wedding-showcase">
-                <div class="wedding-content">
-                    <h3>Your Dream Wedding Awaits</h3>
-                    <p style="font-size: 1.1rem; margin-bottom: 1.5rem;">Grand Mandola is the perfect canvas for your special day. From intimate engagements to grand weddings, we bring your vision to life.</p>
-                    
-                    <ul class="wedding-highlights">
-                        <li><i class="fas fa-check-circle"></i> <strong>Cinematic Poolside Haldi & Mehendi</strong> - As featured in Deepak Srivastava's review</li>
-                        <li><i class="fas fa-check-circle"></i> Beautifully decorated venues by Talib</li>
-                        <li><i class="fas fa-check-circle"></i> Expert coordination by Nidhi</li>
-                        <li><i class="fas fa-check-circle"></i> Mouth-watering catering - Mutton & Gazar ka Halua specialty</li>
-                        <li><i class="fas fa-check-circle"></i> Lush green lawns for outdoor ceremonies</li>
-                        <li><i class="fas fa-check-circle"></i> Elegant banquet halls for receptions</li>
-                    </ul>
-                    
-                    <a href="#booking" class="btn-book btn-small">Plan Your Wedding</a>
-                </div>
-                <div class="wedding-image"></div>
-            </div>
-            
-            <div style="margin-top: 2rem; background: #f8f4e9; padding: 2rem; border-radius: 20px;">
-                <h3>Why Couples Love Grand Mandola</h3>
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem;">
-                    <div><i class="fas fa-camera" style="color: #d4af37;"></i> Picture-perfect locations</div>
-                    <div><i class="fas fa-users" style="color: #d4af37;"></i> Accommodates 100+ guests</div>
-                    <div><i class="fas fa-music" style="color: #d4af37;"></i> In-house decor & music</div>
-                    <div><i class="fas fa-phone" style="color: #d4af37;"></i> Dedicated event manager</div>
-                </div>
-            </div>
-        </section>
-        
-        <!-- Restaurant Section (Using remaining images) -->
-        <section id="restaurant">
-            <h2><i class="fas fa-utensils"></i> The Restaurant</h2>
-            
-            <div style="margin-bottom: 2rem;">
-                <p style="font-size: 1.2rem;">"Food was amazing" - say our guests. From North Indian delicacies to continental favorites, our chefs create magic.</p>
-            </div>
-            
-            <div class="restaurant-grid">
-                <div class="food-item">
-                    <div class="food-image" style="background-image: url('https://lh3.googleusercontent.com/gps-cs-s/AHVAweoePfiSBeVCNvgZ-E9I8U4lr75dkw6zVgr0KrMpMVqjx5LZ8ShGOM0Cz_3IiknAOP7rpdrEZZy8J7WtX08KV7oQiUfy1h-27Y-EbkdSjeGn3dc3F206oS3offHO2IuDlO5TI1507mAbrFDn=s1360-w1360-h1020-rw')"></div>
-                    <div class="food-details">
-                        <h4>Poolside Dining</h4>
-                        <p>Enjoy your meals with a view</p>
-                    </div>
-                </div>
-                
-                <div class="food-item">
-                    <div class="food-image" style="background-image: url('https://lh3.googleusercontent.com/gps-cs-s/AHVAwepImKuOa5lx97ihh7lYoDzDx9kcf7incXIg-62lgocadr5Ifq6D0204gvrfV7iwWglJ97Jf-FiC7g83Rh_DzkXe3ir1roNmqGojhGuoJFSYQ6EJwqvLScogiMMEym3PGB07-ovzQS4dRzSK=s1360-w1360-h1020-rw')"></div>
-                    <div class="food-details">
-                        <h4>Outdoor Seating</h4>
-                        <p>Beautiful lawn area for dining</p>
-                    </div>
-                </div>
-                
-                <div class="food-item">
-                    <div class="food-image" style="background-image: url('https://lh3.googleusercontent.com/gps-cs-s/AHVAwerl4E5MvyXnJ6R3Gh_QfVHGS0Luu89wmkNNN-ZwuXzYXNsrHZtgW5VVXWm51MFmK1RaARE0kzVUfcnSge_1zaHpV9CxtV3AGeTqWvIrD_oyTEYvHT9u1VrhQUlJIS1nPbF-FOtF4ofd_Coy=s1360-w1360-h1020-rw')"></div>
-                    <div class="food-details">
-                        <h4>Evening Ambience</h4>
-                        <p>Perfect for romantic dinners</p>
-                    </div>
-                </div>
-                
-                <div class="food-item">
-                    <div class="food-image" style="background-image: url('https://lh3.googleusercontent.com/gps-cs-s/AHVAwerLiDTdtOToIyv8zVoZ5PH5qv5dCXExJKZJ5KlEGkP_AqC03ym0ru1C769Y9Vay5Sp7SQ3KJUXjqgt9l4ASETka-wC3r2CZVoBkx1BW9Smpkas9_TdMN8N1hCdhJJ9jM6swB0r8rfs1QO7e=w141-h101-n-k-no-nu')"></div>
-                    <div class="food-details">
-                        <h4>Signature Dishes</h4>
-                        <p>Paneer 65, Butter Chicken & more</p>
-                    </div>
-                </div>
-            </div>
-            
-            <p style="text-align: center; margin-top: 2rem; background: #f8f4e9; padding: 1rem; border-radius: 10px;">
-                <i class="fas fa-star" style="color: #d4af37;"></i> 
-                "Excellent food, great service, nice ambience" - Shobhit Mishra
-            </p>
-        </section>
-        
-        <!-- Location Section with Map -->
-        <section id="location">
-            <h2><i class="fas fa-map-marked-alt"></i> Our Location</h2>
-            
-            <div class="map-container">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3558.451165877685!2d80.9445633!3d26.8877626!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399bfa0e9a1b4c6d%3A0x123456789abcdef!2sCLUB%20HOUSE%20FANTSY%20PARK%2C%20Sahara%20States%20Rd%2C%20Sahara%20States%2C%20Janki%20Vihar%20Colony%2C%20Jankipuram%2C%20Lucknow%2C%20Uttar%20Pradesh%20226021!5e0!3m2!1sen!2sin!4v1711100000000!5m2!1sen!2sin" 
-                allowfullscreen="" 
-                loading="lazy"></iframe>
-            </div>
-            
-            <div class="location-grid">
-                <div class="location-card">
-                    <i class="fas fa-map-pin"></i>
-                    <h4>Address</h4>
-                    <p>CLUB HOUSE FANTSY PARK, Sahara States Rd, Sahara States, Janki Vihar Colony, Jankipuram, Lucknow - 226021</p>
-                </div>
-                
-                <div class="location-card">
-                    <i class="fas fa-plane"></i>
-                    <h4>Airport</h4>
-                    <p class="distance">51 mins drive</p>
-                    <p>Chaudhary Charan Singh Airport</p>
-                </div>
-                
-                <div class="location-card">
-                    <i class="fas fa-utensils"></i>
-                    <h4>Nearby Restaurants</h4>
-                    <p>Khana Khazana (5 min)<br>Delicious Kitchen (7 min)</p>
-                </div>
-                
-                <div class="location-card">
-                    <i class="fas fa-landmark"></i>
-                    <h4>Bara Imambara</h4>
-                    <p class="distance">28 mins drive</p>
-                </div>
-            </div>
-        </section>
-        
-        <!-- Contact Section -->
-        <section id="contact">
-            <h2><i class="fas fa-phone-alt"></i> Contact & Booking</h2>
-            
-            <div class="contact-wrapper">
-                <div class="contact-info-card">
-                    <h3 style="color: white; font-size: 2rem;">Get in Touch</h3>
-                    
-                    <div class="contact-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <div>
-                            <strong>Address:</strong>
-                            <p>CLUB HOUSE FANTSY PARK, Sahara States Rd, Jankipuram, Lucknow</p>
-                        </div>
-                    </div>
-                    
-                    <div class="contact-item">
-                        <i class="fas fa-phone"></i>
-                        <div>
-                            <strong>Phone:</strong>
-                            <p style="font-size: 1.5rem; font-weight: bold;">+91 9559936444</p>
-                        </div>
-                    </div>
-                    
-                    <div class="contact-item">
-                        <i class="fas fa-clock"></i>
-                        <div>
-                            <strong>Check-in/out:</strong>
-                            <p>Check-in: 12:00 PM | Check-out: 11:00 AM</p>
-                        </div>
-                    </div>
-                    
-                    <a href="tel:+919559936444" class="btn-book btn-small" style="background: white; color: #1a2a1f; margin-top: 1rem; display: inline-block;">
-                        <i class="fas fa-phone-alt"></i> Call Now
-                    </a>
-                </div>
-                
-                <div class="timing-card">
-                    <h3>Quick Info</h3>
-                    
-                    <div class="timing-row">
-                        <span><i class="fas fa-clock"></i> Reception</span>
-                        <span><strong>24x7 Open</strong></span>
-                    </div>
-                    
-                    <div class="timing-row">
-                        <span><i class="fas fa-utensils"></i> Restaurant</span>
-                        <span><strong>11:00 AM - 11:00 PM</strong></span>
-                    </div>
-                    
-                    <div class="timing-row">
-                        <span><i class="fas fa-swimming-pool"></i> Pool</span>
-                        <span><strong>8:00 AM - 8:00 PM</strong></span>
-                    </div>
-                    
-                    <div class="timing-row">
-                        <span><i class="fas fa-parking"></i> Parking</span>
-                        <span><strong>Free for Guests</strong></span>
-                    </div>
-                    
-                    <div class="timing-row">
-                        <span><i class="fas fa-calendar-alt"></i> Event Booking</span>
-                        <span><strong>Call for Availability</strong></span>
-                    </div>
-                    
-                    <div style="margin-top: 2rem; background: #d4af37; padding: 1rem; border-radius: 12px; text-align: center;">
-                        <p style="color: #1a2a1f; font-weight: 600;">✨ Special offer for wedding bookings</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+
+    <!-- Announcement Bar -->
+    <div class="announcement">
+        <i class="fas fa-bullhorn"></i> 2026-27 सत्र के लिए प्रवेश शुरू | प्रवेश हेतु संपर्क करें: +91 98765 43210
     </div>
-    
-    <!-- Floating Buttons -->
-    <div class="float-buttons">
-        <a href="https://wa.me/919559936444?text=Hi!%20I'm%20interested%20in%20booking%20Grand%20Mandola%20Resorts.%20Please%20share%20details." class="float-wa" target="_blank">
-            <i class="fab fa-whatsapp"></i>
-        </a>
-        <a href="tel:+919559936444" class="float-call">
-            <i class="fas fa-phone-alt"></i>
-        </a>
-    </div>
-    
-    <!-- Booking Confirmation Modal -->
-    <div id="bookingModal" class="modal">
-        <div class="modal-content">
-            <i class="fas fa-check-circle"></i>
-            <h3>Booking Confirmed!</h3>
-            <p id="modalMessage">Your booking request has been received. Our team will contact you shortly.</p>
-            <button onclick="closeModal()" class="btn-book btn-small">OK</button>
+
+    <!-- Home Page / Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>सन शाइन पब्लिक स्कूल निचलौल</h1>
+            <p>Empowering Young Minds for a Bright Future.</p>
+            <p>गुणवत्तापूर्ण शिक्षा, संस्कार और उज्जवल भविष्य की नींव</p>
+            <div class="hero-buttons">
+                <a href="#admission" class="btn">प्रवेश लें <i class="fas fa-arrow-right"></i></a>
+                <a href="#about" class="btn btn-outline">और जानें</a>
+            </div>
         </div>
-    </div>
-    
+    </section>
+
+    <!-- Notice Board Section -->
+    <section id="notice" class="container">
+        <div class="notice-board">
+            <div class="notice-title">
+                <i class="fas fa-bullhorn" style="font-size: 2rem; color: #ffd700;"></i>
+                <h2>नवीनतम सूचनाएं</h2>
+            </div>
+            <ul class="notice-list">
+                <li>
+                    <i class="fas fa-newspaper"></i>
+                    2026-27 सत्र के लिए प्रवेश फॉर्म उपलब्ध
+                    <span class="notice-date">1 Apr 2026</span>
+                </li>
+                <li>
+                    <i class="fas fa-newspaper"></i>
+                    वार्षिक खेलकूद प्रतियोगिता 15 मार्च को
+                    <span class="notice-date">10 Mar 2026</span>
+                </li>
+                <li>
+                    <i class="fas fa-newspaper"></i>
+                    अभिभावक-शिक्षक बैठक 20 मार्च
+                    <span class="notice-date">15 Mar 2026</span>
+                </li>
+                <li>
+                    <i class="fas fa-newspaper"></i>
+                    वसंतोत्सव कार्यक्रम 25 मार्च को
+                    <span class="notice-date">20 Mar 2026</span>
+                </li>
+                <li>
+                    <i class="fas fa-newspaper"></i>
+                    वार्षिक परीक्षा समय-सारिणी जारी
+                    <span class="notice-date">25 Mar 2026</span>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="container">
+        <h2 class="section-title">हमारे बारे में</h2>
+        <div class="about-grid">
+            <div class="about-image">
+                <img src="purskar.jpg" alt="स्कूल कैंपस">
+            </div>
+            <div class="about-text">
+                <h3>शिक्षा का नया आयाम</h3>
+                <p><strong>Founded in 2015,</strong> सन शाइन पब्लिक स्कूल निचलौल has been dedicated to providing quality education and fostering the intellectual and personal growth of students. हमारा लक्ष्य बच्चों को शैक्षणिक उत्कृष्टता के साथ-साथ नैतिक मूल्यों से भी जोड़ना है।</p>
+                
+                <h4 style="color: #1e3c72; margin: 1.5rem 0 0.5rem;">हमारा Vision</h4>
+                <p>To create responsible citizens and lifelong learners who contribute positively to society.</p>
+                
+                <h4 style="color: #1e3c72; margin: 1.5rem 0 0.5rem;">हमारा Mission</h4>
+                <p>To provide a safe, inclusive, and stimulating environment where students can achieve their full potential.</p>
+                
+                <h4 style="color: #1e3c72; margin: 1.5rem 0 0.5rem;">Principal's Message</h4>
+                <p>"हमारा लक्ष्य बच्चों को न केवल किताबी ज्ञान देना है, बल्कि उन्हें एक अच्छा इंसान बनाना भी है। हम यहां हर बच्चे के सर्वांगीण विकास के लिए प्रतिबद्ध हैं।"</p>
+                <p style="font-weight: 600; margin-top: 0.5rem;">- राजेश कसौधन (प्रधानाचार्य)</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Academics Section -->
+    <section id="academics" class="container">
+        <h2 class="section-title">हमारे शैक्षणिक कार्यक्रम</h2>
+        <div class="programs-grid">
+            <div class="program-card">
+                <h3>प्राथमिक खंड</h3>
+                <p><i class="fas fa-child"></i> कक्षा 1–5</p>
+                <p>Building strong foundational knowledge through activity-based learning.</p>
+            </div>
+            <div class="program-card">
+                <h3>मध्य खंड</h3>
+                <p><i class="fas fa-users"></i> कक्षा 6–8</p>
+                <p>Encouraging critical thinking, creativity, and subject exploration.</p>
+            </div>
+            <div class="program-card">
+                <h3>माध्यमिक खंड</h3>
+                <p><i class="fas fa-graduation-cap"></i> कक्षा 9–12</p>
+                <p>Preparing students for higher education and future careers with specialized subjects.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Facilities Section -->
+    <section id="facilities" class="container">
+        <h2 class="section-title">हमारी सुविधाएं</h2>
+        <div class="facilities-grid">
+            <div class="facility-card">
+                <div class="facility-img" style="background-image: url('https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=2022&auto=format&fit=crop')"></div>
+                <div class="facility-content">
+                    <h4>स्मार्ट क्लासरूम</h4>
+                    <p>डिजिटल बोर्ड और आधुनिक तकनीक से युक्त कक्षाएं</p>
+                </div>
+            </div>
+            <div class="facility-card">
+                <div class="facility-img" style="background-image: url('https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?q=80&w=2070&auto=format&fit=crop')"></div>
+                <div class="facility-content">
+                    <h4>पुस्तकालय</h4>
+                    <p>5000+ पुस्तकों का संग्रह, ज्ञान का भंडार</p>
+                </div>
+            </div>
+            <div class="facility-card">
+                <div class="facility-img" style="background-image: url('https://images.unsplash.com/photo-1577896851231-70ef18881754?q=80&w=2070&auto=format&fit=crop')"></div>
+                <div class="facility-content">
+                    <h4>विज्ञान प्रयोगशाला</h4>
+                    <p>भौतिकी, रसायन और जीवविज्ञान की अत्याधुनिक लैब</p>
+                </div>
+            </div>
+            <div class="facility-card">
+                <div class="facility-img" style="background-image: url('yoga.jpg')"></div>
+                <div class="facility-content">
+                    <h4>योग एवं ध्यान</h4>
+                    <p>नियमित योगाभ्यास और ध्यान कक्षा</p>
+                </div>
+            </div>
+            <div class="facility-card">
+                <div class="facility-img" style="background-image: url('https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?q=80&w=2070&auto=format&fit=crop')"></div>
+                <div class="facility-content">
+                    <h4>कंप्यूटर लैब</h4>
+                    <p>आधुनिक कंप्यूटर और इंटरनेट सुविधा</p>
+                </div>
+            </div>
+            <div class="facility-card">
+                <div class="facility-img" style="background-image: url('https://images.unsplash.com/photo-1540479859555-17af45c78602?q=80&w=2070&auto=format&fit=crop')"></div>
+                <div class="facility-content">
+                    <h4>परिवहन</h4>
+                    <p>सुरक्षित बस सेवा और CCTV निगरानी</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section class="container">
+        <h2 class="section-title">छात्र उपलब्धियां</h2>
+        <div class="achievements-grid">
+            <div class="achievement-card">
+                <i class="fas fa-trophy"></i>
+                <h3>राज्य स्तरीय विज्ञान प्रतियोगिता</h3>
+                <p>प्रथम पुरस्कार - 2025</p>
+            </div>
+            <div class="achievement-card">
+                <i class="fas fa-medal"></i>
+                <h3>खेलकूद प्रतियोगिता</h3>
+                <p>जिला स्तर पर 5 स्वर्ण पदक</p>
+            </div>
+            <div class="achievement-card">
+                <i class="fas fa-award"></i>
+                <h3>सांस्कृतिक कार्यक्रम</h3>
+                <p>राष्ट्रीय स्तर पर चयन - 2024</p>
+            </div>
+            <div class="achievement-card">
+                <i class="fas fa-star"></i>
+                <h3>शैक्षणिक उत्कृष्टता</h3>
+                <p>बोर्ड परीक्षा में 95% परिणाम</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="container">
+        <h2 class="section-title">फोटो गैलरी</h2>
+        <div class="gallery-grid">
+            <div class="gallery-item" style="background-image: url('warsik.jpg')">
+                <div class="gallery-caption">वार्षिक समारोह</div>
+            </div>
+            <div class="gallery-item" style="background-image: url('khel.jpg')">
+                <div class="gallery-caption">स्पोर्ट्स डे</div>
+            </div>
+            <div class="gallery-item" style="background-image: url('https://images.unsplash.com/photo-1524178232363-1fb2b075b655?q=80&w=2070&auto=format&fit=crop')">
+                <div class="gallery-caption">कक्षा गतिविधियां</div>
+            </div>
+            <div class="gallery-item" style="background-image: url('snskriti karksrm.jpg')">
+                <div class="gallery-caption">सांस्कृतिक कार्यक्रम</div>
+            </div>
+            <div class="gallery-item" style="background-image: url('https://images.unsplash.com/photo-1577896851231-70ef18881754?q=80&w=2070&auto=format&fit=crop')">
+                <div class="gallery-caption">प्रयोगशाला कार्य</div>
+            </div>
+            <div class="gallery-item" style="background-image: url('prisar.jpg')">
+                <div class="gallery-caption">स्कूल परिसर</div>
+            </div>
+            <div class="gallery-item" style="background-image: url('yoga.jpg')">
+                <div class="gallery-caption">योग दिवस</div>
+            </div>
+            <div class="gallery-item" style="background-image: url('purskar.jpg')">
+                <div class="gallery-caption">पुरस्कार वितरण</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Admission Section -->
+    <section id="admission" class="container">
+        <h2 class="section-title">प्रवेश सूचना</h2>
+        <div style="background: linear-gradient(135deg, #1e3c72, #2a5298); color: white; padding: 3rem; border-radius: 30px; text-align: center; margin-bottom: 2rem;">
+            <h3 style="font-size: 2rem; margin-bottom: 1rem; color: #ffd700;">Admissions Open 2026–2027</h3>
+            <p style="font-size: 1.2rem; margin-bottom: 2rem;">हम उन छात्रों का स्वागत करते हैं जो सीखने और बढ़ने के लिए उत्सुक हैं।</p>
+            <a href="#contact-form" class="btn" style="background: #ffd700; color: #1e3c72;">आज ही संपर्क करें</a>
+        </div>
+
+        <h3 style="margin: 2rem 0; text-align: center;">प्रवेश प्रक्रिया</h3>
+        <div class="process-steps">
+            <div class="step">
+                <div class="step-number">1</div>
+                <h4>आवेदन फॉर्म भरें</h4>
+                <p>ऑनलाइन या स्कूल से प्राप्त करें</p>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <h4>दस्तावेज जमा करें</h4>
+                <p>जन्म प्रमाण पत्र, फोटो, अंक तालिका</p>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <h4>साक्षात्कार / प्रवेश परीक्षा</h4>
+                <p>बच्चे और अभिभावक से बातचीत</p>
+            </div>
+            <div class="step">
+                <div class="step-number">4</div>
+                <h4>प्रवेश की पुष्टि</h4>
+                <p>शुल्क जमा करें और प्रवेश लें</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download Section -->
+    <section class="container">
+        <h2 class="section-title">डाउनलोड करें</h2>
+        <div class="download-grid">
+            <a href="#" class="download-card">
+                <i class="fas fa-file-pdf"></i>
+                <h4>प्रवेश फॉर्म</h4>
+            </a>
+            <a href="#" class="download-card">
+                <i class="fas fa-calendar-alt"></i>
+                <h4>शैक्षणिक कैलेंडर</h4>
+            </a>
+            <a href="#" class="download-card">
+                <i class="fas fa-book"></i>
+                <h4>पाठ्यक्रम</h4>
+            </a>
+            <a href="#" class="download-card">
+                <i class="fas fa-address-card"></i>
+                <h4>शुल्क संरचना</h4>
+            </a>
+            <a href="#" class="download-card">
+                <i class="fas fa-clock"></i>
+                <h4>समय-सारिणी</h4>
+            </a>
+        </div>
+    </section>
+
+    <!-- Online Services Section -->
+    <section class="container">
+        <h2 class="section-title">ऑनलाइन सेवाएं</h2>
+        <div class="portal-grid">
+            <a href="#" class="portal-card">
+                <i class="fas fa-rupee-sign"></i>
+                <h3>ऑनलाइन शुल्क भुगतान</h3>
+                <p>सुरक्षित और सरल तरीके से फीस जमा करें</p>
+            </a>
+            <a href="#" class="portal-card">
+                <i class="fas fa-user-graduate"></i>
+                <h3>छात्र पोर्टल</h3>
+                <p>परिणाम, समय-सारिणी और नोटिस देखें</p>
+            </a>
+            <a href="#" class="portal-card">
+                <i class="fas fa-chalkboard-teacher"></i>
+                <h3>शिक्षक पोर्टल</h3>
+                <p>उपस्थिति और मूल्यांकन प्रबंधन</p>
+            </a>
+            <a href="#" class="portal-card">
+                <i class="fas fa-blog"></i>
+                <h3>स्कूल ब्लॉग</h3>
+                <p>नवीनतम समाचार और गतिविधियां</p>
+            </a>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="container">
+        <h2 class="section-title">संपर्क करें</h2>
+        <div class="contact-wrapper">
+            <div class="contact-info">
+                <h3 style="font-size: 2rem; margin-bottom: 2rem;">हमसे मिलें</h3>
+                <div class="info-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <strong>पता:</strong>
+                        <p>सन शाइन पब्लिक स्कूल, निचलौल बाजार, महराजगंज - 273303</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-phone-alt"></i>
+                    <div>
+                        <strong>फोन:</strong>
+                        <p>+91 98765 43210 (प्रवेश हेतु)</p>
+                        <p>+91 98765 43211 (कार्यालय)</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-envelope"></i>
+                    <div>
+                        <strong>ईमेल:</strong>
+                        <p>info@sunshineschool.in</p>
+                        <p>admission@sunshineschool.in</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-clock"></i>
+                    <div>
+                        <strong>कार्यालय समय:</strong>
+                        <p>सोमवार - शनिवार: सुबह 8:00 - दोपहर 3:00</p>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-form" id="contact-form">
+                <h3 style="margin-bottom: 1.5rem;">प्रवेश हेतु पूछताछ</h3>
+                <div id="successMessage" class="success-message">
+                    <i class="fas fa-check-circle"></i> धन्यवाद! आपकी जानकारी WhatsApp पर भेज दी गई है।
+                </div>
+                <form id="contactForm">
+                    <div class="form-group">
+                        <input type="text" id="name" placeholder="आपका नाम" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" placeholder="ईमेल" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" id="phone" placeholder="फोन नंबर" required>
+                    </div>
+                    <div class="form-group">
+                        <select id="class">
+                            <option value="">कक्षा का चयन करें</option>
+                            <option value="नर्सरी">नर्सरी</option>
+                            <option value="एलकेजी">एलकेजी</option>
+                            <option value="यूकेजी">यूकेजी</option>
+                            <option value="कक्षा 1">कक्षा 1</option>
+                            <option value="कक्षा 2">कक्षा 2</option>
+                            <option value="कक्षा 3">कक्षा 3</option>
+                            <option value="कक्षा 4">कक्षा 4</option>
+                            <option value="कक्षा 5">कक्षा 5</option>
+                            <option value="कक्षा 6">कक्षा 6</option>
+                            <option value="कक्षा 7">कक्षा 7</option>
+                            <option value="कक्षा 8">कक्षा 8</option>
+                            <option value="कक्षा 9">कक्षा 9</option>
+                            <option value="कक्षा 10">कक्षा 10</option>
+                            <option value="कक्षा 11">कक्षा 11</option>
+                            <option value="कक्षा 12">कक्षा 12</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" rows="4" placeholder="आपका संदेश"></textarea>
+                    </div>
+                    <button type="submit" class="btn" style="width: 100%;">WhatsApp पर भेजें <i class="fab fa-whatsapp"></i></button>
+                </form>
+            </div>
+        </div>
+        
+        <!-- Google Map -->
+        <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28577.584565792855!2d83.727377!3d27.107855!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399c4b1b1b1b1b1b%3A0x123456789abcdef!2sNichlaul%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1711100000000!5m2!1sen!2sin" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer>
         <div class="footer-content">
-            <div class="footer-logo">
-                <h2>Grand Mandola</h2>
-                <p style="margin-top: 1rem;">Luxury Resort & Wedding Destination in Lucknow</p>
-            </div>
-            
             <div>
-                <h4 style="color: #d4af37;">Quick Links</h4>
+                <h3 style="color: #ffd700;">सन शाइन पब्लिक स्कूल</h3>
+                <p>निचलौल, महराजगंज</p>
+                <div class="footer-logo">
+                    <img src="logo.jpg" alt="School Logo">
+                </div>
+                <p style="margin-top: 1rem;">शिक्षा का उज्जवल केंद्र | Est. 2015</p>
+            </div>
+            <div>
+                <h4 style="color: #ffd700;">त्वरित लिंक</h4>
                 <ul style="list-style: none; margin-top: 1rem;">
-                    <li style="margin: 0.5rem 0;"><a href="#home" style="color: white; text-decoration: none;">Home</a></li>
-                    <li style="margin: 0.5rem 0;"><a href="#about" style="color: white; text-decoration: none;">Reviews</a></li>
-                    <li style="margin: 0.5rem 0;"><a href="#booking" style="color: white; text-decoration: none;">Book Now</a></li>
-                    <li style="margin: 0.5rem 0;"><a href="#wedding" style="color: white; text-decoration: none;">Weddings</a></li>
+                    <li><a href="#home" style="color: white; text-decoration: none;">होम</a></li>
+                    <li><a href="#about" style="color: white; text-decoration: none;">हमारे बारे में</a></li>
+                    <li><a href="#academics" style="color: white; text-decoration: none;">शिक्षा</a></li>
+                    <li><a href="#facilities" style="color: white; text-decoration: none;">सुविधाएं</a></li>
+                    <li><a href="#gallery" style="color: white; text-decoration: none;">गैलरी</a></li>
+                    <li><a href="#admission" style="color: white; text-decoration: none;">प्रवेश</a></li>
+                    <li><a href="#contact" style="color: white; text-decoration: none;">संपर्क</a></li>
                 </ul>
             </div>
-            
             <div>
-                <h4 style="color: #d4af37;">Address</h4>
-                <p style="margin-top: 1rem;">CLUB HOUSE FANTSY PARK,<br>Sahara States Rd, Jankipuram,<br>Lucknow, Uttar Pradesh 226021</p>
-            </div>
-            
-            <div>
-                <h4 style="color: #d4af37;">Follow Us</h4>
-                <div style="margin-top: 1rem; font-size: 1.5rem;">
-                    <i class="fab fa-facebook" style="margin-right: 1rem;"></i>
-                    <i class="fab fa-instagram" style="margin-right: 1rem;"></i>
-                    <i class="fab fa-twitter"></i>
+                <h4 style="color: #ffd700;">हमें फॉलो करें</h4>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
                 </div>
             </div>
+            <div>
+                <h4 style="color: #ffd700;">डाउनलोड</h4>
+                <ul style="list-style: none; margin-top: 1rem;">
+                    <li><a href="#" style="color: white; text-decoration: none;">प्रवेश फॉर्म</a></li>
+                    <li><a href="#" style="color: white; text-decoration: none;">शैक्षणिक कैलेंडर</a></li>
+                    <li><a href="#" style="color: white; text-decoration: none;">शुल्क संरचना</a></li>
+                    <li><a href="#" style="color: white; text-decoration: none;">पाठ्यक्रम</a></li>
+                </ul>
+            </div>
         </div>
-        
-        <div class="copyright">
-            <p>© 2024 Grand Mandola Resorts. All rights reserved. | Google Business Profile Verified</p>
+        <div class="footer-bottom">
+            <p>© 2026 सन शाइन पब्लिक स्कूल निचलौल। सर्वाधिकार सुरक्षित।</p>
+            <p style="margin-top: 0.5rem;">Design & Developed by Grand Mandola Digital</p>
         </div>
     </footer>
-    
-    <!-- JavaScript for Booking System -->
+
+    <!-- Floating Buttons -->
+    <div class="float-buttons">
+        <a href="https://wa.me/919876543210?text=नमस्ते,%20सन%20शाइन%20पब्लिक%20स्कूल%20में%20प्रवेश%20के%20बारे%20में%20जानकारी%20चाहिए।" class="float-btn whatsapp" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="tel:+919876543210" class="float-btn call">
+            <i class="fas fa-phone-alt"></i>
+        </a>
+    </div>
+
     <script>
-        // Initialize Date Pickers
-        flatpickr(".datepicker", {
-            minDate: "today",
-            dateFormat: "Y-m-d",
-            disableMobile: true
-        });
-        
-        // Room Price Calculator
-        document.getElementById('roomType').addEventListener('change', function() {
-            const roomPrices = {
-                'deluxe': 5999,
-                'premium': 8999,
-                'executive': 12999
-            };
-            
-            const selectedRoom = this.value;
-            if (selectedRoom) {
-                const price = roomPrices[selectedRoom];
-                document.getElementById('roomPriceDisplay').innerHTML = `Total: ₹${price.toLocaleString()}`;
-            }
-        });
-        
-        // Room Booking Form Submission
-        document.getElementById('roomBookingForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            const checkin = document.getElementById('checkin').value;
-            const checkout = document.getElementById('checkout').value;
-            const roomType = document.getElementById('roomType');
-            const roomTypeText = roomType.options[roomType.selectedIndex].text;
-            const guests = document.getElementById('guests').value;
-            const name = document.getElementById('name').value;
-            const phone = document.getElementById('phone').value;
-            const email = document.getElementById('email').value;
-            
-            if (!checkin || !checkout || !roomType.value || !name || !phone || !email) {
-                alert('Please fill in all fields');
-                return;
-            }
-            
-            // Format WhatsApp Message
-            const message = `*New Room Booking Request*%0a%0a` +
-                `*Name:* ${name}%0a` +
-                `*Phone:* ${phone}%0a` +
-                `*Email:* ${email}%0a` +
-                `*Check-in:* ${checkin}%0a` +
-                `*Check-out:* ${checkout}%0a` +
-                `*Room:* ${roomTypeText}%0a` +
-                `*Guests:* ${guests}`;
-            
-            // Open WhatsApp with booking details
-            window.open(`https://wa.me/919559936444?text=${message}`, '_blank');
-            
-            // Show confirmation modal
-            document.getElementById('modalMessage').innerText = 'Your room booking request has been sent! Our team will contact you shortly.';
-            document.getElementById('bookingModal').style.display = 'flex';
-            
-            // Reset form
-            this.reset();
-        });
-        
-        // Event Booking Form Submission
-        document.getElementById('eventBookingForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            const eventDate = document.getElementById('eventDate').value;
-            const eventType = document.getElementById('eventType');
-            const eventTypeText = eventType.options[eventType.selectedIndex].text;
-            const eventGuests = document.getElementById('eventGuests').value;
-            const name = document.getElementById('eventName').value;
-            const phone = document.getElementById('eventPhone').value;
-            const email = document.getElementById('eventEmail').value;
-            const requests = document.getElementById('eventRequests').value;
-            
-            if (!eventDate || !eventType.value || !name || !phone || !email) {
-                alert('Please fill in all required fields');
-                return;
-            }
-            
-            // Format WhatsApp Message
-            const message = `*New Event Booking Request*%0a%0a` +
-                `*Name:* ${name}%0a` +
-                `*Phone:* ${phone}%0a` +
-                `*Email:* ${email}%0a` +
-                `*Event Date:* ${eventDate}%0a` +
-                `*Event Type:* ${eventTypeText}%0a` +
-                `*Guests:* ${eventGuests}%0a` +
-                `*Special Requests:* ${requests || 'None'}`;
-            
-            // Open WhatsApp with booking details
-            window.open(`https://wa.me/919559936444?text=${message}`, '_blank');
-            
-            // Show confirmation modal
-            document.getElementById('modalMessage').innerText = 'Your event inquiry has been sent! Our event team will contact you shortly.';
-            document.getElementById('bookingModal').style.display = 'flex';
-            
-            // Reset form
-            this.reset();
-        });
-        
-        // Close Modal Function
-        function closeModal() {
-            document.getElementById('bookingModal').style.display = 'none';
-        }
-        
-        // Close modal when clicking outside
-        window.onclick = function(event) {
-            const modal = document.getElementById('bookingModal');
-            if (event.target == modal) {
-                modal.style.display = 'none';
-            }
-        }
-        
         // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
                 const target = document.querySelector(this.getAttribute('href'));
                 if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
+                    target.scrollIntoView({ behavior: 'smooth' });
+                    
+                    // Update active class
+                    document.querySelectorAll('.nav-menu a').forEach(link => {
+                        link.classList.remove('active');
                     });
+                    this.classList.add('active');
                 }
+            });
+        });
+
+        // WhatsApp Form Submission
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form values
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const studentClass = document.getElementById('class').value;
+            const message = document.getElementById('message').value;
+            
+            // Validation
+            if (!name || !email || !phone || !studentClass) {
+                alert('कृपया सभी आवश्यक जानकारी भरें');
+                return;
+            }
+            
+            // Format WhatsApp Message
+            const whatsappMessage = `*नया प्रवेश पूछताछ*%0a%0a` +
+                `*नाम:* ${name}%0a` +
+                `*ईमेल:* ${email}%0a` +
+                `*फोन:* ${phone}%0a` +
+                `*कक्षा:* ${studentClass}%0a` +
+                `*संदेश:* ${message || 'कोई संदेश नहीं'}`;
+            
+            // WhatsApp Number (Change this to your actual number)
+            const whatsappNumber = '919876543210'; // यहां अपना WhatsApp नंबर डालें (बिना + के)
+            
+            // Open WhatsApp
+            window.open(`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`, '_blank');
+            
+            // Show success message
+            const successMsg = document.getElementById('successMessage');
+            successMsg.style.display = 'block';
+            
+            // Reset form
+            this.reset();
+            
+            // Hide success message after 5 seconds
+            setTimeout(() => {
+                successMsg.style.display = 'none';
+            }, 5000);
+        });
+
+        // Mobile menu toggle
+        document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
+            const navMenu = document.querySelector('.nav-menu');
+            if (navMenu.style.display === 'flex') {
+                navMenu.style.display = 'none';
+            } else {
+                navMenu.style.display = 'flex';
+                navMenu.style.flexDirection = 'column';
+                navMenu.style.position = 'absolute';
+                navMenu.style.top = '70px';
+                navMenu.style.left = '0';
+                navMenu.style.width = '100%';
+                navMenu.style.background = '#1e3c72';
+                navMenu.style.padding = '1rem';
+                navMenu.style.gap = '1rem';
+                navMenu.style.zIndex = '1000';
+            }
+        });
+
+        // Active link on scroll
+        window.addEventListener('scroll', function() {
+            let sections = document.querySelectorAll('section[id]');
+            let scrollY = window.pageYOffset;
+
+            sections.forEach(section => {
+                const sectionHeight = section.offsetHeight;
+                const sectionTop = section.offsetTop - 150;
+                const sectionId = section.getAttribute('id');
+                
+                if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+                    document.querySelector('.nav-menu a[href="#' + sectionId + '"]')?.classList.add('active');
+                } else {
+                    document.querySelector('.nav-menu a[href="#' + sectionId + '"]')?.classList.remove('active');
+                }
+            });
+        });
+
+        // Gallery image click
+        document.querySelectorAll('.gallery-item').forEach(item => {
+            item.addEventListener('click', function() {
+                const caption = this.querySelector('.gallery-caption').innerText;
+                alert(caption + ' की फोटो खोली गई');
             });
         });
     </script>
