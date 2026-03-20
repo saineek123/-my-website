@@ -1,0 +1,1312 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title लिटिल एंजल्स कॉन्वेंट स्कूल
+बाली, निचलौल, महराजगंज | Est. 2015></title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="लिटिल एंजल्स कॉन्वेंट स्कूल  बाली निचलौल, महराजगंज में सर्वश्रेष्ठ शिक्षा, आधुनिक सुविधाएं, स्मार्ट क्लास, प्रयोगशाला, पुस्तकालय और खेल मैदान। 2026-27 प्रवेश शुरू।">
+    <meta name="keywords" content="लिटिल एंजल्स कॉन्वेंट  बाली स्कूल nichlaul, best school in maharajganj, school near nichlaul, english medium school, admission 2026">
+    <meta name="author" content="लिटिल एंजल्स कॉन्वेंट  बाली स्कूल">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: #f4f7fc;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Header & Navigation */
+        .header {
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: white;
+            padding: 0.8rem 0;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1300px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .logo h1 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            line-height: 1.2;
+            color: #ffd700;
+        }
+        .logo span {
+            font-size: 0.9rem;
+            font-weight: 300;
+            opacity: 0.9;
+            display: block;
+            color: white;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 1.5rem;
+        }
+
+        .nav-menu a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: 0.3s;
+            font-size: 0.95rem;
+            padding: 0.5rem 0;
+        }
+
+        .nav-menu a:hover, .nav-menu a.active {
+            color: #ffd700;
+            border-bottom: 2px solid #ffd700;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            font-size: 1.8rem;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+            url('https://images.unsplash.com/photo-1591123120675-6f7f1aae0e5b?q=80&w=1469&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+            background-size: cover;
+            background-position: center;
+            min-height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding: 2rem;
+        }
+
+        .hero-content h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 5px black;
+        }
+
+        .hero-content p {
+            font-size: 1.4rem;
+            margin-bottom: 2rem;
+            text-shadow: 1px 1px 3px black;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #ffd700;
+            color: #1e3c72;
+            padding: 12px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background: #ffc800;
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(255, 215, 0, 0.4);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid white;
+            color: white;
+        }
+        .btn-outline:hover {
+            background: white;
+            color: #1e3c72;
+        }
+
+        /* Announcement Bar */
+        .announcement {
+            background: #ffd700;
+            color: #1e3c72;
+            padding: 1rem;
+            text-align: center;
+            font-weight: 600;
+            font-size: 1.1rem;
+            animation: blink 1s infinite;
+        }
+
+        @keyframes blink {
+            0% { opacity: 1; }
+            50% { opacity: 0.9; background: #ffc800; }
+            100% { opacity: 1; }
+        }
+
+        .announcement i {
+            margin-right: 10px;
+            animation: bellRing 1s infinite;
+        }
+
+        @keyframes bellRing {
+            0% { transform: rotate(0deg); }
+            10% { transform: rotate(15deg); }
+            20% { transform: rotate(-15deg); }
+            30% { transform: rotate(10deg); }
+            40% { transform: rotate(-10deg); }
+            50% { transform: rotate(5deg); }
+            60% { transform: rotate(-5deg); }
+            100% { transform: rotate(0deg); }
+        }
+
+        /* Container */
+        .container {
+            max-width: 1300px;
+            margin: 3rem auto;
+            padding: 0 2rem;
+        }
+
+        /* Section Headings */
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #1e3c72;
+            margin-bottom: 3rem;
+            position: relative;
+            padding-bottom: 15px;
+        }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: #ffd700;
+            border-radius: 2px;
+        }
+
+        /* Notice Board */
+        .notice-board {
+            background: white;
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            margin-bottom: 3rem;
+            border-left: 5px solid #ffd700;
+        }
+
+        .notice-title {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #1e3c72;
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .notice-list {
+            list-style: none;
+        }
+
+        .notice-list li {
+            padding: 1rem;
+            border-bottom: 1px dashed #ddd;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            transition: 0.3s;
+        }
+
+        .notice-list li:hover {
+            background: #f0f7ff;
+            padding-left: 1.5rem;
+        }
+
+        .notice-list li:last-child {
+            border-bottom: none;
+        }
+
+        .notice-list i {
+            color: #ffd700;
+        }
+
+        .notice-date {
+            background: #1e3c72;
+            color: white;
+            padding: 0.3rem 1rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            margin-left: auto;
+        }
+
+        /* About Section */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .about-image {
+            position: relative;
+        }
+
+        .about-image img {
+            width: 100%;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            transition: 0.5s;
+        }
+
+        .about-image:hover img {
+            transform: scale(1.02);
+        }
+
+        .about-image::before {
+            content: '';
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            width: 100%;
+            height: 100%;
+            border: 3px solid #ffd700;
+            border-radius: 20px;
+            z-index: -1;
+        }
+
+        .about-text h3 {
+            font-size: 2rem;
+            color: #2a5298;
+            margin-bottom: 1rem;
+        }
+
+        .about-text p {
+            margin-bottom: 1.5rem;
+            color: #555;
+        }
+
+        .features-list {
+            list-style: none;
+        }
+
+        .features-list li {
+            margin: 1rem 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .features-list i {
+            color: #ffd700;
+            font-size: 1.3rem;
+        }
+
+        /* Facilities Grid */
+        .facilities-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .facility-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            transition: 0.3s;
+        }
+
+        .facility-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+        }
+
+        .facility-img {
+            height: 220px;
+            background-size: cover;
+            background-position: center;
+            transition: 0.5s;
+        }
+
+        .facility-card:hover .facility-img {
+            transform: scale(1.05);
+        }
+
+        .facility-content {
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .facility-content h4 {
+            font-size: 1.4rem;
+            color: #1e3c72;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Academic Programs */
+        .programs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .program-card {
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: white;
+            padding: 2rem;
+            border-radius: 20px;
+            text-align: center;
+            transition: 0.3s;
+        }
+
+        .program-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(30,60,114,0.4);
+        }
+
+        .program-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: #ffd700;
+        }
+
+        /* Gallery */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .gallery-item {
+            height: 250px;
+            border-radius: 15px;
+            overflow: hidden;
+            cursor: pointer;
+            transition: 0.3s;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.03);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+        }
+
+        .gallery-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0,0,0,0.8));
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            font-weight: 500;
+            transform: translateY(100%);
+            transition: 0.4s;
+        }
+
+        .gallery-item:hover .gallery-caption {
+            transform: translateY(0);
+        }
+
+        /* Admission Process */
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .step {
+            text-align: center;
+            padding: 2rem;
+            background: white;
+            border-radius: 15px;
+            position: relative;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        .step-number {
+            width: 50px;
+            height: 50px;
+            background: #ffd700;
+            color: #1e3c72;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin: 0 auto 1rem;
+        }
+
+        /* Download Section */
+        .download-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .download-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 15px;
+            text-align: center;
+            text-decoration: none;
+            color: #1e3c72;
+            transition: 0.3s;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        .download-card:hover {
+            background: #1e3c72;
+            color: white;
+            transform: translateY(-5px);
+        }
+
+        .download-card i {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Contact Section */
+        .contact-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin-top: 2rem;
+        }
+
+        .contact-info {
+            background: #1e3c72;
+            color: white;
+            padding: 2.5rem;
+            border-radius: 25px;
+            box-shadow: 0 10px 30px rgba(30,60,114,0.3);
+        }
+
+        .info-item {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            margin: 2rem 0;
+            padding: 1rem;
+            background: rgba(255,255,255,0.1);
+            border-radius: 15px;
+            transition: 0.3s;
+        }
+
+        .info-item:hover {
+            background: rgba(255,215,0,0.2);
+            transform: translateX(10px);
+        }
+
+        .info-item i {
+            font-size: 1.8rem;
+            color: #ffd700;
+        }
+
+        .contact-form {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 25px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            font-size: 1rem;
+            transition: 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #2a5298;
+            box-shadow: 0 0 0 3px rgba(42,82,152,0.1);
+        }
+
+        /* Map */
+        .map-container {
+            margin: 2rem 0;
+            border-radius: 20px;
+            overflow: hidden;
+            height: 400px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        /* Student Portal & Teacher Section */
+        .portal-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .portal-card {
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: white;
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            text-decoration: none;
+            transition: 0.3s;
+            box-shadow: 0 10px 25px rgba(30,60,114,0.3);
+        }
+
+        .portal-card:hover {
+            transform: translateY(-5px);
+            background: #ffd700;
+            color: #1e3c72;
+        }
+
+        .portal-card i {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Footer */
+        footer {
+            background: #1e3c72;
+            color: white;
+            padding: 4rem 0 1rem;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .footer-logo {
+            max-width: 100px;
+            margin-top: 0.5rem;
+        }
+
+        .footer-logo img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-links a {
+            color: white;
+            background: rgba(255,255,255,0.1);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .social-links a:hover {
+            background: #ffd700;
+            color: #1e3c72;
+            transform: translateY(-3px);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            margin-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        /* Floating Buttons */
+        .float-buttons {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            z-index: 999;
+        }
+
+        .float-btn {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            color: white;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+            transition: 0.3s;
+            text-decoration: none;
+            animation: pulse 2s infinite;
+        }
+
+        .float-btn.whatsapp {
+            background: #25d366;
+        }
+
+        .float-btn.call {
+            background: #2a5298;
+        }
+
+        .float-btn:hover {
+            transform: scale(1.1);
+            animation: none;
+        }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+        }
+
+        /* Success Message */
+        .success-message {
+            background: #4CAF50;
+            color: white;
+            padding: 1rem;
+            border-radius: 10px;
+            text-align: center;
+            margin-bottom: 1rem;
+            display: none;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 968px) {
+            .nav-menu {
+                display: none;
+            }
+            .mobile-menu-btn {
+                display: block;
+            }
+            .hero-content h1 {
+                font-size: 2.2rem;
+            }
+            .hero-content p {
+                font-size: 1.1rem;
+            }
+            .about-grid,
+            .contact-wrapper {
+                grid-template-columns: 1fr;
+            }
+            .section-title {
+                font-size: 2rem;
+            }
+            .about-image::before {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="nav-container">
+            <div class="logo">
+                <h1>लिटिल एंजल्स कॉन्वेंट स्कूल बाली</h1>
+                <span>निचलौल, महराजगंज | Est. 2015</span>
+            </div>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="#home" class="active">होम</a></li>
+                    <li><a href="#about">हमारे बारे में</a></li>
+                    <li><a href="#academics">शिक्षा</a></li>
+                    <li><a href="#facilities">सुविधाएं</a></li>
+                    <li><a href="#gallery">गैलरी</a></li>
+                    <li><a href="#admission">प्रवेश</a></li>
+                    <li><a href="#notice">नोटिस</a></li>
+                    <li><a href="#contact">संपर्क</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu-btn">☰</div>
+        </div>
+    </header>
+
+    <!-- Announcement Bar -->
+    <div class="announcement">
+        <i class="fas fa-bullhorn"></i> 2026-27 सत्र के लिए प्रवेश शुरू | प्रवेश हेतु संपर्क करें: +91 98765 43210
+    </div>
+
+    <!-- Home Page / Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>लिटिल एंजल्स कॉन्वेंट स्कूल
+बाली, निचलौल, महराजगंज | Est. 2015 </h1>
+            <p>Empowering Young Minds for a Bright Future.</p>
+            <p>गुणवत्तापूर्ण शिक्षा, संस्कार और उज्जवल भविष्य की नींव</p>
+            <div class="hero-buttons">
+                <a href="#admission" class="btn">प्रवेश लें <i class="fas fa-arrow-right"></i></a>
+                <a href="#about" class="btn btn-outline">और जानें</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Notice Board Section -->
+    <section id="notice" class="container">
+        <div class="notice-board">
+            <div class="notice-title">
+                <i class="fas fa-bullhorn" style="font-size: 2rem; color: #ffd700;"></i>
+                <h2>नवीनतम सूचनाएं</h2>
+            </div>
+            <ul class="notice-list">
+                <li>
+                    <i class="fas fa-newspaper"></i>
+                    2026-27 सत्र के लिए प्रवेश फॉर्म उपलब्ध
+                    <span class="notice-date">1 Apr 2026</span>
+                </li>
+                <li>
+                    <i class="fas fa-newspaper"></i>
+                    वार्षिक खेलकूद प्रतियोगिता 15 मार्च को
+                    <span class="notice-date">10 Mar 2026</span>
+                </li>
+                <li>
+                    <i class="fas fa-newspaper"></i>
+                    अभिभावक-शिक्षक बैठक 20 मार्च
+                    <span class="notice-date">15 Mar 2026</span>
+                </li>
+                <li>
+                    <i class="fas fa-newspaper"></i>
+                    वसंतोत्सव कार्यक्रम 25 मार्च को
+                    <span class="notice-date">20 Mar 2026</span>
+                </li>
+                <li>
+                    <i class="fas fa-newspaper"></i>
+                    वार्षिक परीक्षा समय-सारिणी जारी
+                    <span class="notice-date">25 Mar 2026</span>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="container">
+        <h2 class="section-title">हमारे बारे में</h2>
+        <div class="about-grid">
+            <div class="about-image">
+                <img src="https://plus.unsplash.com/premium_photo-1683841527901-d2d926709203?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="स्कूल कैंपस">
+            </div>
+            <div class="about-text">
+                <h3>शिक्षा का नया आयाम</h3>
+                <p><strong>Founded in 2015,</strong> लिटिल एंजल्स कॉन्वेंट स्कूल बाली, निचलौल, महराजगंज | has been dedicated to providing quality education and fostering the intellectual and personal growth of students. हमारा लक्ष्य बच्चों को शैक्षणिक उत्कृष्टता के साथ-साथ नैतिक मूल्यों से भी जोड़ना है।</p>
+                
+                <h4 style="color: #1e3c72; margin: 1.5rem 0 0.5rem;">हमारा Vision</h4>
+                <p>To create responsible citizens and lifelong learners who contribute positively to society.</p>
+                
+                <h4 style="color: #1e3c72; margin: 1.5rem 0 0.5rem;">हमारा Mission</h4>
+                <p>To provide a safe, inclusive, and stimulating environment where students can achieve their full potential.</p>
+                
+                <h4 style="color: #1e3c72; margin: 1.5rem 0 0.5rem;">Principal's Message</h4>
+                <p>"हमारा लक्ष्य बच्चों को न केवल किताबी ज्ञान देना है, बल्कि उन्हें एक अच्छा इंसान बनाना भी है। हम यहां हर बच्चे के सर्वांगीण विकास के लिए प्रतिबद्ध हैं।"</p>
+                <p style="font-weight: 600; margin-top: 0.5rem;">-  (प्रधानाचार्य)</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Academics Section -->
+    <section id="academics" class="container">
+        <h2 class="section-title">हमारे शैक्षणिक कार्यक्रम</h2>
+        <div class="programs-grid">
+            <div class="program-card">
+                <h3>प्राथमिक खंड</h3>
+                <p><i class="fas fa-child"></i> कक्षा 1–5</p>
+                <p>Building strong foundational knowledge through activity-based learning.</p>
+            </div>
+            <div class="program-card">
+                <h3>मध्य खंड</h3>
+                <p><i class="fas fa-users"></i> कक्षा 6–8</p>
+                <p>Encouraging critical thinking, creativity, and subject exploration.</p>
+            </div>
+            <div class="program-card">
+                <h3>माध्यमिक खंड</h3>
+                <p><i class="fas fa-graduation-cap"></i> कक्षा 9–12</p>
+                <p>Preparing students for higher education and future careers with specialized subjects.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Facilities Section -->
+    <section id="facilities" class="container">
+        <h2 class="section-title">हमारी सुविधाएं</h2>
+        <div class="facilities-grid">
+            <div class="facility-card">
+                <div class="facility-img" style="background-image: url('https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=2022&auto=format&fit=crop')"></div>
+                <div class="facility-content">
+                    <h4>स्मार्ट क्लासरूम</h4>
+                    <p>डिजिटल बोर्ड और आधुनिक तकनीक से युक्त कक्षाएं</p>
+                </div>
+            </div>
+            <div class="facility-card">
+                <div class="facility-img" style="background-image: url('https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?q=80&w=2070&auto=format&fit=crop')"></div>
+                <div class="facility-content">
+                    <h4>पुस्तकालय</h4>
+                    <p>5000+ पुस्तकों का संग्रह, ज्ञान का भंडार</p>
+                </div>
+            </div>
+            <div class="facility-card">
+                <div class="facility-img" style="background-image: url('https://images.unsplash.com/photo-1577896851231-70ef18881754?q=80&w=2070&auto=format&fit=crop')"></div>
+                <div class="facility-content">
+                    <h4>विज्ञान प्रयोगशाला</h4>
+                    <p>भौतिकी, रसायन और जीवविज्ञान की अत्याधुनिक लैब</p>
+                </div>
+            </div>
+            <div class="facility-card">
+                <div class="facility-img" style="background-image: url('https://media.istockphoto.com/id/1483989816/photo/adult-arab-male-with-a-ponytail-meditating-in-a-yoga-class.jpg?s=1024x1024&w=is&k=20&c=uRmywr48m-SnwPpIQfZ0IQ9eJ3IU_aviFjFWg75BzXU=')"></div>
+                <div class="facility-content">
+                    <h4>योग एवं ध्यान</h4>
+                    <p>नियमित योगाभ्यास और ध्यान कक्षा</p>
+                </div>
+            </div>
+            <div class="facility-card">
+                <div class="facility-img" style="background-image: url('https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?q=80&w=2070&auto=format&fit=crop')"></div>
+                <div class="facility-content">
+                    <h4>कंप्यूटर लैब</h4>
+                    <p>आधुनिक कंप्यूटर और इंटरनेट सुविधा</p>
+                </div>
+            </div>
+            <div class="facility-card">
+                <div class="facility-img" style="background-image: url('https://images.unsplash.com/photo-1540479859555-17af45c78602?q=80&w=2070&auto=format&fit=crop')"></div>
+                <div class="facility-content">
+                    <h4>परिवहन</h4>
+                    <p>सुरक्षित बस सेवा और CCTV निगरानी</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="container">
+        <h2 class="section-title">फोटो गैलरी</h2>
+        <div class="gallery-grid">
+            <div class="gallery-item" style="background-image: url('https://media.istockphoto.com/id/1343472952/photo/happy-school-girls-walking-together-in-a-school-corridor-while-talking-to-each-other.jpg?s=1024x1024&w=is&k=20&c=jOwUSZNpWLcEtocNzrGNhh_8Iq1oFkosp3ZA4ZD8i4A=')">
+                <div class="gallery-caption">वार्षिक समारोह</div>
+            </div>
+            <div class="gallery-item" style="background-image: url('https://media.istockphoto.com/id/1744121102/photo/young-male-lecturer-helping-student-during-his-class-student-in-a-lecture-with-helpful-teacher.jpg?s=1024x1024&w=is&k=20&c=pjYLJ7tD8Eea6WBgXbUmyUKoaKp00hkzaQwZCWFHX_Q=')">
+                <div class="gallery-caption">स्पोर्ट्स डे</div>
+            </div>
+            <div class="gallery-item" style="background-image: url('https://images.unsplash.com/photo-1524178232363-1fb2b075b655?q=80&w=2070&auto=format&fit=crop')">
+                <div class="gallery-caption">कक्षा गतिविधियां</div>
+            </div>
+            <div class="gallery-item" style="background-image: url('snskriti karksrm.jpg')">
+                <div class="gallery-caption">सांस्कृतिक कार्यक्रम</div>
+            </div>
+            <div class="gallery-item" style="background-image: url('https://images.unsplash.com/photo-1577896851231-70ef18881754?q=80&w=2070&auto=format&fit=crop')">
+                <div class="gallery-caption">प्रयोगशाला कार्य</div>
+            </div>
+            <div class="gallery-item" style="background-image: url('https://media.istockphoto.com/id/2075583750/photo/group-of-indian-village-students-in-school-uniform-sitting-in-classroom-doing-homework.jpg?s=1024x1024&w=is&k=20&c=XFyDcAP4mwknevM1jMbWtQiwQnN8r5oj5VqIphJceJE=')">
+                <div class="gallery-caption">स्कूल परिसर</div>
+            </div>
+            <div class="gallery-item" style="background-image: url('https://media.istockphoto.com/id/1357012217/photo/family-meditating-at-park.jpg?s=1024x1024&w=is&k=20&c=SqCc04GHoJUaDIxS5KnSLtIsceCVJtvuHUC-hjCdNNU=')">
+                <div class="gallery-caption">योग दिवस</div>
+            </div>
+            <div class="gallery-item" style="background-image: url('https://media.istockphoto.com/id/2244743627/photo/teacher-guiding-students-through-mindfulness-hand-breathing-exercise-in-classroom.jpg?s=1024x1024&w=is&k=20&c=skZSFCFPTgp9eawlrnfzlfiJ-3Jf8C8eUtARHBnVApw=')">
+                <div class="gallery-caption">पुरस्कार वितरण</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Admission Section -->
+    <section id="admission" class="container">
+        <h2 class="section-title">प्रवेश सूचना</h2>
+        <div style="background: linear-gradient(135deg, #1e3c72, #2a5298); color: white; padding: 3rem; border-radius: 30px; text-align: center; margin-bottom: 2rem;">
+            <h3 style="font-size: 2rem; margin-bottom: 1rem; color: #ffd700;">Admissions Open 2026–2027</h3>
+            <p style="font-size: 1.2rem; margin-bottom: 2rem;">हम उन छात्रों का स्वागत करते हैं जो सीखने और बढ़ने के लिए उत्सुक हैं।</p>
+            <a href="#contact-form" class="btn" style="background: #ffd700; color: #1e3c72;">आज ही संपर्क करें</a>
+        </div>
+
+        <h3 style="margin: 2rem 0; text-align: center;">प्रवेश प्रक्रिया</h3>
+        <div class="process-steps">
+            <div class="step">
+                <div class="step-number">1</div>
+                <h4>आवेदन फॉर्म भरें</h4>
+                <p>ऑनलाइन या स्कूल से प्राप्त करें</p>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <h4>दस्तावेज जमा करें</h4>
+                <p>जन्म प्रमाण पत्र, फोटो, अंक तालिका</p>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <h4>साक्षात्कार / प्रवेश परीक्षा</h4>
+                <p>बच्चे और अभिभावक से बातचीत</p>
+            </div>
+            <div class="step">
+                <div class="step-number">4</div>
+                <h4>प्रवेश की पुष्टि</h4>
+                <p>शुल्क जमा करें और प्रवेश लें</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download Section -->
+    <section class="container">
+        <h2 class="section-title">डाउनलोड करें</h2>
+        <div class="download-grid">
+            <a href="#" class="download-card">
+                <i class="fas fa-file-pdf"></i>
+                <h4>प्रवेश फॉर्म</h4>
+            </a>
+            <a href="#" class="download-card">
+                <i class="fas fa-calendar-alt"></i>
+                <h4>शैक्षणिक कैलेंडर</h4>
+            </a>
+            <a href="#" class="download-card">
+                <i class="fas fa-book"></i>
+                <h4>पाठ्यक्रम</h4>
+            </a>
+            <a href="#" class="download-card">
+                <i class="fas fa-address-card"></i>
+                <h4>शुल्क संरचना</h4>
+            </a>
+            <a href="#" class="download-card">
+                <i class="fas fa-clock"></i>
+                <h4>समय-सारिणी</h4>
+            </a>
+        </div>
+    </section>
+
+    <!-- Online Services Section -->
+    <section class="container">
+        <h2 class="section-title">ऑनलाइन सेवाएं</h2>
+        <div class="portal-grid">
+            <a href="#" class="portal-card">
+                <i class="fas fa-rupee-sign"></i>
+                <h3>ऑनलाइन शुल्क भुगतान</h3>
+                <p>सुरक्षित और सरल तरीके से फीस जमा करें</p>
+            </a>
+            <a href="#" class="portal-card">
+                <i class="fas fa-user-graduate"></i>
+                <h3>छात्र पोर्टल</h3>
+                <p>परिणाम, समय-सारिणी और नोटिस देखें</p>
+            </a>
+            <a href="#" class="portal-card">
+                <i class="fas fa-chalkboard-teacher"></i>
+                <h3>शिक्षक पोर्टल</h3>
+                <p>उपस्थिति और मूल्यांकन प्रबंधन</p>
+            </a>
+            <a href="#" class="portal-card">
+                <i class="fas fa-blog"></i>
+                <h3>स्कूल ब्लॉग</h3>
+                <p>नवीनतम समाचार और गतिविधियां</p>
+            </a>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="container">
+        <h2 class="section-title">संपर्क करें</h2>
+        <div class="contact-wrapper">
+            <div class="contact-info">
+                <h3 style="font-size: 2rem; margin-bottom: 2rem;">हमसे मिलें</h3>
+                <div class="info-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <strong>पता:</strong>
+                        <p>लिटिल एंजल्स कॉन्वेंट स्कूल बली, निचलौल, महराजगंज</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-phone-alt"></i>
+                    <div>
+                        <strong>फोन:</strong>
+                        <p>+91 98765 43210 (प्रवेश हेतु)</p>
+                        <p>+91 98765 43211 (कार्यालय)</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-envelope"></i>
+                    <div>
+                        <strong>ईमेल:</strong>
+                        <p>info@school.in</p>
+                        <p>admission@school.in</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-clock"></i>
+                    <div>
+                        <strong>कार्यालय समय:</strong>
+                        <p>सोमवार - शनिवार: सुबह 8:00 - दोपहर 3:00</p>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-form" id="contact-form">
+                <h3 style="margin-bottom: 1.5rem;">प्रवेश हेतु पूछताछ</h3>
+                <div id="successMessage" class="success-message">
+                    <i class="fas fa-check-circle"></i> धन्यवाद! आपकी जानकारी WhatsApp पर भेज दी गई है।
+                </div>
+                <form id="contactForm">
+                    <div class="form-group">
+                        <input type="text" id="name" placeholder="आपका नाम" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" placeholder="ईमेल" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" id="phone" placeholder="फोन नंबर" required>
+                    </div>
+                    <div class="form-group">
+                        <select id="class">
+                            <option value="">कक्षा का चयन करें</option>
+                            <option value="नर्सरी">नर्सरी</option>
+                            <option value="एलकेजी">एलकेजी</option>
+                            <option value="यूकेजी">यूकेजी</option>
+                            <option value="कक्षा 1">कक्षा 1</option>
+                            <option value="कक्षा 2">कक्षा 2</option>
+                            <option value="कक्षा 3">कक्षा 3</option>
+                            <option value="कक्षा 4">कक्षा 4</option>
+                            <option value="कक्षा 5">कक्षा 5</option>
+                            <option value="कक्षा 6">कक्षा 6</option>
+                            <option value="कक्षा 7">कक्षा 7</option>
+                            <option value="कक्षा 8">कक्षा 8</option>
+                            <option value="कक्षा 9">कक्षा 9</option>
+                            <option value="कक्षा 10">कक्षा 10</option>
+                            <option value="कक्षा 11">कक्षा 11</option>
+                            <option value="कक्षा 12">कक्षा 12</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" rows="4" placeholder="आपका संदेश"></textarea>
+                    </div>
+                    <button type="submit" class="btn" style="width: 100%;">WhatsApp पर भेजें <i class="fab fa-whatsapp"></i></button>
+                </form>
+            </div>
+        </div>
+        
+        <!-- Google Map -->
+        <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28577.584565792855!2d83.727377!3d27.107855!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399c4b1b1b1b1b1b%3A0x123456789abcdef!2sNichlaul%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1711100000000!5m2!1sen!2sin" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div>
+                <h3 style="color: #ffd700;">लिटिल एंजल्स कॉन्वेंट स्कूल, </h3>
+                <p>निचलौल, महराजगंज</p>
+                <div class="footer-logo">
+                    <img src="https://images.unsplash.com/photo-1587987501183-33e43fdde781?q=80&w=884&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="School Logo">
+                </div>
+                <p style="margin-top: 1rem;">शिक्षा का उज्जवल केंद्र | Est. 2015</p>
+            </div>
+            <div>
+                <h4 style="color: #ffd700;">त्वरित लिंक</h4>
+                <ul style="list-style: none; margin-top: 1rem;">
+                    <li><a href="#home" style="color: white; text-decoration: none;">होम</a></li>
+                    <li><a href="#about" style="color: white; text-decoration: none;">हमारे बारे में</a></li>
+                    <li><a href="#academics" style="color: white; text-decoration: none;">शिक्षा</a></li>
+                    <li><a href="#facilities" style="color: white; text-decoration: none;">सुविधाएं</a></li>
+                    <li><a href="#gallery" style="color: white; text-decoration: none;">गैलरी</a></li>
+                    <li><a href="#admission" style="color: white; text-decoration: none;">प्रवेश</a></li>
+                    <li><a href="#contact" style="color: white; text-decoration: none;">संपर्क</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 style="color: #ffd700;">हमें फॉलो करें</h4>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+            <div>
+                <h4 style="color: #ffd700;">डाउनलोड</h4>
+                <ul style="list-style: none; margin-top: 1rem;">
+                    <li><a href="#" style="color: white; text-decoration: none;">प्रवेश फॉर्म</a></li>
+                    <li><a href="#" style="color: white; text-decoration: none;">शैक्षणिक कैलेंडर</a></li>
+                    <li><a href="#" style="color: white; text-decoration: none;">शुल्क संरचना</a></li>
+                    <li><a href="#" style="color: white; text-decoration: none;">पाठ्यक्रम</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>लिटिल एंजल्स कॉन्वेंट स्कूल  बाली,।</p>
+            <p style="margin-top: 0.5rem;">Design & Developed by Grand Mandola Digital</p>
+        </div>
+    </footer>
+
+    <!-- Floating Buttons -->
+    <div class="float-buttons">
+        <a href="https://wa.me/919876543210?text=नमस्ते,%20लिटिल%20 एंजल्स %20कॉन्वेंट%20स्कूल%20में%20प्रवेश%20के%20बारे%20में%20जानकारी%20चाहिए।" class="float-btn whatsapp" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="tel:+919876543210" class="float-btn call">
+            <i class="fas fa-phone-alt"></i>
+        </a>
+    </div>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                    
+                    // Update active class
+                    document.querySelectorAll('.nav-menu a').forEach(link => {
+                        link.classList.remove('active');
+                    });
+                    this.classList.add('active');
+                }
+            });
+        });
+
+        // WhatsApp Form Submission
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form values
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const studentClass = document.getElementById('class').value;
+            const message = document.getElementById('message').value;
+            
+            // Validation
+            if (!name || !email || !phone || !studentClass) {
+                alert('कृपया सभी आवश्यक जानकारी भरें');
+                return;
+            }
+            
+            // Format WhatsApp Message
+            const whatsappMessage = `*नया प्रवेश पूछताछ*%0a%0a` +
+                `*नाम:* ${name}%0a` +
+                `*ईमेल:* ${email}%0a` +
+                `*फोन:* ${phone}%0a` +
+                `*कक्षा:* ${studentClass}%0a` +
+                `*संदेश:* ${message || 'कोई संदेश नहीं'}`;
+            
+            // WhatsApp Number (Change this to your actual number)
+            const whatsappNumber = '919876543210'; // यहां अपना WhatsApp नंबर डालें (बिना + के)
+            
+            // Open WhatsApp
+            window.open(`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`, '_blank');
+            
+            // Show success message
+            const successMsg = document.getElementById('successMessage');
+            successMsg.style.display = 'block';
+            
+            // Reset form
+            this.reset();
+            
+            // Hide success message after 5 seconds
+            setTimeout(() => {
+                successMsg.style.display = 'none';
+            }, 5000);
+        });
+
+        // Mobile menu toggle
+        document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
+            const navMenu = document.querySelector('.nav-menu');
+            if (navMenu.style.display === 'flex') {
+                navMenu.style.display = 'none';
+            } else {
+                navMenu.style.display = 'flex';
+                navMenu.style.flexDirection = 'column';
+                navMenu.style.position = 'absolute';
+                navMenu.style.top = '70px';
+                navMenu.style.left = '0';
+                navMenu.style.width = '100%';
+                navMenu.style.background = '#1e3c72';
+                navMenu.style.padding = '1rem';
+                navMenu.style.gap = '1rem';
+                navMenu.style.zIndex = '1000';
+            }
+        });
+
+        // Active link on scroll
+        window.addEventListener('scroll', function() {
+            let sections = document.querySelectorAll('section[id]');
+            let scrollY = window.pageYOffset;
+
+            sections.forEach(section => {
+                const sectionHeight = section.offsetHeight;
+                const sectionTop = section.offsetTop - 150;
+                const sectionId = section.getAttribute('id');
+                
+                if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+                    document.querySelector('.nav-menu a[href="#' + sectionId + '"]')?.classList.add('active');
+                } else {
+                    document.querySelector('.nav-menu a[href="#' + sectionId + '"]')?.classList.remove('active');
+                }
+            });
+        });
+
+        // Gallery image click
+        document.querySelectorAll('.gallery-item').forEach(item => {
+            item.addEventListener('click', function() {
+                const caption = this.querySelector('.gallery-caption').innerText;
+                alert(caption + ' की फोटो खोली गई');
+            });
+        });
+    </script>
+</body>
+</html>
