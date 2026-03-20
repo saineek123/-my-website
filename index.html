@@ -1,95 +1,683 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Amit Saini Dashboard</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Amit Saini | Developer Portfolio Hub</title>
+  <!-- Google Fonts & Smooth Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-<style>
-body {
-    margin: 0;
-    font-family: 'Segoe UI', sans-serif;
-    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-    color: white;
-    text-align: center;
-}
+    body {
+      font-family: 'Inter', 'Segoe UI', sans-serif;
+      background: radial-gradient(circle at 10% 30%, #0a0f1e, #05080f);
+      color: #edf2ff;
+      line-height: 1.5;
+      scroll-behavior: smooth;
+    }
 
-h1 {
-    margin-top: 30px;
-    font-size: 40px;
-    color: #00ffd5;
-}
+    /* animated gradient orb */
+    .bg-orb {
+      position: fixed;
+      width: 70vw;
+      height: 70vw;
+      background: radial-gradient(circle, rgba(0,255,213,0.12) 0%, rgba(0,150,255,0) 70%);
+      top: -20vh;
+      right: -20vw;
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 0;
+      filter: blur(80px);
+      animation: floatOrb 18s infinite alternate ease-in-out;
+    }
 
-.container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    padding: 20px;
-}
+    .bg-orb2 {
+      left: -15vw;
+      bottom: -10vh;
+      top: auto;
+      right: auto;
+      width: 60vw;
+      height: 60vw;
+      background: radial-gradient(circle, rgba(100,80,255,0.1) 0%, rgba(0,0,0,0) 70%);
+      filter: blur(90px);
+      animation: floatOrb2 22s infinite alternate;
+    }
 
-.card {
-    background: rgba(255,255,255,0.1);
-    backdrop-filter: blur(10px);
-    border-radius: 15px;
-    padding: 20px;
-    width: 220px;
-}
+    @keyframes floatOrb {
+      0% { transform: translate(0, 0) scale(1); opacity: 0.5; }
+      100% { transform: translate(5%, 5%) scale(1.2); opacity: 0.8; }
+    }
+    @keyframes floatOrb2 {
+      0% { transform: translate(0, 0) scale(1); opacity: 0.3; }
+      100% { transform: translate(-3%, -5%) scale(1.3); opacity: 0.6; }
+    }
 
-a {
-    display: block;
-    margin: 10px 0;
-    padding: 10px;
-    background: #00ffd5;
-    color: black;
-    text-decoration: none;
-    border-radius: 8px;
-    font-weight: bold;
-}
-</style>
+    .wrapper {
+      max-width: 1300px;
+      margin: 0 auto;
+      padding: 1.8rem 2rem 4rem;
+      position: relative;
+      z-index: 2;
+    }
+
+    /* header / hero section */
+    .hero {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 3rem;
+      border-bottom: 1px solid rgba(0, 255, 213, 0.25);
+      padding-bottom: 2rem;
+    }
+    .badge-area {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    .status-badge {
+      background: rgba(0, 255, 213, 0.12);
+      backdrop-filter: blur(8px);
+      padding: 0.3rem 1rem;
+      border-radius: 40px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      border: 1px solid rgba(0, 255, 213, 0.4);
+      letter-spacing: 0.3px;
+    }
+    .status-badge i {
+      margin-right: 6px;
+      font-size: 0.75rem;
+      color: #00ffd5;
+    }
+    h1 {
+      font-size: 3.4rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, #FFFFFF, #00ffd5, #8a6eff);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      letter-spacing: -0.02em;
+      margin: 0.5rem 0 0.3rem;
+    }
+    .title-line {
+      font-size: 1.2rem;
+      font-weight: 400;
+      color: #a0b4da;
+      border-left: 3px solid #00ffd5;
+      padding-left: 1rem;
+      margin: 0.5rem 0;
+    }
+    .hero-stats {
+      display: flex;
+      gap: 2rem;
+      margin-top: 1rem;
+    }
+    .stat {
+      text-align: left;
+    }
+    .stat-number {
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: #00ffd5;
+      line-height: 1;
+    }
+    .stat-label {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      opacity: 0.7;
+    }
+
+    /* filter & search */
+    .tools-panel {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      margin: 2rem 0 2rem;
+      gap: 1rem;
+    }
+    .search-box {
+      background: rgba(20, 30, 45, 0.7);
+      backdrop-filter: blur(8px);
+      border-radius: 60px;
+      padding: 0.3rem 0.3rem 0.3rem 1.5rem;
+      display: flex;
+      align-items: center;
+      border: 1px solid rgba(0,255,213,0.3);
+      transition: all 0.2s;
+    }
+    .search-box i {
+      color: #00ffd5;
+      font-size: 1rem;
+    }
+    .search-box input {
+      background: transparent;
+      border: none;
+      padding: 0.7rem 0.8rem;
+      font-size: 0.95rem;
+      width: 220px;
+      color: white;
+      outline: none;
+      font-family: 'Inter', monospace;
+    }
+    .search-box input::placeholder {
+      color: #8e9fc3;
+    }
+    .filter-buttons {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .filter-chip {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: 40px;
+      padding: 0.5rem 1.2rem;
+      font-size: 0.85rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: 0.2s;
+      backdrop-filter: blur(4px);
+    }
+    .filter-chip.active, .filter-chip:hover {
+      background: #00ffd5;
+      color: #0a0f1e;
+      border-color: #00ffd5;
+      box-shadow: 0 4px 12px rgba(0,255,213,0.3);
+    }
+    .add-card-btn {
+      background: linear-gradient(95deg, #1e2a3a, #0f1722);
+      border: 1px solid #00ffd5;
+      border-radius: 40px;
+      padding: 0.5rem 1.4rem;
+      font-weight: 600;
+      font-size: 0.85rem;
+      color: #00ffd5;
+      cursor: pointer;
+      transition: 0.2s;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .add-card-btn:hover {
+      background: #00ffd5;
+      color: #0a0f1e;
+      transform: scale(1.02);
+    }
+
+    /* dynamic card grid */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.8rem;
+      margin-top: 1rem;
+    }
+    .project-card {
+      background: rgba(18, 28, 40, 0.65);
+      backdrop-filter: blur(12px);
+      border-radius: 28px;
+      padding: 1.6rem 1.4rem;
+      border: 1px solid rgba(0, 255, 213, 0.25);
+      transition: all 0.3s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+      box-shadow: 0 12px 28px -12px rgba(0,0,0,0.4);
+      position: relative;
+      overflow: hidden;
+    }
+    .project-card:hover {
+      transform: translateY(-6px);
+      border-color: #00ffd5;
+      background: rgba(25, 40, 55, 0.8);
+      box-shadow: 0 24px 36px -12px rgba(0,255,213,0.2);
+    }
+    .card-icon {
+      font-size: 2.2rem;
+      background: rgba(0,255,213,0.15);
+      width: 52px;
+      height: 52px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 20px;
+      margin-bottom: 1rem;
+      color: #00ffd5;
+    }
+    .card-title {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      letter-spacing: -0.3px;
+    }
+    .card-file {
+      font-size: 0.75rem;
+      font-family: monospace;
+      background: rgba(0,0,0,0.4);
+      display: inline-block;
+      padding: 0.2rem 0.6rem;
+      border-radius: 30px;
+      margin: 0.6rem 0;
+      color: #b9d0ff;
+    }
+    .card-actions {
+      display: flex;
+      gap: 1rem;
+      margin-top: 1.2rem;
+      align-items: center;
+    }
+    .btn-link {
+      background: linear-gradient(110deg, #00ccb0, #0099cc);
+      border: none;
+      padding: 0.5rem 1.2rem;
+      border-radius: 40px;
+      font-weight: 600;
+      text-decoration: none;
+      color: #0a0f1e;
+      font-size: 0.8rem;
+      transition: 0.2s;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      cursor: pointer;
+    }
+    .btn-link i {
+      font-size: 0.8rem;
+    }
+    .btn-link:hover {
+      background: #00ffd5;
+      transform: scale(0.97);
+      box-shadow: 0 0 10px #00ffd580;
+    }
+    .delete-card {
+      background: rgba(255, 70, 90, 0.2);
+      border: 1px solid rgba(255,90,100,0.5);
+      color: #ff9eaa;
+      padding: 0.4rem 1rem;
+      border-radius: 30px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+    .delete-card:hover {
+      background: #ff4d6d;
+      color: white;
+      border-color: #ff4d6d;
+    }
+    .empty-state {
+      text-align: center;
+      padding: 3rem;
+      background: rgba(255,255,255,0.03);
+      border-radius: 2rem;
+      margin-top: 2rem;
+      backdrop-filter: blur(4px);
+    }
+    .empty-state i {
+      font-size: 3rem;
+      opacity: 0.5;
+      margin-bottom: 1rem;
+    }
+    footer {
+      margin-top: 4rem;
+      text-align: center;
+      font-size: 0.8rem;
+      opacity: 0.6;
+      border-top: 1px solid rgba(0,255,213,0.2);
+      padding-top: 2rem;
+    }
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.7);
+      backdrop-filter: blur(8px);
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+    .modal-card {
+      background: #111a24;
+      border-radius: 2rem;
+      max-width: 450px;
+      width: 90%;
+      padding: 2rem;
+      border: 1px solid #00ffd5;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+    }
+    .modal-card h3 {
+      font-size: 1.6rem;
+      margin-bottom: 1rem;
+    }
+    .modal-card input {
+      width: 100%;
+      background: #1e2a36;
+      border: 1px solid #3e5568;
+      padding: 0.8rem;
+      border-radius: 1rem;
+      margin: 0.8rem 0;
+      color: white;
+      font-size: 1rem;
+    }
+    .modal-buttons {
+      display: flex;
+      justify-content: flex-end;
+      gap: 12px;
+      margin-top: 1rem;
+    }
+    .modal-buttons button {
+      padding: 0.5rem 1.2rem;
+      border-radius: 2rem;
+      cursor: pointer;
+      border: none;
+      font-weight: 600;
+    }
+    #modalConfirm {
+      background: #00ffd5;
+      color: black;
+    }
+    #modalCancel {
+      background: #334155;
+      color: white;
+    }
+    @media (max-width: 680px) {
+      .wrapper { padding: 1rem; }
+      h1 { font-size: 2.3rem; }
+      .hero { flex-direction: column; align-items: start; gap: 1rem; }
+    }
+  </style>
 </head>
-
 <body>
+<div class="bg-orb"></div>
+<div class="bg-orb2"></div>
 
-<h1>✨ Welcome to Amit Saini</h1>
+<div class="wrapper">
+  <div class="hero">
+    <div>
+      <div class="badge-area">
+        <span class="status-badge"><i class="fas fa-code"></i> Full Stack Architect</span>
+        <span class="status-badge"><i class="fas fa-globe"></i> Live Projects</span>
+        <span class="status-badge"><i class="fas fa-bolt"></i> Creative Dev</span>
+      </div>
+      <h1>Amit Saini</h1>
+      <div class="title-line">crafting digital experiences · interactive dashboards · hospitality tech</div>
+      <div class="hero-stats">
+        <div class="stat"><div class="stat-number" id="totalProjectsCount">0</div><div class="stat-label">active portals</div></div>
+        <div class="stat"><div class="stat-number">✦ 6+</div><div class="stat-label">concepts</div></div>
+        <div class="stat"><div class="stat-number"><i class="fas fa-sync-alt" style="font-size:1rem"></i> live</div><div class="stat-label">dynamic manager</div></div>
+      </div>
+    </div>
+    <div class="add-card-btn" id="openModalBtn">
+      <i class="fas fa-plus-circle"></i> Add new page
+    </div>
+  </div>
 
-<div class="container">
-<div class="card">
-<h3>🌐 My Pages</h3>
+  <div class="tools-panel">
+    <div class="search-box">
+      <i class="fas fa-search"></i>
+      <input type="text" id="searchInput" placeholder="Search by name or file..." autocomplete="off">
+    </div>
+    <div class="filter-buttons">
+      <div class="filter-chip active" data-filter="all">📁 All projects</div>
+      <div class="filter-chip" data-filter="resort">🏨 Resorts</div>
+      <div class="filter-chip" data-filter="school">📚 Schools</div>
+      <div class="filter-chip" data-filter="hotel">🍽️ Hotels</div>
+    </div>
+  </div>
 
-<div id="links"></div>
-
+  <div id="projectsGrid" class="projects-grid"></div>
+  <footer>
+    <i class="fas fa-dharmachakra"></i> developer hub — powered by localStorage · real-time card management<br>
+    <span style="font-size:0.7rem">⚡ click any card to preview · add new portals on the fly</span>
+  </footer>
 </div>
+
+<!-- Modal for adding new page -->
+<div id="addModal" class="modal">
+  <div class="modal-card">
+    <h3><i class="fas fa-layer-group"></i> New web portal</h3>
+    <input type="text" id="newPageName" placeholder="Display name (e.g. 'Sunset Villa')">
+    <input type="text" id="newPageFile" placeholder="Filename (e.g. 'sunset.html')">
+    <div class="modal-buttons">
+      <button id="modalCancel">Cancel</button>
+      <button id="modalConfirm">➕ Create & Publish</button>
+    </div>
+  </div>
 </div>
 
 <script>
-let defaultPages = [
-    {name: "Mandola Resorts", file: "index.html"},
-    {name: "सन शाइन पब्लिक", file: "hotel.html"},
-    {name: "लिटिल एंजल्स", file: "school.html"},
-    {name: "Shaurya Inn", file: "team.html"},
-    {name: "Little Angels", file: "Little.html"},
-    {name: "Hotel Ram Bhawan", file: "mk.html"}
-];
+  // ---------- DATA MODEL ----------
+  let pagesData = [];   // array of { name, file, enabled, category? (inferred) }
+  let currentFilter = "all";
+  let searchQuery = "";
 
-let saved = JSON.parse(localStorage.getItem("pages"));
+  // default base pages with enriched category (for filtering)
+  const defaultPagesRaw = [
+    {name: "Mandola Resorts", file: "index.html", category: "resort"},
+    {name: "सन शाइन पब्लिक", file: "hotel.html", category: "hotel"},
+    {name: "लिटिल एंजल्स", file: "school.html", category: "school"},
+    {name: "Shaurya Inn", file: "team.html", category: "hotel"},
+    {name: "Little Angels", file: "Little.html", category: "school"},
+    {name: "Hotel Ram Bhawan", file: "mk.html", category: "hotel"}
+  ];
 
-if(!saved){
-    let setup = defaultPages.map(p => ({...p, enabled: true}));
-    localStorage.setItem("pages", JSON.stringify(setup));
-    saved = setup;
-}
+  // Helper: infer category from name or file if needed
+  function inferCategory(item) {
+    if (item.category) return item.category;
+    const nameLower = item.name.toLowerCase();
+    const fileLower = item.file.toLowerCase();
+    if (nameLower.includes("resort") || fileLower.includes("resort")) return "resort";
+    if (nameLower.includes("school") || nameLower.includes("angels") || fileLower.includes("school") || nameLower.includes("little")) return "school";
+    if (nameLower.includes("hotel") || nameLower.includes("inn") || nameLower.includes("bhawan") || fileLower.includes("hotel")) return "hotel";
+    return "resort"; // default fallback
+  }
 
-let container = document.getElementById("links");
-
-saved.forEach(p => {
-    if(p.enabled){
-        let a = document.createElement("a");
-        a.href = p.file;
-        a.innerText = p.name;
-        container.appendChild(a);
+  // load from localStorage or init
+  function loadData() {
+    let stored = localStorage.getItem("amit_dashboard_pages");
+    if (!stored) {
+      // initial setup with enabled true + assign categories
+      pagesData = defaultPagesRaw.map(p => ({
+        name: p.name,
+        file: p.file,
+        enabled: true,
+        category: p.category || inferCategory(p)
+      }));
+      saveToLocal();
+    } else {
+      pagesData = JSON.parse(stored);
+      // ensure legacy entries have category field
+      let needUpdate = false;
+      pagesData.forEach(p => {
+        if (!p.category) {
+          p.category = inferCategory(p);
+          needUpdate = true;
+        }
+        if (p.enabled === undefined) p.enabled = true;
+      });
+      if (needUpdate) saveToLocal();
     }
-});
-</script>
+    updateProjectCounter();
+  }
 
+  function saveToLocal() {
+    localStorage.setItem("amit_dashboard_pages", JSON.stringify(pagesData));
+    updateProjectCounter();
+  }
+
+  function updateProjectCounter() {
+    const enabledCount = pagesData.filter(p => p.enabled === true).length;
+    const counterSpan = document.getElementById("totalProjectsCount");
+    if (counterSpan) counterSpan.innerText = enabledCount;
+  }
+
+  // add new page
+  function addNewPage(name, file) {
+    if (!name.trim() || !file.trim()) {
+      alert("Please enter both name and filename 🚀");
+      return false;
+    }
+    // avoid duplicate file name? optional warning
+    const existing = pagesData.find(p => p.file === file.trim());
+    if (existing) {
+      alert(`⚠️ File "${file}" already exists. Choose unique filename.`);
+      return false;
+    }
+    const newPage = {
+      name: name.trim(),
+      file: file.trim(),
+      enabled: true,
+      category: inferCategory({ name: name.trim(), file: file.trim() })
+    };
+    pagesData.push(newPage);
+    saveToLocal();
+    renderCards();    // refresh UI
+    return true;
+  }
+
+  // delete page (disable, but we actually remove from array)
+  function deletePage(fileToDelete) {
+    if (confirm(`Are you sure you want to remove "${pagesData.find(p => p.file === fileToDelete)?.name}" from dashboard?`)) {
+      pagesData = pagesData.filter(p => p.file !== fileToDelete);
+      saveToLocal();
+      renderCards();
+    }
+  }
+
+  // filter & search logic
+  function filterAndSearch() {
+    let filtered = pagesData.filter(p => p.enabled === true);  // only active cards
+    
+    // apply category filter
+    if (currentFilter !== "all") {
+      filtered = filtered.filter(p => p.category === currentFilter);
+    }
+    
+    // apply search (name or file)
+    if (searchQuery.trim() !== "") {
+      const q = searchQuery.trim().toLowerCase();
+      filtered = filtered.filter(p => p.name.toLowerCase().includes(q) || p.file.toLowerCase().includes(q));
+    }
+    return filtered;
+  }
+
+  // render cards dynamically with modern glassmorphism
+  function renderCards() {
+    const grid = document.getElementById("projectsGrid");
+    const visibleItems = filterAndSearch();
+    
+    if (visibleItems.length === 0) {
+      grid.innerHTML = `
+        <div class="empty-state">
+          <i class="fas fa-compass"></i>
+          <h3>✨ No matching portals</h3>
+          <p>Try adjusting filter or add a new page using the button above.</p>
+        </div>`;
+      return;
+    }
+    
+    grid.innerHTML = "";
+    visibleItems.forEach(item => {
+      const card = document.createElement("div");
+      card.className = "project-card";
+      
+      // choose icon based on category
+      let iconHtml = `<i class="fas fa-globe"></i>`;
+      if (item.category === "resort") iconHtml = `<i class="fas fa-umbrella-beach"></i>`;
+      else if (item.category === "school") iconHtml = `<i class="fas fa-chalkboard-user"></i>`;
+      else if (item.category === "hotel") iconHtml = `<i class="fas fa-hotel"></i>`;
+      
+      card.innerHTML = `
+        <div class="card-icon">${iconHtml}</div>
+        <div class="card-title">${escapeHtml(item.name)}</div>
+        <div class="card-file"><i class="far fa-file-code"></i> ${escapeHtml(item.file)}</div>
+        <div class="card-actions">
+          <a class="btn-link" href="${escapeHtml(item.file)}" target="_blank"><i class="fas fa-external-link-alt"></i> Visit</a>
+          <button class="delete-card" data-file="${escapeHtml(item.file)}"><i class="fas fa-trash-alt"></i> Remove</button>
+        </div>
+      `;
+      grid.appendChild(card);
+    });
+    
+    // attach delete events
+    document.querySelectorAll(".delete-card").forEach(btn => {
+      btn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        const file = btn.getAttribute("data-file");
+        deletePage(file);
+      });
+    });
+  }
+  
+  function escapeHtml(str) { return str.replace(/[&<>]/g, function(m){if(m==='&') return '&amp;'; if(m==='<') return '&lt;'; if(m==='>') return '&gt;'; return m;}); }
+  
+  // setup filter chips + search listener
+  function bindEvents() {
+    const chips = document.querySelectorAll(".filter-chip");
+    chips.forEach(chip => {
+      chip.addEventListener("click", () => {
+        chips.forEach(c => c.classList.remove("active"));
+        chip.classList.add("active");
+        currentFilter = chip.getAttribute("data-filter");
+        renderCards();
+      });
+    });
+    
+    const searchInput = document.getElementById("searchInput");
+    searchInput.addEventListener("input", (e) => {
+      searchQuery = e.target.value;
+      renderCards();
+    });
+    
+    // Modal logic
+    const modal = document.getElementById("addModal");
+    const openBtn = document.getElementById("openModalBtn");
+    const cancelBtn = document.getElementById("modalCancel");
+    const confirmBtn = document.getElementById("modalConfirm");
+    const nameInput = document.getElementById("newPageName");
+    const fileInput = document.getElementById("newPageFile");
+    
+    openBtn.addEventListener("click", () => {
+      modal.style.display = "flex";
+      nameInput.value = "";
+      fileInput.value = "";
+    });
+    
+    const closeModal = () => { modal.style.display = "none"; };
+    cancelBtn.addEventListener("click", closeModal);
+    window.addEventListener("click", (e) => { if (e.target === modal) closeModal(); });
+    
+    confirmBtn.addEventListener("click", () => {
+      const newName = nameInput.value.trim();
+      const newFile = fileInput.value.trim();
+      if (addNewPage(newName, newFile)) {
+        closeModal();
+        renderCards();
+      }
+    });
+  }
+  
+  // also refresh when storage changes from other tabs? optional but nice
+  window.addEventListener("storage", (e) => {
+    if (e.key === "amit_dashboard_pages") {
+      loadData();
+      renderCards();
+    }
+  });
+  
+  function init() {
+    loadData();
+    renderCards();
+    bindEvents();
+  }
+  
+  init();
+</script>
 </body>
 </html>
