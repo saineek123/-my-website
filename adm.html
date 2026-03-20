@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Admin Panel</title>
+
+<style>
+body {
+    font-family: Arial;
+    background: #111;
+    color: white;
+    text-align: center;
+}
+
+h1 {
+    margin-top: 20px;
+}
+
+.container {
+    margin-top: 30px;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.allow { background: #00ff88; }
+.block { background: #ff4444; }
+
+.card {
+    background: #222;
+    margin: 10px auto;
+    padding: 15px;
+    width: 300px;
+    border-radius: 10px;
+}
+</style>
+</head>
+
+<body>
+
+<h1>🔐 Admin Control Panel</h1>
+
+<div class="container" id="adminPanel"></div>
+
+<script>
+
+let pages = [
+    {name: "Mandola Resorts", file: "index.html", enabled: true},
+    {name: "Sun Shine Public", file: "hotel.html", enabled: true},
+    {name: "Little Angels", file: "school.html", enabled: true},
+    {name: "Shaurya Inn", file: "team.html", enabled: true},
+    {name: "Little Angels 2", file: "Little.html", enabled: true},
+    {name: "Hotel Ram Bhawan", file: "mk.html", enabled: true}
+];
+
+function renderAdmin() {
+    let panel = document.getElementById("adminPanel");
+    panel.innerHTML = "";
+
+    pages.forEach((page, index) => {
+        let div = document.createElement("div");
+        div.className = "card";
+
+        div.innerHTML = `
+            <h3>${page.name}</h3>
+            <p>Status: ${page.enabled ? "✅ Enabled" : "❌ Disabled"}</p>
+            <button class="allow" onclick="toggle(${index}, true)">Enable</button>
+            <button class="block" onclick="toggle(${index}, false)">Disable</button>
+        `;
+
+        panel.appendChild(div);
+    });
+}
+
+function toggle(index, state) {
+    pages[index].enabled = state;
+    localStorage.setItem("pages", JSON.stringify(pages));
+    renderAdmin();
+}
+
+function loadData() {
+    let saved = localStorage.getItem("pages");
+    if (saved) {
+        pages = JSON.parse(saved);
+    }
+}
+
+loadData();
+renderAdmin();
+
+</script>
+
+</body>
+</html>
+
+
+
+<!-- USER SIDE DASHBOARD UPDATE -->
+
+<!-- Replace your links with this script -->
+
+<script>
+let pages = JSON.parse(localStorage.getItem("pages")) || [];
+
+function checkAccess(file) {
+    let page = pages.find(p => p.file === file);
+    return page ? page.enabled : true;
+}
+
+// Example usage:
+// if(checkAccess('index.html')) show link else hide
+</script>
