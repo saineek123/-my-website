@@ -1,0 +1,985 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <meta name="description" content="Akshay Hostel & Stay - Premium furnished rooms in Lucknow with WiFi, CCTV, housekeeping. Best hostel near IISEC College.">
+    <title>Akshay Hostel & Stay | Premium Accommodation Lucknow</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background: #ffffff;
+            color: #1a1a2e;
+            overflow-x: hidden;
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #e67e22;
+            border-radius: 10px;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+
+        .section {
+            padding: 80px 0;
+        }
+
+        .section-dark {
+            background: #fef9f2;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 16px;
+            color: #1a1a2e;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: #666;
+            font-size: 1.1rem;
+            margin-bottom: 48px;
+        }
+
+        .btn-primary {
+            background: #e67e22;
+            color: white;
+            padding: 14px 32px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .btn-primary:hover {
+            background: #d35400;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(230, 126, 34, 0.3);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid #e67e22;
+            color: #e67e22;
+            padding: 12px 28px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-outline:hover {
+            background: #e67e22;
+            color: white;
+        }
+
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
+            z-index: 1000;
+            transition: all 0.3s;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 18px 40px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .logo h1 {
+            font-size: 1.8rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #e67e22, #f39c12);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .logo p {
+            font-size: 0.75rem;
+            color: #666;
+            letter-spacing: 1px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #2c3e50;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #e67e22;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            font-size: 1.8rem;
+            cursor: pointer;
+            color: #e67e22;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            margin-top: 76px;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            color: white;
+            max-width: 600px;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+
+        .hero-content .highlight {
+            color: #e67e22;
+        }
+
+        .hero-content p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            margin-bottom: 32px;
+            line-height: 1.6;
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 40px;
+            margin-top: 40px;
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 800;
+            color: #e67e22;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 30px 20px;
+            border-radius: 20px;
+            text-align: center;
+            transition: all 0.3s;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+            border: 1px solid #f0f0f0;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(230, 126, 34, 0.1);
+            border-color: #e67e22;
+        }
+
+        .feature-card i {
+            font-size: 2.5rem;
+            color: #e67e22;
+            margin-bottom: 15px;
+        }
+
+        .rooms-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+        }
+
+        .room-card {
+            background: white;
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s;
+        }
+
+        .room-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+        }
+
+        .room-image {
+            height: 260px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .room-badge {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: #e67e22;
+            color: white;
+            padding: 6px 14px;
+            border-radius: 30px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .room-info {
+            padding: 28px;
+        }
+
+        .room-info h3 {
+            font-size: 1.6rem;
+            margin-bottom: 8px;
+        }
+
+        .room-price {
+            font-size: 2rem;
+            font-weight: 800;
+            color: #e67e22;
+            margin: 15px 0;
+        }
+
+        .amenities {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin: 20px 0;
+        }
+
+        .amenity {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.85rem;
+            background: #f8f9fa;
+            padding: 5px 12px;
+            border-radius: 20px;
+        }
+
+        .facilities-showcase {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .facility-item {
+            background: white;
+            padding: 35px 25px;
+            border-radius: 20px;
+            text-align: center;
+            transition: all 0.3s;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .facility-item i {
+            font-size: 3rem;
+            color: #e67e22;
+            margin-bottom: 20px;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .gallery-item {
+            height: 280px;
+            border-radius: 20px;
+            background-size: cover;
+            background-position: center;
+            cursor: pointer;
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .gallery-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.3);
+            opacity: 0;
+            transition: 0.3s;
+        }
+
+        .gallery-item:hover::before {
+            opacity: 1;
+        }
+
+        .contact-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            background: white;
+            border-radius: 30px;
+            padding: 50px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+        }
+
+        .contact-info-item {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            padding: 20px;
+            background: #fef9f2;
+            border-radius: 20px;
+            margin-bottom: 20px;
+            transition: 0.3s;
+        }
+
+        .contact-icon {
+            width: 55px;
+            height: 55px;
+            background: #e67e22;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.4rem;
+        }
+
+        .contact-form input,
+        .contact-form select,
+        .contact-form textarea {
+            width: 100%;
+            padding: 14px 18px;
+            margin-bottom: 18px;
+            border: 1px solid #e0e0e0;
+            border-radius: 12px;
+            font-family: inherit;
+            transition: 0.3s;
+        }
+
+        .contact-form input:focus,
+        .contact-form select:focus,
+        .contact-form textarea:focus {
+            outline: none;
+            border-color: #e67e22;
+            box-shadow: 0 0 0 3px rgba(230, 126, 34, 0.1);
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 40px;
+        }
+
+        .pricing-card {
+            background: white;
+            border-radius: 30px;
+            padding: 40px;
+            text-align: center;
+            transition: 0.3s;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            border: 1px solid #f0f0f0;
+        }
+
+        .pricing-card.featured {
+            border: 2px solid #e67e22;
+            transform: scale(1.02);
+        }
+
+        .pricing-amount {
+            font-size: 3rem;
+            font-weight: 800;
+            color: #e67e22;
+            margin: 20px 0;
+        }
+
+        .floating-wa {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #25d366;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 30px;
+            box-shadow: 0 5px 20px rgba(37, 211, 102, 0.4);
+            z-index: 999;
+            transition: 0.3s;
+        }
+
+        .floating-call {
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+            background: #e67e22;
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+            box-shadow: 0 5px 20px rgba(230, 126, 34, 0.4);
+            z-index: 999;
+            transition: 0.3s;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .testimonial-card {
+            background: white;
+            padding: 30px;
+            border-radius: 24px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .stars {
+            color: #f39c12;
+            margin-bottom: 15px;
+        }
+
+        .faq-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 25px;
+        }
+
+        .faq-item {
+            background: white;
+            padding: 25px;
+            border-radius: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.8);
+            z-index: 2000;
+            justify-content: center;
+            align-items: center;
+        }
+        .modal-content {
+            background: white;
+            padding: 40px;
+            border-radius: 30px;
+            max-width: 500px;
+            width: 90%;
+            text-align: center;
+            animation: slideIn 0.3s ease;
+        }
+        @keyframes slideIn {
+            from {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        .modal-content i {
+            font-size: 4rem;
+            color: #2ecc71;
+            margin-bottom: 20px;
+        }
+        .modal-content h3 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+        }
+        .modal-btn {
+            margin-top: 20px;
+            background: #e67e22;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        footer {
+            background: #1a1a2e;
+            color: white;
+            padding: 50px 0 20px;
+        }
+
+        @media (max-width: 968px) {
+            .container {
+                padding: 0 20px;
+            }
+            .section {
+                padding: 50px 0;
+            }
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                background: white;
+                flex-direction: column;
+                padding: 20px;
+                box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            }
+            .nav-links.active {
+                display: flex;
+            }
+            .mobile-menu-btn {
+                display: block;
+            }
+            .hero-content h1 {
+                font-size: 2.2rem;
+            }
+            .contact-wrapper {
+                grid-template-columns: 1fr;
+                padding: 30px;
+            }
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="floating-call"><i class="fas fa-phone-alt"></i></div>
+<a href="https://wa.me/919876543210?text=Hi! I'm interested in booking a room at Akshay Hostel" class="floating-wa" target="_blank"><i class="fab fa-whatsapp"></i></a>
+
+<nav class="navbar">
+    <div class="nav-container">
+        <div class="logo">
+            <h1>AKSHAY</h1>
+            <p>HOSTEL & STAY</p>
+        </div>
+        <div class="mobile-menu-btn" id="menuToggle">
+            <i class="fas fa-bars"></i>
+        </div>
+        <div class="nav-links" id="navLinks">
+            <a href="#home">Home</a>
+            <a href="#rooms">Rooms</a>
+            <a href="#facilities">Facilities</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#location">Location</a>
+            <a href="#contact">Contact</a>
+            <a href="#pricing" class="btn-primary" style="padding: 8px 20px;">Book Now</a>
+        </div>
+    </div>
+</nav>
+
+<section id="home" class="hero">
+    <div class="container">
+        <div class="hero-content">
+            <h1>Your <span class="highlight">Perfect Stay</span> in Lucknow</h1>
+            <p>Premium furnished rooms with modern amenities, just steps away from IISEC College. Experience comfort, security, and community like never before.</p>
+            <div>
+                <a href="#booking-section" class="btn-primary" id="heroBookBtn"><i class="fas fa-calendar-check"></i> Book Your Room</a>
+                <a href="#rooms" class="btn-outline" style="margin-left: 15px;"><i class="fas fa-eye"></i> View Rooms</a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat"><div class="stat-number">50+</div><div>Happy Residents</div></div>
+                <div class="stat"><div class="stat-number">24/7</div><div>Security</div></div>
+                <div class="stat"><div class="stat-number">100%</div><div>Satisfaction</div></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <div class="features-grid">
+            <div class="feature-card"><i class="fas fa-wifi"></i><h3>Free High-Speed WiFi</h3><p>100 Mbps unlimited</p></div>
+            <div class="feature-card"><i class="fas fa-video"></i><h3>24×7 CCTV Surveillance</h3><p>Full campus coverage</p></div>
+            <div class="feature-card"><i class="fas fa-broom"></i><h3>Daily Housekeeping</h3><p>Spotless rooms</p></div>
+            <div class="feature-card"><i class="fas fa-gamepad"></i><h3>Common Area & Play Zone</h3><p>Indoor games, TV, lounge</p></div>
+            <div class="feature-card"><i class="fas fa-bolt"></i><h3>Quick Response Team</h3><p>24/7 support staff</p></div>
+            <div class="feature-card"><i class="fas fa-tools"></i><h3>Regular Maintenance</h3><p>Everything functional</p></div>
+        </div>
+    </div>
+</section>
+
+<section id="rooms" class="section section-dark">
+    <div class="container">
+        <h2 class="section-title">Premium Rooms</h2>
+        <p class="section-subtitle">Choose the perfect space that suits your needs</p>
+        <div class="rooms-grid">
+            <div class="room-card">
+                <div class="room-image" style="background-image: url('https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?w=600&h=400&fit=crop');">
+                    <span class="room-badge">Most Popular</span>
+                </div>
+                <div class="room-info">
+                    <h3>Single Room</h3>
+                    <div class="room-price">₹8,500 <span>/month</span></div>
+                    <div class="amenities">
+                        <span class="amenity"><i class="fas fa-bed"></i> Single Bed</span>
+                        <span class="amenity"><i class="fas fa-snowflake"></i> AC Available</span>
+                        <span class="amenity"><i class="fas fa-table"></i> Study Table</span>
+                        <span class="amenity"><i class="fas fa-lock"></i> Personal Locker</span>
+                    </div>
+                    <button class="btn-primary" style="width: 100%; text-align: center; justify-content: center;" onclick="openBookingModal('Single Room', 8500)">Book Now →</button>
+                </div>
+            </div>
+            <div class="room-card">
+                <div class="room-image" style="background-image: url('https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?w=600&h=400&fit=crop&sat=-50');">
+                    <span class="room-badge">Best Value</span>
+                </div>
+                <div class="room-info">
+                    <h3>Twin Sharing</h3>
+                    <div class="room-price">₹5,500 <span>/month per bed</span></div>
+                    <div class="amenities">
+                        <span class="amenity"><i class="fas fa-bed"></i> Comfort Beds</span>
+                        <span class="amenity"><i class="fas fa-wind"></i> AC/Cooler</span>
+                        <span class="amenity"><i class="fas fa-wardrobe"></i> Shared Wardrobe</span>
+                        <span class="amenity"><i class="fas fa-users"></i> Spacious</span>
+                    </div>
+                    <button class="btn-primary" style="width: 100%; text-align: center; justify-content: center;" onclick="openBookingModal('Twin Sharing', 5500)">Book Now →</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="facilities" class="section">
+    <div class="container">
+        <h2 class="section-title">World-Class Facilities</h2>
+        <p class="section-subtitle">Everything you need for a comfortable stay</p>
+        <div class="facilities-showcase">
+            <div class="facility-item"><i class="fas fa-wifi"></i><h3>Free WiFi</h3><p>High-speed internet for studies & entertainment</p></div>
+            <div class="facility-item"><i class="fas fa-broom"></i><h3>Daily Housekeeping</h3><p>Professional cleaning every day</p></div>
+            <div class="facility-item"><i class="fas fa-video"></i><h3>24×7 CCTV</h3><p>Advanced security system</p></div>
+            <div class="facility-item"><i class="fas fa-futbol"></i><h3>Play Zone</h3><p>Indoor games & recreation area</p></div>
+            <div class="facility-item"><i class="fas fa-tshirt"></i><h3>Laundry Facility</h3><p>Washing machine available</p></div>
+            <div class="facility-item"><i class="fas fa-first-aid"></i><h3>Medical Support</h3><p>First aid & doctor on call</p></div>
+        </div>
+    </div>
+</section>
+
+<section id="gallery" class="section section-dark">
+    <div class="container">
+        <h2 class="section-title">Gallery</h2>
+        <p class="section-subtitle">Take a peek into our premium accommodation</p>
+        <div class="gallery-grid">
+            <div class="gallery-item" style="background-image: url('https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=600&h=400&fit=crop');"></div>
+            <div class="gallery-item" style="background-image: url('https://images.unsplash.com/photo-1560448204-603b3fc33ddc?w=600&h=400&fit=crop');"></div>
+            <div class="gallery-item" style="background-image: url('https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=600&h=400&fit=crop');"></div>
+            <div class="gallery-item" style="background-image: url('https://images.unsplash.com/photo-1560185007-5f0bb1866cab?w=600&h=400&fit=crop');"></div>
+        </div>
+    </div>
+</section>
+
+<section id="pricing" class="section">
+    <div class="container">
+        <h2 class="section-title">Pricing Plans</h2>
+        <p class="section-subtitle">Transparent pricing with no hidden charges</p>
+        <div class="pricing-grid">
+            <div class="pricing-card">
+                <h3>Single Room</h3>
+                <div class="pricing-amount">₹8,500</div>
+                <p>per month</p>
+                <hr style="margin: 20px 0;">
+                <p><i class="fas fa-check" style="color: #e67e22;"></i> Fully furnished</p>
+                <p><i class="fas fa-check" style="color: #e67e22;"></i> AC/Non-AC option</p>
+                <p><i class="fas fa-check" style="color: #e67e22;"></i> All utilities included</p>
+                <p><i class="fas fa-check" style="color: #e67e22;"></i> Free WiFi</p>
+                <button class="btn-primary" style="margin-top: 20px; width: 100%; justify-content: center;" onclick="openBookingModal('Single Room', 8500)">Book Now</button>
+            </div>
+            <div class="pricing-card featured">
+                <h3>Twin Sharing</h3>
+                <div class="pricing-amount">₹5,500</div>
+                <p>per person/month</p>
+                <hr style="margin: 20px 0;">
+                <p><i class="fas fa-check" style="color: #e67e22;"></i> Comfortable beds</p>
+                <p><i class="fas fa-check" style="color: #e67e22;"></i> AC/Cooler available</p>
+                <p><i class="fas fa-check" style="color: #e67e22;"></i> Housekeeping included</p>
+                <p><i class="fas fa-check" style="color: #e67e22;"></i> 24/7 security</p>
+                <button class="btn-primary" style="margin-top: 20px; width: 100%; justify-content: center;" onclick="openBookingModal('Twin Sharing', 5500)">Book Now</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="location" class="section section-dark">
+    <div class="container">
+        <h2 class="section-title">Find Us</h2>
+        <p class="section-subtitle">Conveniently located near educational hubs</p>
+        <div style="border-radius: 24px; overflow: hidden; margin-bottom: 30px;">
+            <iframe src="https://maps.google.com/maps?q=Kettle%20The%20Chai%20Spot%2C%20Vasundhara%20Vihar%2C%20Mohammadpur%20Khatri%20Kalyanpur%20Lucknow%20Uttar%20Pradesh%20226022&t=&z=16&ie=UTF8&iwloc=&output=embed" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+        <div style="background: white; padding: 30px; border-radius: 24px; text-align: center;">
+            <i class="fas fa-map-marker-alt" style="font-size: 2rem; color: #e67e22;"></i>
+            <h3 style="margin: 15px 0;">Kettle The Chai Spot, Next to IISEC College</h3>
+            <p>Vasundhara Vihar, Mohammadpur Khatri Kalyanpur, Lucknow (Uttar Pradesh 226022)</p>
+            <p style="margin-top: 15px;"><strong>Nearby:</strong> IISEC College (2 min walk) | Main Market (5 min) | Transport Hub (3 min)</p>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <h2 class="section-title">What Our Residents Say</h2>
+        <p class="section-subtitle">Trusted by students and professionals</p>
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                <p>"Amazing hostel with great facilities! The staff is very supportive and the location is perfect. Highly recommend for students."</p>
+                <h4 style="margin-top: 15px;">- Rohan Sharma</h4>
+            </div>
+            <div class="testimonial-card">
+                <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                <p>"The 24/7 security and housekeeping make this place feel like home. WiFi is super fast and the common area is great."</p>
+                <h4 style="margin-top: 15px;">- Priya Verma</h4>
+            </div>
+            <div class="testimonial-card">
+                <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+                <p>"Value for money! The rooms are spacious and well-maintained. Quick response team is always available. Best hostel!"</p>
+                <h4 style="margin-top: 15px;">- Akash Gupta</h4>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section section-dark">
+    <div class="container">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <p class="section-subtitle">Everything you need to know</p>
+        <div class="faq-grid">
+            <div class="faq-item"><i class="fas fa-clock" style="color: #e67e22; font-size: 1.5rem;"></i><h3 style="margin: 15px 0 10px;">Guest Policy?</h3><p>Visitors allowed till 8 PM with prior registration. Overnight stays require management approval.</p></div>
+            <div class="faq-item"><i class="fas fa-moon" style="color: #e67e22; font-size: 1.5rem;"></i><h3 style="margin: 15px 0 10px;">Curfew Timing?</h3><p>24×7 entry/exit with security check. Safety is our priority.</p></div>
+            <div class="faq-item"><i class="fas fa-utensils" style="color: #e67e22; font-size: 1.5rem;"></i><h3 style="margin: 15px 0 10px;">Food Availability?</h3><p>Mess facility available. Tiffin services can be arranged. Kitchen available for self-cooking.</p></div>
+            <div class="faq-item"><i class="fas fa-hand-holding-usd" style="color: #e67e22; font-size: 1.5rem;"></i><h3 style="margin: 15px 0 10px;">Security Deposit?</h3><p>Refundable deposit of ₹4,000-5,000 at time of move-in, returned at checkout.</p></div>
+        </div>
+    </div>
+</section>
+
+<section id="contact" class="section">
+    <div class="container">
+        <h2 class="section-title">Get In Touch</h2>
+        <p class="section-subtitle">Book your stay or ask any questions</p>
+        <div class="contact-wrapper">
+            <div class="contact-info">
+                <div class="contact-info-item">
+                    <div class="contact-icon"><i class="fas fa-phone-alt"></i></div>
+                    <div><h3>Call Us</h3><p>+91 98765 43210</p></div>
+                </div>
+                <div class="contact-info-item">
+                    <div class="contact-icon"><i class="fab fa-whatsapp"></i></div>
+                    <div><h3>WhatsApp</h3><p>+91 98765 43210</p></div>
+                </div>
+                <div class="contact-info-item">
+                    <div class="contact-icon"><i class="fab fa-instagram"></i></div>
+                    <div><h3>Instagram</h3><p>@akshayhostel_lko</p></div>
+                </div>
+            </div>
+            <div id="booking-section" class="contact-form">
+                <h3 style="margin-bottom: 20px;">Book Your Room Now</h3>
+                <form id="bookingForm">
+                    <input type="text" id="fullName" placeholder="Full Name" required>
+                    <input type="tel" id="phoneNumber" placeholder="Phone Number" required>
+                    <input type="email" id="emailId" placeholder="Email Address">
+                    <select id="roomTypeSelect" required>
+                        <option value="">Select Room Type</option>
+                        <option value="Single Room">Single Room (₹8,500/month)</option>
+                        <option value="Twin Sharing">Twin Sharing (₹5,500/month)</option>
+                    </select>
+                    <input type="date" id="moveInDate" placeholder="Move-in Date">
+                    <textarea id="specialRequest" rows="2" placeholder="Special requests (if any)"></textarea>
+                    <button type="submit" class="btn-primary" style="width: 100%; justify-content: center;"><i class="fas fa-check-circle"></i> Confirm Booking</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div id="successModal" class="modal">
+    <div class="modal-content">
+        <i class="fas fa-check-circle"></i>
+        <h3>Booking Confirmed! 🎉</h3>
+        <p>Thank you for booking with Akshay Hostel!</p>
+        <p style="margin-top: 10px; color: #666;">Our team will contact you within 30 minutes to confirm your stay.</p>
+        <button class="modal-btn" onclick="closeModal()">OK, Got it</button>
+    </div>
+</div>
+
+<footer>
+    <div class="container">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; margin-bottom: 40px;">
+            <div><h3 style="color: #e67e22;">AKSHAY HOSTEL</h3><p style="margin-top: 15px;">Premium accommodation in Lucknow with world-class amenities and prime location.</p></div>
+            <div><h4>Quick Links</h4><p><a href="#rooms" style="color: #ccc; text-decoration: none;">Rooms</a></p><p><a href="#facilities" style="color: #ccc; text-decoration: none;">Facilities</a></p><p><a href="#contact" style="color: #ccc; text-decoration: none;">Contact</a></p></div>
+            <div><h4>Address</h4><p>Kettle The Chai Spot, Next to IISEC College, Vasundhara Vihar, Lucknow - 226022</p></div>
+        </div>
+        <hr style="border-color: #333;">
+        <p style="text-align: center; margin-top: 30px;">© 2025 Akshay Hostel & Stay. All rights reserved. | Designed for comfort & safety</p>
+    </div>
+</footer>
+
+<script>
+    // Mobile Menu Toggle
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
+    menuToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+    });
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+            navLinks.classList.remove('active');
+        });
+    });
+
+    // Store bookings in localStorage
+    let bookings = JSON.parse(localStorage.getItem('hostelBookings')) || [];
+
+    function saveBooking(bookingData) {
+        bookings.push(bookingData);
+        localStorage.setItem('hostelBookings', JSON.stringify(bookings));
+        console.log('All Bookings:', bookings);
+    }
+
+    function openBookingModal(roomType, price) {
+        document.getElementById('roomTypeSelect').value = roomType;
+        document.getElementById('booking-section').scrollIntoView({ behavior: 'smooth' });
+        document.getElementById('fullName').focus();
+    }
+
+    function showModal() {
+        document.getElementById('successModal').style.display = 'flex';
+    }
+
+    function closeModal() {
+        document.getElementById('successModal').style.display = 'none';
+    }
+
+    // Handle Booking Form Submission
+    const bookingForm = document.getElementById('bookingForm');
+    bookingForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        
+        const name = document.getElementById('fullName').value.trim();
+        const phone = document.getElementById('phoneNumber').value.trim();
+        const email = document.getElementById('emailId').value.trim();
+        const roomType = document.getElementById('roomTypeSelect').value;
+        const moveInDate = document.getElementById('moveInDate').value;
+        const specialRequest = document.getElementById('specialRequest').value;
+        
+        if (!name || !phone || !roomType) {
+            alert('Please fill in Name, Phone Number, and Room Type');
+            return;
+        }
+        
+        if (phone.length < 10) {
+            alert('Please enter a valid 10-digit phone number');
+            return;
+        }
+        
+        const price = roomType.includes('Single') ? 8500 : 5500;
+        
+        const booking = {
+            id: Date.now(),
+            name: name,
+            phone: phone,
+            email: email,
+            roomType: roomType,
+            price: price,
+            moveInDate: moveInDate || 'Not specified',
+            specialRequest: specialRequest || 'None',
+            bookingDate: new Date().toLocaleString()
+        };
+        
+        saveBooking(booking);
+        
+        bookingForm.reset();
+        showModal();
+        
+        // Optional: Send to WhatsApp (can be enabled)
+        const message = `New Booking!\nName: ${name}\nPhone: ${phone}\nRoom: ${roomType}\nPrice: ₹${price}\nMove-in: ${booking.moveInDate}`;
+        console.log('Booking details:', message);
+    });
+
+    // Hero button click
+    document.getElementById('heroBookBtn')?.addEventListener('click', (e) => {
+        e.preventDefault();
+        document.getElementById('booking-section').scrollIntoView({ behavior: 'smooth' });
+    });
+
+    window.onclick = function(event) {
+        const modal = document.getElementById('successModal');
+        if (event.target === modal) {
+            modal.style.display = 'none';
+        }
+    }
+</script>
+</body>
+</html>
