@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes, viewport-fit=cover">
+    <meta name="description" content="Hotel Kachnar House - Premium budget hotel in Vikas Nagar, Lucknow. Luxury rooms, free WiFi, AC rooms, parking, near Mohibullapur railway station.">
+    <meta name="keywords" content="Hotel Kachnar House, Vikas Nagar hotel, budget hotel lucknow, AC rooms lucknow, luxury hotel lucknow">
+    <meta name="author" content="Hotel Kachnar House">
+    <title>Hotel Kachnar House | Premium Stay in Vikas Nagar, Lucknow</title>
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #fff;
+            color: #2c3e50;
+            overflow-x: hidden;
+            width: 100%;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #c49a6c;
+            border-radius: 5px;
+        }
+
+        /* Navbar Premium - Mobile first */
+        nav {
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+        .nav-container {
+            max-width: 1400px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.8rem 1.2rem;
+        }
+        .logo {
+            display: flex;
+            align-items: baseline;
+            gap: 5px;
+            flex-wrap: wrap;
+        }
+        .logo h2 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #c49a6c, #8b5a2b);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .logo p {
+            font-size: 0.6rem;
+            color: #c49a6c;
+            letter-spacing: 0.5px;
+        }
+        .nav-links {
+            display: none;
+            flex-direction: column;
+            width: 100%;
+            background: white;
+            position: absolute;
+            top: 65px;
+            left: 0;
+            padding: 1rem 0;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            border-radius: 0 0 20px 20px;
+            list-style: none;
+            gap: 0.8rem;
+            text-align: center;
+            z-index: 999;
+        }
+        .nav-links.active {
+            display: flex;
+        }
+        .nav-links li {
+            margin: 0;
+        }
+        .nav-links a {
+            text-decoration: none;
+            color: #2c3e50;
+            font-weight: 500;
+            padding: 0.6rem 1rem;
+            display: inline-block;
+            transition: 0.3s;
+            font-size: 1rem;
+        }
+        .nav-links a:hover, .nav-links a.active {
+            color: #c49a6c;
+            background: #fef5ed;
+            border-radius: 40px;
+        }
+        .menu-toggle {
+            display: block;
+            font-size: 1.7rem;
+            cursor: pointer;
+            color: #c49a6c;
+        }
+
+        /* Hero Section - Mobile optimized */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.65)), url('https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80') center/cover no-repeat;
+            min-height: 85vh;
+            height: auto;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: white;
+            padding: 6rem 1rem 4rem;
+            margin-top: 0;
+        }
+        .hero-content {
+            max-width: 900px;
+            margin: auto;
+            padding: 0 1rem;
+        }
+        .hero h1 {
+            font-size: 2.4rem;
+            margin-bottom: 0.8rem;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+        .hero p {
+            font-size: 1rem;
+            margin-bottom: 1.8rem;
+            font-weight: 300;
+        }
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #c49a6c, #a67b4e);
+            color: white;
+            padding: 0.8rem 1.8rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.3s;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            font-size: 0.9rem;
+            text-align: center;
+        }
+        .btn-outline {
+            background: transparent;
+            border: 2px solid white;
+            box-shadow: none;
+        }
+        .btn-outline:hover {
+            background: white;
+            color: #c49a6c;
+        }
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+        }
+
+        /* Container */
+        .container {
+            max-width: 1400px;
+            margin: auto;
+            padding: 3rem 1.2rem;
+        }
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 0.8rem;
+            color: #2c3e50;
+            position: relative;
+        }
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 70px;
+            height: 3px;
+            background: #c49a6c;
+            margin: 12px auto 0;
+            border-radius: 3px;
+        }
+        .section-sub {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: #7f8c8d;
+            font-size: 0.95rem;
+        }
+
+        /* Rooms & Gallery Grids - mobile friendly */
+        .rooms-grid, .gallery-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.8rem;
+        }
+        .room-card, .gallery-item {
+            background: white;
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+            transition: 0.3s;
+        }
+        .room-card img, .gallery-item img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            display: block;
+        }
+        .room-info {
+            padding: 1.5rem;
+        }
+        .room-info h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.3rem;
+        }
+        .price {
+            font-size: 1.4rem;
+            color: #c49a6c;
+            font-weight: bold;
+            margin: 0.6rem 0;
+        }
+        .amenities-list {
+            list-style: none;
+            margin: 1rem 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+        .amenities-list li {
+            background: #f8f4f0;
+            padding: 0.25rem 0.9rem;
+            border-radius: 25px;
+            font-size: 0.75rem;
+            color: #5a3e2b;
+        }
+
+        /* Contact & Forms */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+        .contact-details {
+            background: linear-gradient(135deg, #f8f4f0, #fff);
+            padding: 1.5rem;
+            border-radius: 24px;
+        }
+        .contact-details p {
+            margin-bottom: 0.8rem;
+            word-break: break-word;
+        }
+        .contact-details i {
+            width: 30px;
+            color: #c49a6c;
+            font-size: 1.2rem;
+        }
+        .contact-form input, .contact-form textarea, .booking-form input, .booking-form select {
+            width: 100%;
+            padding: 0.9rem;
+            margin: 0.6rem 0;
+            border: 1px solid #e0e0e0;
+            border-radius: 16px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.9rem;
+        }
+        .map iframe {
+            height: 200px;
+            border-radius: 18px;
+        }
+
+        /* Reviews */
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+        .review-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 20px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            border: 1px solid #f0e6df;
+        }
+        .stars {
+            color: #f39c12;
+            margin: 0.5rem 0;
+            font-size: 1rem;
+        }
+
+        /* Stats Section */
+        .stats-section {
+            background: linear-gradient(135deg, #2c3e50, #1a2632);
+            color: white;
+            padding: 3rem 1rem;
+            text-align: center;
+        }
+        .stats-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            max-width: 1200px;
+            margin: auto;
+        }
+        .stat-item h3 {
+            font-size: 2rem;
+            color: #c49a6c;
+        }
+
+        /* Footer */
+        footer {
+            background: #1a1f25;
+            color: #aaa;
+            padding: 2rem 1rem 1rem;
+            margin-top: 2rem;
+        }
+        .footer-content {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.8rem;
+            text-align: center;
+        }
+        .footer-section h4 {
+            color: #c49a6c;
+            margin-bottom: 0.8rem;
+        }
+        .social-links a {
+            color: #aaa;
+            margin: 0 0.5rem;
+            font-size: 1.3rem;
+            display: inline-block;
+        }
+        .copyright {
+            text-align: center;
+            margin-top: 1.8rem;
+            padding-top: 1rem;
+            border-top: 1px solid #333;
+            font-size: 0.8rem;
+        }
+
+        /* WhatsApp Float - adjusted for mobile */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #25d366;
+            color: white;
+            border-radius: 50px;
+            padding: 0.7rem 1.2rem;
+            font-weight: bold;
+            box-shadow: 0 6px 16px rgba(37,211,102,0.4);
+            z-index: 999;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.85rem;
+        }
+        .whatsapp-float i {
+            font-size: 1.3rem;
+        }
+
+        /* Pages */
+        .page {
+            display: none;
+            animation: fadeIn 0.4s ease;
+        }
+        .active-page {
+            display: block;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* Admin Panel */
+        .admin-panel {
+            background: #fff9f0;
+            border-left: 5px solid #c49a6c;
+            padding: 1rem;
+            margin: 0.8rem;
+            border-radius: 16px;
+            display: none;
+            font-size: 0.85rem;
+            text-align: center;
+        }
+        .admin-panel.visible {
+            display: block;
+        }
+        button#resetBookingsBtn {
+            background: #c49a6c;
+            padding: 0.2rem 1rem;
+            font-size: 0.7rem;
+            border-radius: 40px;
+        }
+
+        /* Tablet and Desktop improvements */
+        @media (min-width: 640px) {
+            .rooms-grid, .gallery-grid, .reviews-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .contact-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .stats-grid {
+                flex-direction: row;
+                justify-content: space-around;
+            }
+            .footer-content {
+                grid-template-columns: repeat(3, 1fr);
+                text-align: left;
+            }
+            .hero h1 {
+                font-size: 3.2rem;
+            }
+            .hero p {
+                font-size: 1.1rem;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .nav-links {
+                display: flex !important;
+                flex-direction: row;
+                position: static;
+                width: auto;
+                background: transparent;
+                box-shadow: none;
+                padding: 0;
+                gap: 2rem;
+            }
+            .menu-toggle {
+                display: none;
+            }
+            .nav-container {
+                padding: 1rem 3rem;
+            }
+            .rooms-grid, .gallery-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            .hero h1 {
+                font-size: 4rem;
+            }
+            .container {
+                padding: 5rem 3rem;
+            }
+        }
+
+        /* extra touch-friendly */
+        button, .btn, .nav-links a, .whatsapp-float {
+            touch-action: manipulation;
+        }
+        input, select, textarea {
+            font-size: 16px; /* prevents zoom on mobile */
+        }
+    </style>
+</head>
+<body>
+
+<nav id="navbar">
+    <div class="nav-container">
+        <div class="logo">
+            <h2>Hotel Kachnar House</h2>
+            <p>✦ Premium Stay</p>
+        </div>
+        <div class="menu-toggle" id="mobile-menu">
+            <i class="fas fa-bars"></i>
+        </div>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="#" data-page="home" class="active">Home</a></li>
+            <li><a href="#" data-page="rooms">Rooms</a></li>
+            <li><a href="#" data-page="about">About</a></li>
+            <li><a href="#" data-page="amenities">Amenities</a></li>
+            <li><a href="#" data-page="contact">Contact</a></li>
+            <li><a href="#" data-page="booking">Booking</a></li>
+            <li><a href="#" data-page="gallery">Gallery</a></li>
+            <li><a href="#" data-page="reviews">Reviews</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Admin Panel -->
+<div id="adminPanel" class="admin-panel">
+    <strong><i class="fas fa-crown"></i> Admin Dashboard</strong><br>
+    <p>Total Bookings: <span id="bookingCount">0</span> | <button id="resetBookingsBtn" class="btn" style="padding: 0.3rem 1rem; font-size:0.75rem;">Reset</button></p>
+</div>
+
+<!-- Home Page -->
+<div id="home-page" class="page active-page">
+    <div class="hero">
+        <div class="hero-content">
+            <h1>Hotel Kachnar House</h1>
+            <p>Where Comfort Meets Elegance in Vikas Nagar, Lucknow</p>
+            <div class="cta-buttons">
+                <a href="#" class="btn" data-nav="booking">Book Your Stay</a>
+                <a href="#" class="btn btn-outline" data-nav="contact">Contact Us</a>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <h2 class="section-title" data-aos="fade-up">Welcome to Your Home Away From Home</h2>
+        <p style="text-align:center; max-width:800px; margin:auto; font-size:1rem;" data-aos="fade-up">Experience luxury at budget-friendly prices. Located in the heart of Vikas Nagar, we offer unmatched hospitality, modern amenities, and a warm ambiance.</p>
+        <div style="text-align:center; margin-top:2rem;" data-aos="fade-up">
+            <i class="fas fa-clock"></i> Check-in: 12:00 PM | Check-out: 11:00 AM
+        </div>
+    </div>
+    <div class="stats-section">
+        <div class="stats-grid">
+            <div class="stat-item" data-aos="zoom-in"><h3>150+</h3><p>Happy Guests</p></div>
+            <div class="stat-item" data-aos="zoom-in" data-aos-delay="100"><h3>4.8 ★</h3><p>Guest Rating</p></div>
+            <div class="stat-item" data-aos="zoom-in" data-aos-delay="200"><h3>24/7</h3><p>Service Available</p></div>
+        </div>
+    </div>
+</div>
+
+<!-- Rooms Page -->
+<div id="rooms-page" class="page">
+    <div class="container">
+        <h2 class="section-title" data-aos="fade-up">Luxurious Rooms</h2>
+        <p class="section-sub" data-aos="fade-up">Choose your perfect space</p>
+        <div class="rooms-grid" id="rooms-grid"></div>
+    </div>
+</div>
+
+<!-- About Page -->
+<div id="about-page" class="page">
+    <div class="container">
+        <h2 class="section-title" data-aos="fade-up">About Hotel Kachnar House</h2>
+        <div style="max-width: 900px; margin: auto; text-align: center;" data-aos="fade-up">
+            <p style="font-size:1rem; margin-bottom:1.2rem;">Nestled in the serene Vikas Nagar, Sector 2, Lucknow, Hotel Kachnar House is a sanctuary of comfort and elegance. We pride ourselves on delivering exceptional service with a personal touch.</p>
+            <p><strong>📍 Location:</strong> 2/195, Sector 2, Vikas Nagar, Lucknow - 226022</p>
+            <p><strong>🚉 Nearby:</strong> Mohibullapur Railway Station (2 km) | Bara Imambara (6 km) | Chota Imambara (7 km)</p>
+            <p><strong>🇮🇳 Policy:</strong> Indian nationals only — ensuring a homely atmosphere.</p>
+        </div>
+    </div>
+</div>
+
+<!-- Amenities Page -->
+<div id="amenities-page" class="page">
+    <div class="container">
+        <h2 class="section-title" data-aos="fade-up">Premium Amenities</h2>
+        <div style="display: grid; grid-template-columns: 1fr; gap: 1.5rem; margin-top: 2rem;">
+            <div data-aos="fade-right"><i class="fas fa-wifi" style="color:#c49a6c; font-size:1.8rem;"></i><h3>Free High-Speed Wi-Fi</h3><p>Stay connected throughout your stay</p></div>
+            <div data-aos="fade-right" data-aos-delay="50"><i class="fas fa-car" style="color:#c49a6c; font-size:1.8rem;"></i><h3>Free Parking</h3><p>Secure parking space available</p></div>
+            <div data-aos="fade-right" data-aos-delay="100"><i class="fas fa-wind" style="color:#c49a6c; font-size:1.8rem;"></i><h3>Air Conditioned Rooms</h3><p>Perfect climate control</p></div>
+            <div data-aos="fade-right" data-aos-delay="150"><i class="fas fa-concierge-bell" style="color:#c49a6c; font-size:1.8rem;"></i><h3>24/7 Room Service</h3><p>Delicious meals at your doorstep</p></div>
+            <div data-aos="fade-right" data-aos-delay="200"><i class="fas fa-clock" style="color:#c49a6c; font-size:1.8rem;"></i><h3>24-Hour Front Desk</h3><p>Always here to help you</p></div>
+            <div data-aos="fade-right" data-aos-delay="250"><i class="fas fa-utensils" style="color:#c49a6c; font-size:1.8rem;"></i><h3>Breakfast Available</h3><p>Start your day fresh (paid)</p></div>
+        </div>
+    </div>
+</div>
+
+<!-- Contact Page -->
+<div id="contact-page" class="page">
+    <div class="container">
+        <h2 class="section-title" data-aos="fade-up">Get In Touch</h2>
+        <div class="contact-grid">
+            <div data-aos="fade-right">
+                <div class="contact-details">
+                    <p><i class="fas fa-map-marker-alt"></i> <strong>Address:</strong> 2/195, Sector 2, Vikas Nagar, Lucknow</p>
+                    <p><i class="fas fa-phone-alt"></i> <strong>Phone:</strong> <a href="tel:+919876543210" style="color:#c49a6c;">+91 9876543210</a> (Click to call)</p>
+                    <p><i class="fas fa-envelope"></i> <strong>Email:</strong> stay@kachnarhouse.com</p>
+                    <div class="map">
+                        <iframe src="https://maps.google.com/maps?q=Vikas%20Nagar%20Lucknow&t=&z=13&ie=UTF8&iwloc=&output=embed" width="100%" height="220" style="border:0; border-radius:18px;" allowfullscreen loading="lazy"></iframe>
+                    </div>
+                </div>
+            </div>
+            <div data-aos="fade-left">
+                <div class="contact-form">
+                    <h3>Send us a Message</h3>
+                    <form id="contactForm">
+                        <input type="text" placeholder="Your Name" required>
+                        <input type="tel" placeholder="Phone Number" required>
+                        <textarea rows="4" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Booking Page -->
+<div id="booking-page" class="page">
+    <div class="container">
+        <h2 class="section-title" data-aos="fade-up">Book Your Stay</h2>
+        <div style="text-align:center; margin-bottom:1.8rem;">
+            <a href="https://wa.me/919876543210?text=I%20want%20to%20book%20a%20room%20at%20Hotel%20Kachnar%20House" class="btn" style="background:#25d366;" target="_blank"><i class="fab fa-whatsapp"></i> Book via WhatsApp</a>
+        </div>
+        <h3 class="section-sub">Advanced Booking Form</h3>
+        <form id="advancedBookingForm" class="booking-form" style="max-width:650px; margin:auto" data-aos="fade-up">
+            <input type="text" placeholder="Full Name" id="bookName" required>
+            <input type="email" placeholder="Email Address" id="bookEmail">
+            <input type="tel" placeholder="Phone Number" id="bookPhone" required>
+            <input type="date" id="checkin" required>
+            <input type="date" id="checkout" required>
+            <select id="guests">
+                <option>1 Guest</option>
+                <option>2 Guests</option>
+                <option>3 Guests</option>
+                <option>4 Guests</option>
+            </select>
+            <select id="roomType">
+                <option value="Deluxe Single">Deluxe Single Room</option>
+                <option value="Premium Double">Premium Double Room</option>
+                <option value="Luxury AC Suite">Luxury AC Suite</option>
+            </select>
+            <button type="submit" class="btn">Book Now</button>
+        </form>
+    </div>
+</div>
+
+<!-- Gallery Page -->
+<div id="gallery-page" class="page">
+    <div class="container">
+        <h2 class="section-title" data-aos="fade-up">Our Gallery</h2>
+        <div class="gallery-grid" id="gallery-grid"></div>
+    </div>
+</div>
+
+<!-- Reviews Page -->
+<div id="reviews-page" class="page">
+    <div class="container">
+        <h2 class="section-title" data-aos="fade-up">Guest Reviews</h2>
+        <div class="reviews-grid" id="reviews-grid"></div>
+    </div>
+</div>
+
+<!-- WhatsApp Float -->
+<a href="https://wa.me/919876543210?text=I%20want%20to%20book%20a%20room%20at%20Hotel%20Kachnar%20House" class="whatsapp-float" target="_blank">
+    <i class="fab fa-whatsapp"></i> Book Now
+</a>
+
+<footer>
+    <div class="footer-content">
+        <div class="footer-section">
+            <h4>Hotel Kachnar House</h4>
+            <p>Premium budget hotel in Vikas Nagar, Lucknow. Experience luxury at affordable prices.</p>
+        </div>
+        <div class="footer-section">
+            <h4>Quick Links</h4>
+            <p><a href="#" data-nav="home" style="color:#aaa; text-decoration:none;">Home</a></p>
+            <p><a href="#" data-nav="rooms" style="color:#aaa; text-decoration:none;">Rooms</a></p>
+            <p><a href="#" data-nav="booking" style="color:#aaa; text-decoration:none;">Book Now</a></p>
+        </div>
+        <div class="footer-section">
+            <h4>Contact</h4>
+            <p><i class="fas fa-phone"></i> +91 9876543210</p>
+            <p><i class="fas fa-envelope"></i> stay@kachnarhouse.com</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>© 2025 Hotel Kachnar House | Indian Nationals Only | All Rights Reserved</p>
+    </div>
+</footer>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init({ duration: 600, once: true, disable: 'mobile' }); // lightweight on mobile
+
+    const roomsData = [
+        { name: "Deluxe Single", price: "₹1,299/night", img: "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=600&auto=format", amenities: ["WiFi", "Attached Bath", "Tea/Coffee", "Room Service"] },
+        { name: "Premium Double", price: "₹1,899/night", img: "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=600&auto=format", amenities: ["WiFi", "TV", "Mini Fridge", "24/7 Support"] },
+        { name: "Luxury AC Suite", price: "₹2,999/night", img: "https://images.unsplash.com/photo-1611892440504-42a792e24d32?w=600&auto=format", amenities: ["AC", "WiFi", "King Bed", "Jacuzzi", "Breakfast"] }
+    ];
+
+    const galleryImages = [
+        "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=600&auto=format",
+        "https://images.unsplash.com/photo-1584132967334-10e028bd69f7?w=600&auto=format",
+        "https://images.unsplash.com/photo-1618773928121-c32242e63f39?w=600&auto=format",
+        "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=600&auto=format"
+    ];
+
+    const reviewsList = [
+        { name: "Amit Sharma", text: "Absolutely amazing experience! The staff was super friendly and rooms were spotless.", rating: 5 },
+        { name: "Neha Gupta", text: "Best budget hotel in Vikas Nagar. Great location and value for money.", rating: 5 },
+        { name: "Rohit Verma", text: "Luxury feel at affordable price. AC worked perfectly and WiFi was fast.", rating: 4.5 }
+    ];
+
+    function loadRooms() {
+        const container = document.getElementById("rooms-grid");
+        if(container) {
+            container.innerHTML = roomsData.map(room => `
+                <div class="room-card" data-aos="fade-up">
+                    <img src="${room.img}" alt="${room.name}" loading="lazy">
+                    <div class="room-info">
+                        <h3>${room.name}</h3>
+                        <div class="price">${room.price}</div>
+                        <ul class="amenities-list">${room.amenities.map(a => `<li>${a}</li>`).join('')}</ul>
+                        <a href="#" class="btn" data-nav="booking">Book Now</a>
+                    </div>
+                </div>
+            `).join('');
+            if (AOS) AOS.refresh();
+        }
+    }
+
+    function loadGallery() {
+        const container = document.getElementById("gallery-grid");
+        if(container) {
+            container.innerHTML = galleryImages.map(img => `<div class="gallery-item" data-aos="zoom-in"><img src="${img}" alt="gallery" loading="lazy"></div>`).join('');
+            if (AOS) AOS.refresh();
+        }
+    }
+
+    function loadReviews() {
+        const container = document.getElementById("reviews-grid");
+        if(container) {
+            container.innerHTML = reviewsList.map(rev => `
+                <div class="review-card" data-aos="fade-up">
+                    <h4>${rev.name}</h4>
+                    <div class="stars">${'★'.repeat(Math.floor(rev.rating))}${rev.rating % 1 ? '½' : ''}</div>
+                    <p>"${rev.text}"</p>
+                </div>
+            `).join('');
+            if (AOS) AOS.refresh();
+        }
+    }
+
+    const pages = ['home', 'rooms', 'about', 'amenities', 'contact', 'booking', 'gallery', 'reviews'];
+    function showPage(pageId) {
+        pages.forEach(p => {
+            const el = document.getElementById(`${p}-page`);
+            if(el) el.classList.remove('active-page');
+        });
+        document.getElementById(`${pageId}-page`).classList.add('active-page');
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.classList.remove('active');
+            if(link.getAttribute('data-page') === pageId) link.classList.add('active');
+        });
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    document.querySelectorAll('[data-nav]').forEach(el => {
+        el.addEventListener('click', (e) => {
+            e.preventDefault();
+            const page = el.getAttribute('data-nav');
+            if(pages.includes(page)) showPage(page);
+            if(document.getElementById('nav-links').classList.contains('active')) 
+                document.getElementById('nav-links').classList.remove('active');
+        });
+    });
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            const page = link.getAttribute('data-page');
+            if(pages.includes(page)) showPage(page);
+            if(window.innerWidth <= 1024) document.getElementById('nav-links').classList.remove('active');
+        });
+    });
+
+    let bookingCounter = localStorage.getItem('kachnarBookings') ? parseInt(localStorage.getItem('kachnarBookings')) : 0;
+    function updateAdminPanel() { const span = document.getElementById('bookingCount'); if(span) span.innerText = bookingCounter; }
+    function incrementBooking() { bookingCounter++; localStorage.setItem('kachnarBookings', bookingCounter); updateAdminPanel(); }
+
+    const resetBtn = document.getElementById('resetBookingsBtn');
+    if(resetBtn) resetBtn.addEventListener('click', () => { bookingCounter = 0; localStorage.setItem('kachnarBookings', 0); updateAdminPanel(); alert("Reset done"); });
+
+    const bookingForm = document.getElementById('advancedBookingForm');
+    if(bookingForm) bookingForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const name = document.getElementById('bookName').value;
+        if(!name) { alert("Please enter name"); return; }
+        alert(`✨ Booking confirmed for ${name}! We'll contact you shortly.`);
+        incrementBooking();
+        e.target.reset();
+    });
+
+    const contactForm = document.getElementById('contactForm');
+    if(contactForm) contactForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        alert("📧 Thank you! We'll respond within 24 hours.");
+        e.target.reset();
+    });
+
+    document.getElementById('mobile-menu')?.addEventListener('click', () => {
+        document.getElementById('nav-links').classList.toggle('active');
+    });
+
+    if(window.location.hash === '#admin' || window.location.search.includes('admin=true')) {
+        document.getElementById('adminPanel')?.classList.add('visible');
+    }
+
+    loadRooms();
+    loadGallery();
+    loadReviews();
+    updateAdminPanel();
+</script>
+</body>
+</html>
