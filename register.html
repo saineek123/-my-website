@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes, viewport-fit=cover">
+  <title>Aroma beauty salon and makeup studio | Best Salon in Lucknow</title>
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #fefaf8;
+      color: #2c241f;
+      scroll-behavior: smooth;
+    }
+
+    h1, h2, h3, .logo-text, .tagline {
+      font-family: 'Playfair Display', serif;
+    }
+
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* Navigation - Mobile First */
+    nav {
+      background: rgba(255, 255, 255, 0.98);
+      backdrop-filter: blur(4px);
+      box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      padding: 14px 0;
+    }
+
+    .nav-flex {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .logo h1 {
+      font-size: 1.4rem;
+      letter-spacing: -0.3px;
+      color: #d4845f;
+    }
+    .logo p {
+      font-size: 0.65rem;
+      letter-spacing: 1px;
+      color: #9b7a6b;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .nav-links a {
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.85rem;
+      color: #4a342b;
+      transition: 0.2s;
+    }
+    .book-now-nav {
+      background: #d4845f;
+      color: white !important;
+      padding: 6px 16px;
+      border-radius: 40px;
+      font-size: 0.8rem;
+    }
+
+    .btn-primary {
+      background: #d4845f;
+      border: none;
+      padding: 12px 28px;
+      font-weight: 600;
+      border-radius: 50px;
+      color: white;
+      cursor: pointer;
+      display: inline-block;
+      text-decoration: none;
+      transition: all 0.25s ease;
+      box-shadow: 0 6px 14px rgba(212,132,95,0.25);
+    }
+    .btn-primary:hover {
+      background: #b96a47;
+      transform: translateY(-2px);
+    }
+    .btn-outline {
+      background: transparent;
+      border: 2px solid #d4845f;
+      padding: 8px 24px;
+      border-radius: 50px;
+      font-weight: 500;
+      color: #d4845f;
+      cursor: pointer;
+    }
+
+    /* Hero Section */
+    .hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+      padding: 40px 0 30px;
+    }
+    .hero-content { text-align: center; }
+    .hero-content .tagline {
+      font-size: 0.9rem;
+      letter-spacing: 2px;
+      color: #d4845f;
+      font-weight: 500;
+    }
+    .hero-content h1 {
+      font-size: 2rem;
+      margin: 12px 0;
+      line-height: 1.2;
+    }
+    .hero-banner {
+      width: 100%;
+      border-radius: 35px;
+      overflow: hidden;
+      box-shadow: 0 18px 30px rgba(0,0,0,0.1);
+    }
+    .hero-banner img { width: 100%; height: auto; display: block; }
+
+    .quick-services { margin: 50px 0; }
+    .section-title {
+      text-align: center;
+      font-size: 1.8rem;
+      margin-bottom: 30px;
+    }
+    .section-title:after {
+      content: '';
+      width: 65px;
+      height: 3px;
+      background: #d4845f;
+      display: block;
+      margin: 12px auto 0;
+      border-radius: 3px;
+    }
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 18px;
+    }
+    .service-card {
+      background: white;
+      padding: 20px 12px;
+      border-radius: 28px;
+      text-align: center;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.02);
+      border: 1px solid #fae1d4;
+    }
+    .service-card i { font-size: 2rem; color: #d4845f; margin-bottom: 10px; }
+    .service-card h3 { font-size: 1.1rem; }
+
+    /* Services */
+    .services-category { margin: 50px 0; }
+    .category { margin-bottom: 40px; }
+    .category h3 {
+      font-size: 1.5rem;
+      border-left: 5px solid #d4845f;
+      padding-left: 15px;
+      margin-bottom: 20px;
+    }
+    .services-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 18px;
+    }
+    .service-item {
+      background: white;
+      border-radius: 24px;
+      display: flex;
+      gap: 14px;
+      padding: 14px;
+      align-items: center;
+      box-shadow: 0 5px 12px rgba(0,0,0,0.03);
+      border: 1px solid #f3e0d7;
+    }
+    .service-item img {
+      width: 65px;
+      height: 65px;
+      border-radius: 20px;
+      object-fit: cover;
+      background: #f8e4db;
+    }
+    .service-info h4 { font-size: 1rem; }
+    .service-info p { font-size: 0.75rem; color: #7a5a4b; margin: 4px 0; }
+    .price { font-weight: 700; color: #d4845f; font-size: 0.85rem; }
+
+    /* Booking */
+    .booking-section {
+      background: linear-gradient(135deg, #fff6f1, #fff);
+      padding: 35px 20px;
+      border-radius: 45px;
+      margin: 50px 0;
+      box-shadow: 0 12px 28px rgba(0,0,0,0.05);
+    }
+    .booking-form {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+    .booking-form input, .booking-form select, .booking-form textarea {
+      padding: 14px 18px;
+      border-radius: 60px;
+      border: 1px solid #f0d5c9;
+      font-family: 'Poppins', sans-serif;
+      background: white;
+      font-size: 0.9rem;
+    }
+    .whatsapp-note {
+      background: #25d36610;
+      padding: 10px;
+      text-align: center;
+      border-radius: 60px;
+      font-size: 0.8rem;
+    }
+
+    /* ========== GALLERY - ENHANCED WITH BEAUTIFUL DUMMY IMAGES ========== */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+      margin: 40px 0;
+    }
+    .gallery-item {
+      position: relative;
+      border-radius: 28px;
+      overflow: hidden;
+      box-shadow: 0 20px 30px -12px rgba(0,0,0,0.2);
+      transition: all 0.35s ease;
+      cursor: pointer;
+    }
+    .gallery-item:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 28px 36px -12px rgba(0,0,0,0.3);
+    }
+    .gallery-item img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.5s ease;
+    }
+    .gallery-item:hover img {
+      transform: scale(1.05);
+    }
+    .gallery-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+      color: white;
+      padding: 20px 15px 12px;
+      text-align: center;
+      font-weight: 600;
+      font-size: 1rem;
+      backdrop-filter: blur(2px);
+      transform: translateY(100%);
+      transition: 0.3s ease;
+    }
+    .gallery-item:hover .gallery-overlay {
+      transform: translateY(0);
+    }
+
+    /* Testimonials */
+    .testimonials {
+      background: #fff3ed;
+      padding: 40px 20px;
+      border-radius: 50px;
+      margin: 50px 0;
+    }
+    .testi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+      gap: 25px;
+    }
+    .testi-card {
+      background: white;
+      padding: 24px;
+      border-radius: 35px;
+      text-align: center;
+    }
+    .stars { color: #f5b042; margin: 10px 0; letter-spacing: 2px;}
+
+    /* Contact */
+    .contact-section {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      margin: 50px 0;
+    }
+    .contact-details { background: #fffbf9; padding: 20px; border-radius: 35px; }
+    .info-row { margin: 18px 0; display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
+    .map { width: 100%; height: 280px; border-radius: 35px; overflow: hidden; }
+
+    /* About etc */
+    .about-offer {
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+      margin: 50px 0;
+    }
+    .about-box, .offer-box {
+      background: white;
+      padding: 28px;
+      border-radius: 35px;
+      box-shadow: 0 8px 18px rgba(0,0,0,0.03);
+      border: 1px solid #fae2d6;
+    }
+    .membership {
+      background: #2c241f;
+      color: white;
+      border-radius: 35px;
+      padding: 35px 20px;
+      text-align: center;
+      margin: 40px 0;
+    }
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #25d366;
+      width: 55px;
+      height: 55px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 30px;
+      color: white;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+      z-index: 99;
+      text-decoration: none;
+    }
+    .insta-feed {
+      text-align: center;
+      background: #fef2ec;
+      padding: 30px 20px;
+      border-radius: 45px;
+      margin: 45px 0;
+    }
+    .insta-row {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin: 20px 0;
+    }
+    .insta-row img { width: 85px; height: 85px; border-radius: 25px; object-fit: cover; }
+    footer {
+      text-align: center;
+      padding: 30px 20px;
+      background: #2c241f;
+      color: #e2cfc5;
+      font-size: 0.8rem;
+    }
+
+    @media (min-width: 768px) {
+      .hero { flex-direction: row; text-align: left; }
+      .hero-content { text-align: left; }
+      .hero-content h1 { font-size: 3rem; }
+      .contact-section { flex-direction: row; }
+      .about-offer { flex-direction: row; }
+      .nav-links a { font-size: 1rem; }
+      .logo h1 { font-size: 1.9rem; }
+      .gallery-grid { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+      .gallery-item img { height: 320px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- FLOATING WHATSAPP BUTTON -->
+<a href="https://wa.me/919565504043?text=Hi%20Shine%20N%20Glow%2C%20I%20want%20to%20book%20an%20appointment" class="whatsapp-float" target="_blank">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+<nav>
+  <div class="container nav-flex">
+    <div class="logo">
+      <h1>✨ Aroma beauty salon and makeup studio</h1>
+      <p>Your Beauty, Our Passion</p>
+    </div>
+    <div class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#services">Services</a>
+      <a href="#booking">Book</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#contact">Contact</a>
+      <a href="#booking" class="book-now-nav">📅 Book</a>
+    </div>
+  </div>
+</nav>
+
+<main>
+  <!-- 🔥 HOMEPAGE -->
+  <div class="container" id="home">
+    <div class="hero">
+      <div class="hero-content">
+        <div class="tagline">🌟 PREMIUM BEAUTY STUDIO</div>
+        <h1>Glow with Confidence</h1>
+        <p style="margin: 16px 0 24px;">Expert bridal, hair & skin care in Lucknow. Walk out radiant & unstoppable.</p>
+        <a href="#booking" class="btn-primary"><i class="fas fa-calendar-alt"></i> Book Appointment →</a>
+      </div>
+      <div class="hero-banner">
+        <img src="https://images.unsplash.com/photo-1629397685944-7073f5589754?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Salon Hero">
+      </div>
+    </div>
+
+    <!-- Quick preview -->
+    <div class="quick-services">
+      <h2 class="section-title">✨ Signature Services ✨</h2>
+      <div class="service-grid">
+        <div class="service-card"><i class="fas fa-cut"></i><h3>Hair Styling</h3><p>Trendy cuts & blow-dry</p></div>
+        <div class="service-card"><i class="fas fa-spa"></i><h3>Bridal Makeup</h3><p>Airbrush & HD finish</p></div>
+        <div class="service-card"><i class="fas fa-hand-sparkles"></i><h3>Manicure/Pedicure</h3><p>Spa for hands & feet</p></div>
+        <div class="service-card"><i class="fas fa-smile"></i><h3>Facial & Glow</h3><p>Organic & brightening</p></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 💇‍♀️ SERVICES PAGE -->
+  <div class="container" id="services">
+    <h2 class="section-title">Our Premium Services</h2>
+    <div class="services-category">
+      <div class="category"><h3><i class="fas fa-cut"></i> Hair Services</h3><div class="services-list">
+        <div class="service-item"><img src="https://placehold.co/200x200/f3dfd7/d4845f?text=Haircut" alt="haircut"><div class="service-info"><h4>Haircut</h4><p>Stylish precision cut</p><span class="price">₹499+</span></div></div>
+        <div class="service-item"><img src="https://placehold.co/200x200/f3dfd7/d4845f?text=Hairstyling" alt="styling"><div class="service-info"><h4>Hairstyling</h4><p>Blowdry / curls / updos</p><span class="price">₹799</span></div></div>
+        <div class="service-item"><img src="https://placehold.co/200x200/f3dfd7/d4845f?text=Shampoo" alt="condition"><div class="service-info"><h4>Shampoo & Conditioning</h4><p>Deep cleanse & hydration</p><span class="price">₹399</span></div></div>
+        <div class="service-item"><img src="https://placehold.co/200x200/f3dfd7/d4845f?text=Rebonding" alt="smoothing"><div class="service-info"><h4>Rebonding & Smoothing</h4><p>Straight & glossy finish</p><span class="price">₹2999</span></div></div>
+      </div></div>
+      <div class="category"><h3><i class="fas fa-fill-drip"></i> Skin & Beauty</h3><div class="services-list">
+        <div class="service-item"><img src="https://placehold.co/200x200/f3dfd7/d4845f?text=Facials" alt="facial"><div class="service-info"><h4>Facials</h4><p>Brightening / anti-aging</p><span class="price">₹1299</span></div></div>
+        <div class="service-item"><img src="https://placehold.co/200x200/f3dfd7/d4845f?text=Tanning" alt="tanning"><div class="service-info"><h4>Tanning</h4><p>Sun-kissed glow</p><span class="price">₹899</span></div></div>
+        <div class="service-item"><img src="https://placehold.co/200x200/f3dfd7/d4845f?text=SkinCare" alt="skincare"><div class="service-info"><h4>Skin Care</h4><p>Customised treatment</p><span class="price">₹1499</span></div></div>
+      </div></div>
+      <div class="category"><h3><i class="fas fa-hand-peace"></i> Hand & Feet</h3><div class="services-list">
+        <div class="service-item"><img src="https://placehold.co/200x200/f3dfd7/d4845f?text=Manicure" alt="manicure"><div class="service-info"><h4>Manicure</h4><p>Nail care & polish</p><span class="price">₹599</span></div></div>
+        <div class="service-item"><img src="https://placehold.co/200x200/f3dfd7/d4845f?text=Pedicure" alt="pedicure"><div class="service-info"><h4>Pedicure</h4><p>Relaxing foot spa</p><span class="price">₹699</span></div></div>
+      </div></div>
+      <div class="category"><h3><i class="fas fa-brush"></i> Makeup & Bridal</h3><div class="services-list">
+        <div class="service-item"><img src="https://placehold.co/200x200/f3dfd7/d4845f?text=Makeup" alt="makeup"><div class="service-info"><h4>Make-up Services</h4><p>Party / evening glam</p><span class="price">₹1999</span></div></div>
+        <div class="service-item"><img src="https://placehold.co/200x200/f3dfd7/d4845f?text=Bridal" alt="bridal"><div class="service-info"><h4>Bridal Services</h4><p>Full bridal trousseau</p><span class="price">₹9999+</span></div></div>
+        <div class="service-item"><img src="https://placehold.co/200x200/f3dfd7/d4845f?text=Wedding" alt="wedding"><div class="service-info"><h4>Wedding & Event Prep</h4><p>Pre-bridal packages</p><span class="price">₹5999</span></div></div>
+      </div></div>
+      <div class="category"><h3><i class="fas fa-leaf"></i> Body Care & Specials</h3><div class="services-list">
+        <div class="service-item"><img src="https://placehold.co/200x200/f3dfd7/d4845f?text=Waxing" alt="wax"><div class="service-info"><h4>Body Waxing</h4><p>Rica / Chocolate wax</p><span class="price">₹899</span></div></div>
+        <div class="service-item"><img src="https://placehold.co/200x200/f3dfd7/d4845f?text=Spa" alt="spa"><div class="service-info"><h4>Spa Services</h4><p>Aromatherapy massage</p><span class="price">₹1799</span></div></div>
+        <div class="service-item"><img src="https://placehold.co/200x200/f3dfd7/d4845f?text=Eyelashes" alt="lashes"><div class="service-info"><h4>Eyelashes</h4><p>Extensions & lift</p><span class="price">₹1499</span></div></div>
+      </div></div>
+    </div>
+  </div>
+
+  <!-- 📅 ONLINE BOOKING SYSTEM -->
+  <div class="container" id="booking">
+    <div class="booking-section">
+      <h2 class="section-title">📅 Book Your Slot</h2>
+      <form class="booking-form" id="bookingForm">
+        <select required id="serviceSelect"><option value="">Select Service</option><option>Haircut - ₹499</option><option>Bridal Makeup - ₹9999</option><option>Facials - ₹1299</option><option>Manicure & Pedicure - ₹1199</option><option>Rebonding - ₹2999</option><option>Spa Massage - ₹1799</option></select>
+        <input type="date" id="bookingDate" required>
+        <input type="time" id="bookingTime" required>
+        <input type="text" placeholder="Your Name" id="userName" required>
+        <input type="tel" placeholder="Phone Number (WhatsApp)" id="userPhone" required>
+        <textarea rows="2" placeholder="Any special requests? (optional)"></textarea>
+        <button type="button" class="btn-primary" id="submitBookingBtn"><i class="fab fa-whatsapp"></i> Confirm via WhatsApp</button>
+        <div class="whatsapp-note"><i class="fab fa-whatsapp"></i> Instant confirmation on +91 9565504043</div>
+      </form>
+    </div>
+  </div>
+
+  <!-- 📸 GALLERY - BEAUTIFUL & ATTRACTIVE DUMMY IMAGES (Bridal, Hair, Makeup, Nails) -->
+  <div class="container" id="gallery">
+    <h2 class="section-title">📸 Our Stunning Work</h2>
+    <div class="gallery-grid">
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1684868268327-7e5590bcfbd6?q=80&w=686&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Bridal Makeup">
+        <div class="gallery-overlay">✨ Bridal Glamour</div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://plus.unsplash.com/premium_photo-1706800175963-a59e71d1fd64?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Hairstyling">
+        <div class="gallery-overlay">💇‍♀️ Hair Magic</div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://plus.unsplash.com/premium_photo-1669675935483-01a22e5c88bf?q=80&w=688&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Before After Hair">
+        <div class="gallery-overlay">🔄 Hair Transformation</div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1519014816548-bf5fe059798b?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Manicure Art">
+        <div class="gallery-overlay">💅 Nail Perfection</div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1767027151400-fa6a3d905e7c?q=80&w=764&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Party Makeup">
+        <div class="gallery-overlay">🎉 Party Glam</div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://media.istockphoto.com/id/2226703848/photo/smiling-woman-lies-down-while-the-beautician-applies-cream-to-her-face.jpg?s=1024x1024&w=is&k=20&c=KmQ8-Hp53BIZuJleIXYip7xbQX0tIBOLS_OxEwePIOM=" alt="Facial Glow">
+        <div class="gallery-overlay">🌟 Glow Facial</div>
+      </div>
+    </div>
+    <p style="text-align: center; margin-top: -20px; font-size: 0.85rem; color: #b97a5c;"><i class="fas fa-camera"></i> Real transformations • Bridal • Hair • Nails</p>
+  </div>
+
+  <!-- ⭐ REVIEWS -->
+  <div class="container" id="reviews">
+    <div class="testimonials">
+      <h2 class="section-title">⭐ Happy Clients</h2>
+      <div class="testi-grid">
+        <div class="testi-card"><i class="fas fa-quote-left"></i><div class="stars">★★★★★</div><p>"Absolutely stunning bridal makeup! Got so many compliments. Best decision ever."</p><h4>- Priyanka S.</h4></div>
+        <div class="testi-card"><i class="fas fa-quote-left"></i><div class="stars">★★★★★</div><p>"My hair rebonding was smooth and frizz-free even after 3 months. Great service!"</p><h4>- Anjali M.</h4></div>
+        <div class="testi-card"><i class="fas fa-quote-left"></i><div class="stars">★★★★★</div><p>"Luxurious pedicure and very hygienic. Love the staff and ambiance."</p><h4>- Ritu Verma</h4></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 📍 CONTACT & LOCATION (EXACT LOCATION UPDATED AS REQUESTED) -->
+  <div class="container" id="contact">
+    <h2 class="section-title">📍 Find Us</h2>
+    <div class="contact-section">
+      <div class="contact-details">
+        <div class="info-row"><i class="fas fa-map-marker-alt" style="color:#d4845f; font-size: 1.4rem;"></i><p><strong>Kursi Rd, near gudmbba thana, Gudamba Thana, Phool Bagh Colony, Lucknow, Uttar Pradesh 226026</strong></p></div>
+        <div class="info-row"><i class="fas fa-phone-alt"></i><p>+91 9565504043</p></div>
+        <div class="info-row"><i class="fab fa-whatsapp"></i><p>WhatsApp: +91 9565504043</p></div>
+        <div class="info-row"><i class="far fa-clock"></i><p>⏰ Mon-Sun: 10:00 AM – 8:00 PM</p></div>
+        <a href="https://wa.me/918810760451?text=Hi!%20I%20want%20to%20book%20an%20appointment" class="btn-primary" style="margin-top: 12px; display: inline-block;"><i class="fab fa-whatsapp"></i> Chat Now</a>
+      </div>
+      <div class="map">
+        <!-- Embedded Google Maps iframe with the exact location query for better accuracy -->
+        <iframe src="https://www.google.com/maps?q=Kursi+Rd+near+gudmbba+thana+Gudamba+Thana+Phool+Bagh+Colony+Lucknow+Uttar+Pradesh+226026&output=embed" width="100%" height="100%" style="border:0; border-radius: 28px;" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+    </div>
+  </div>
+
+  <!-- 👩‍🎨 ABOUT + OFFERS + MEMBERSHIP -->
+  <div class="container" id="about">
+    <div class="about-offer">
+      <div class="about-box">
+        <h3><i class="fas fa-crown"></i> About Aroma beauty salon and makeup studio</h3>
+        <p style="margin-top: 14px;">With 9+ years of experience, our expert team blends artistry with premium products. We believe in personalized care, hygiene, and making every client feel royalty. Specialists in bridal transformations and advanced skincare.</p>
+        <p style="margin-top: 12px;"><strong>Why choose us?</strong> ✅ Certified stylists ✅ Sterilized tools ✅ Luxury ambience ✅ 100% satisfaction.</p>
+      </div>
+      <div class="offer-box">
+        <h3><i class="fas fa-tags"></i> Hot Offers 🔥</h3>
+        <p>✨ First-time client: 15% off on any service</p>
+        <p>💍 Bridal combo: Free pre-bridal facial with bridal package</p>
+        <p>🌸 Happy Hours (Mon-Wed, 11AM-2PM): Flat 10% off on all hair services</p>
+      </div>
+    </div>
+    <div class="membership">
+      <h3><i class="fas fa-id-card"></i> Membership & Packages</h3>
+      <p>Join our Glam Club: ₹2999/year – Unlimited discounts, birthday free makeover, priority booking, and 20% off on all services + 2 free haircuts annually!</p>
+      <button class="btn-outline" style="background: white; margin-top: 18px;" onclick="window.open('https://wa.me/918810760451?text=Hi%2C%20I%20want%20to%20know%20about%20Glam%20Club%20membership','_blank')">Enquire Now →</button>
+    </div>
+  </div>
+
+  <!-- Instagram Feed Integration -->
+  <div class="container">
+    <div class="insta-feed">
+      <i class="fab fa-instagram fa-2x" style="color:#d4845f;"></i>
+      <h3>Follow @Aromaeasalonmakeupstudio_lko</h3>
+      <div class="insta-row">
+        <img src="https://placehold.co/150x150/f5e2da/d4845f?text=#glow" alt="insta1">
+        <img src="https://placehold.co/150x150/f5e2da/d4845f?text=#bridal" alt="insta2">
+        <img src="https://placehold.co/150x150/f5e2da/d4845f?text=#hairlove" alt="insta3">
+      </div>
+      <p>📸 Share your look with Aroma beauty salon and makeup studio for a chance to win free service!</p>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <p>© 2025 Aroma beauty salon and makeup studio | Lucknow | Your Beauty, Our Passion</p>
+  <p><i class="fas fa-heart" style="color:#d4845f;"></i> Call / WhatsApp: +91 9565504043</p>
+</footer>
+
+<script>
+  const bookBtn = document.getElementById('submitBookingBtn');
+  if(bookBtn) {
+    bookBtn.addEventListener('click', function(){
+      const service = document.getElementById('serviceSelect').value;
+      const date = document.getElementById('bookingDate').value;
+      const time = document.getElementById('bookingTime').value;
+      const name = document.getElementById('userName').value.trim();
+      const phone = document.getElementById('userPhone').value.trim();
+      if(!service || !date || !time || !name || !phone){
+        alert("Please fill all fields: Service, Date, Time, Name & Phone");
+        return;
+      }
+      const msg = `Hello Aroma beauty salon and makeup studio! 📅 New Booking:%0A👤 Name: ${name}%0A📞 Phone: ${phone}%0A💇 Service: ${service}%0A📆 Date: ${date}%0A⏰ Time: ${time}%0A📍 Location: Kursi Rd, near gudmbba thana, Gudamba Thana, Phool Bagh Colony, Lucknow.%0APlease confirm my appointment.`;
+      window.open(`https://wa.me/919565504043?text=${msg}`, '_blank');
+      alert("✅ Request sent! We'll confirm on WhatsApp.");
+    });
+  }
+  document.querySelectorAll('.nav-links a, .book-now-nav, a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      const href = this.getAttribute('href');
+      if(href && href !== "#" && href.startsWith("#")) {
+        e.preventDefault();
+        const target = document.getElementById(href.substring(1));
+        if(target) target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+</script>
+</body>
+</html>
