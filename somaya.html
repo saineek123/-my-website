@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes, viewport-fit=cover">
+  <title>AR Makeovers | Hydra Facial Offer</title>
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #fefaf8;
+      color: #2c241f;
+      scroll-behavior: smooth;
+    }
+
+    h1, h2, h3, .logo-text, .tagline {
+      font-family: 'Playfair Display', serif;
+    }
+
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* Navigation - Mobile First */
+    nav {
+      background: rgba(255, 255, 255, 0.98);
+      backdrop-filter: blur(4px);
+      box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      padding: 14px 0;
+    }
+
+    .nav-flex {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .logo h1 {
+      font-size: 1.4rem;
+      letter-spacing: -0.3px;
+      color: #d4845f;
+    }
+    .logo p {
+      font-size: 0.65rem;
+      letter-spacing: 1px;
+      color: #9b7a6b;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .nav-links a {
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.85rem;
+      color: #4a342b;
+      transition: 0.2s;
+    }
+    .book-now-nav {
+      background: #d4845f;
+      color: white !important;
+      padding: 6px 16px;
+      border-radius: 40px;
+      font-size: 0.8rem;
+    }
+
+    .btn-primary {
+      background: #d4845f;
+      border: none;
+      padding: 12px 28px;
+      font-weight: 600;
+      border-radius: 50px;
+      color: white;
+      cursor: pointer;
+      display: inline-block;
+      text-decoration: none;
+      transition: all 0.25s ease;
+      box-shadow: 0 6px 14px rgba(212,132,95,0.25);
+    }
+    .btn-primary:hover {
+      background: #b96a47;
+      transform: translateY(-2px);
+    }
+    .btn-outline {
+      background: transparent;
+      border: 2px solid #d4845f;
+      padding: 8px 24px;
+      border-radius: 50px;
+      font-weight: 500;
+      color: #d4845f;
+      cursor: pointer;
+    }
+
+    /* Hero Section */
+    .hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+      padding: 40px 0 30px;
+    }
+    .hero-content { text-align: center; }
+    .hero-content .tagline {
+      font-size: 0.9rem;
+      letter-spacing: 2px;
+      color: #d4845f;
+      font-weight: 500;
+    }
+    .hero-content h1 {
+      font-size: 2rem;
+      margin: 12px 0;
+      line-height: 1.2;
+    }
+    .hero-banner {
+      width: 100%;
+      border-radius: 35px;
+      overflow: hidden;
+      box-shadow: 0 18px 30px rgba(0,0,0,0.1);
+    }
+    .hero-banner img { width: 100%; height: auto; display: block; }
+
+    .quick-services { margin: 50px 0; }
+    .section-title {
+      text-align: center;
+      font-size: 1.8rem;
+      margin-bottom: 30px;
+    }
+    .section-title:after {
+      content: '';
+      width: 65px;
+      height: 3px;
+      background: #d4845f;
+      display: block;
+      margin: 12px auto 0;
+      border-radius: 3px;
+    }
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 18px;
+    }
+    .service-card {
+      background: white;
+      padding: 20px 12px;
+      border-radius: 28px;
+      text-align: center;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.02);
+      border: 1px solid #fae1d4;
+    }
+    .service-card i { font-size: 2rem; color: #d4845f; margin-bottom: 10px; }
+    .service-card h3 { font-size: 1.1rem; }
+
+    /* Services */
+    .services-category { margin: 50px 0; }
+    .category { margin-bottom: 40px; }
+    .category h3 {
+      font-size: 1.5rem;
+      border-left: 5px solid #d4845f;
+      padding-left: 15px;
+      margin-bottom: 20px;
+    }
+    .services-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 18px;
+    }
+    .service-item {
+      background: white;
+      border-radius: 24px;
+      display: flex;
+      gap: 14px;
+      padding: 14px;
+      align-items: center;
+      box-shadow: 0 5px 12px rgba(0,0,0,0.03);
+      border: 1px solid #f3e0d7;
+    }
+    .service-item img {
+      width: 65px;
+      height: 65px;
+      border-radius: 20px;
+      object-fit: cover;
+      background: #f8e4db;
+    }
+    .service-info h4 { font-size: 1rem; }
+    .service-info p { font-size: 0.75rem; color: #7a5a4b; margin: 4px 0; }
+    .price { font-weight: 700; color: #d4845f; font-size: 0.85rem; }
+
+    /* Booking */
+    .booking-section {
+      background: linear-gradient(135deg, #fff6f1, #fff);
+      padding: 35px 20px;
+      border-radius: 45px;
+      margin: 50px 0;
+      box-shadow: 0 12px 28px rgba(0,0,0,0.05);
+    }
+    .booking-form {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+    .booking-form input, .booking-form select, .booking-form textarea {
+      padding: 14px 18px;
+      border-radius: 60px;
+      border: 1px solid #f0d5c9;
+      font-family: 'Poppins', sans-serif;
+      background: white;
+      font-size: 0.9rem;
+    }
+    .whatsapp-note {
+      background: #25d36610;
+      padding: 10px;
+      text-align: center;
+      border-radius: 60px;
+      font-size: 0.8rem;
+    }
+
+    /* ====== HYDRA FACIAL OFFER (from image) ====== */
+    .hydra-offer {
+      background: #fef2ec;
+      border-radius: 45px;
+      padding: 30px 20px;
+      margin: 50px 0;
+      box-shadow: 0 12px 28px rgba(0,0,0,0.04);
+      border: 1px solid #f7ddd0;
+    }
+    .hydra-header {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 25px;
+    }
+    .hydra-header h2 {
+      font-size: 2rem;
+      color: #2c241f;
+      font-family: 'Playfair Display', serif;
+      letter-spacing: 2px;
+    }
+    .hydra-header h2 small {
+      display: block;
+      font-size: 1rem;
+      font-weight: 400;
+      color: #d4845f;
+      letter-spacing: 2px;
+    }
+    .hydra-header .offer-dates {
+      background: #2c241f;
+      color: #fae1d4;
+      padding: 8px 24px;
+      border-radius: 60px;
+      font-weight: 600;
+      font-size: 1rem;
+      letter-spacing: 1px;
+      white-space: nowrap;
+    }
+    .hydra-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      margin-top: 10px;
+    }
+    .hydra-card {
+      background: white;
+      border-radius: 35px;
+      padding: 25px 18px 20px;
+      text-align: center;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.02);
+      border: 1px solid #fae1d4;
+    }
+    .hydra-card .plan-title {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      font-size: 1.6rem;
+      color: #2c241f;
+      letter-spacing: 1px;
+    }
+    .hydra-card .plan-sub {
+      font-size: 0.7rem;
+      letter-spacing: 2px;
+      color: #9b7a6b;
+      margin-top: -4px;
+    }
+    .hydra-card .price-tag {
+      background: #fef2ec;
+      padding: 12px 0;
+      border-radius: 60px;
+      margin: 15px 0;
+      font-size: 1.7rem;
+      font-weight: 700;
+      color: #d4845f;
+    }
+    .hydra-card .price-tag small {
+      font-size: 0.9rem;
+      font-weight: 400;
+      color: #6b4f40;
+    }
+    .hydra-card .feature-list {
+      text-align: left;
+      padding-left: 10px;
+      list-style: none;
+      margin: 16px 0;
+    }
+    .hydra-card .feature-list li {
+      padding: 5px 0;
+      font-size: 0.9rem;
+      border-bottom: 1px solid #f7e4db;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .hydra-card .feature-list li i {
+      color: #d4845f;
+      width: 20px;
+    }
+    .hydra-card .btn-hydra {
+      background: #d4845f;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 60px;
+      color: white;
+      font-weight: 600;
+      cursor: pointer;
+      width: 100%;
+      transition: 0.2s;
+      font-size: 1rem;
+    }
+    .hydra-card .btn-hydra:hover {
+      background: #b96a47;
+    }
+    .hydra-badge {
+      background: #2c241f;
+      color: white;
+      padding: 18px 12px;
+      border-radius: 60px;
+      text-align: center;
+      margin-top: 35px;
+      font-weight: 500;
+      letter-spacing: 1px;
+    }
+    .hydra-badge i {
+      color: #25d366;
+      margin: 0 6px;
+    }
+    .hydra-badge a {
+      color: #fae1d4;
+      font-weight: 600;
+      text-decoration: none;
+      margin: 0 8px;
+    }
+
+    /* Gallery, testimonials etc remain */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+      margin: 40px 0;
+    }
+    .gallery-item {
+      position: relative;
+      border-radius: 28px;
+      overflow: hidden;
+      box-shadow: 0 20px 30px -12px rgba(0,0,0,0.2);
+      transition: all 0.35s ease;
+      cursor: pointer;
+    }
+    .gallery-item:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 28px 36px -12px rgba(0,0,0,0.3);
+    }
+    .gallery-item img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.5s ease;
+    }
+    .gallery-item:hover img {
+      transform: scale(1.05);
+    }
+    .gallery-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+      color: white;
+      padding: 20px 15px 12px;
+      text-align: center;
+      font-weight: 600;
+      font-size: 1rem;
+      backdrop-filter: blur(2px);
+      transform: translateY(100%);
+      transition: 0.3s ease;
+    }
+    .gallery-item:hover .gallery-overlay {
+      transform: translateY(0);
+    }
+
+    .testimonials {
+      background: #fff3ed;
+      padding: 40px 20px;
+      border-radius: 50px;
+      margin: 50px 0;
+    }
+    .testi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+      gap: 25px;
+    }
+    .testi-card {
+      background: white;
+      padding: 24px;
+      border-radius: 35px;
+      text-align: center;
+    }
+    .stars { color: #f5b042; margin: 10px 0; letter-spacing: 2px;}
+
+    .contact-section {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      margin: 50px 0;
+    }
+    .contact-details { background: #fffbf9; padding: 20px; border-radius: 35px; }
+    .info-row { margin: 18px 0; display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
+    .map { width: 100%; height: 280px; border-radius: 35px; overflow: hidden; }
+
+    .about-offer {
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+      margin: 50px 0;
+    }
+    .about-box, .offer-box {
+      background: white;
+      padding: 28px;
+      border-radius: 35px;
+      box-shadow: 0 8px 18px rgba(0,0,0,0.03);
+      border: 1px solid #fae2d6;
+    }
+    .membership {
+      background: #2c241f;
+      color: white;
+      border-radius: 35px;
+      padding: 35px 20px;
+      text-align: center;
+      margin: 40px 0;
+    }
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #25d366;
+      width: 55px;
+      height: 55px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 30px;
+      color: white;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+      z-index: 99;
+      text-decoration: none;
+    }
+    .insta-feed {
+      text-align: center;
+      background: #fef2ec;
+      padding: 30px 20px;
+      border-radius: 45px;
+      margin: 45px 0;
+    }
+    .insta-row {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin: 20px 0;
+    }
+    .insta-row img { width: 85px; height: 85px; border-radius: 25px; object-fit: cover; }
+    footer {
+      text-align: center;
+      padding: 30px 20px;
+      background: #2c241f;
+      color: #e2cfc5;
+      font-size: 0.8rem;
+    }
+
+    @media (min-width: 768px) {
+      .hero { flex-direction: row; text-align: left; }
+      .hero-content { text-align: left; }
+      .hero-content h1 { font-size: 3rem; }
+      .contact-section { flex-direction: row; }
+      .about-offer { flex-direction: row; }
+      .nav-links a { font-size: 1rem; }
+      .logo h1 { font-size: 1.9rem; }
+      .gallery-grid { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+      .gallery-item img { height: 320px; }
+      .hydra-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+  </style>
+</head>
+<body>
+
+<!-- FLOATING WHATSAPP BUTTON -->
+<a href="https://wa.me/918957753574?text=Hi%20Soumya%20Makeover%20%26%20Academy%2C%20I%20want%20to%20book%20Hydra%20Facial%20offer" class="whatsapp-float" target="_blank">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+<nav>
+  <div class="container nav-flex">
+    <div class="logo">
+      <h1>✨ soumya MAKEOVER & ACADEMY</h1>
+      <p>FARENDA ROADS • FRONT OF RAPTI GOLD, MAHARJGANJ</p>
+    </div>
+    <div class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#services">Services</a>
+      <a href="#booking">Book</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#contact">Contact</a>
+      <a href="#booking" class="book-now-nav">📅 Book</a>
+    </div>
+  </div>
+</nav>
+
+<main>
+  <!-- HOMEPAGE -->
+  <div class="container" id="home">
+    <div class="hero">
+      <div class="hero-content">
+        <div class="tagline">🌟 THIS SAWAN • TREAT YOURSELF</div>
+        <h1>Glow Like Never Before</h1>
+        <p style="margin: 16px 0 24px;">Hydra Facial • Deep Cleanse • Deep Hydration • Instant Glow</p>
+        <a href="#hydra-offer" class="btn-primary"><i class="fas fa-spa"></i> Explore Hydra Offer →</a>
+      </div>
+      <div class="hero-banner">
+        <img src="https://images.unsplash.com/photo-1629397685944-7073f5589754?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Salon Hero">
+      </div>
+    </div>
+
+    <div class="quick-services">
+      <h2 class="section-title">✨ Signature Services ✨</h2>
+      <div class="service-grid">
+        <div class="service-card"><i class="fas fa-cut"></i><h3>Hair Styling</h3><p>Trendy cuts & blow-dry</p></div>
+        <div class="service-card"><i class="fas fa-spa"></i><h3>Bridal Makeup</h3><p>Airbrush & HD finish</p></div>
+        <div class="service-card"><i class="fas fa-hand-sparkles"></i><h3>Manicure/Pedicure</h3><p>Spa for hands & feet</p></div>
+        <div class="service-card"><i class="fas fa-smile"></i><h3>Facial & Glow</h3><p>Organic & brightening</p></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ====== HYDRA FACIAL OFFER (exactly as image) ====== -->
+  <div class="container" id="hydra-offer">
+    <div class="hydra-offer">
+      <div class="hydra-header">
+        <h2>
+          <small>#soumya MAKEOVER & ACADEMY</small>
+          This SAWAN<br>Treat Yourself
+        </h2>
+        <span class="offer-dates"><i class="far fa-calendar-alt"></i> 27 JULY TO 1ST AUGUST</span>
+      </div>
+
+      <div style="text-align: center; margin-bottom: 20px;">
+        <span style="background: #d4845f20; padding: 6px 18px; border-radius: 60px; font-weight: 600; color: #b96a47;">GLOW LIKE NEVER BEFORE</span>
+        <h3 style="font-family: 'Playfair Display', serif; font-size: 2rem; margin: 8px 0 0;">HYDRA FACIAL</h3>
+        <p style="color: #7a5a4b;">Deep Cleanse. Deep Hydration. Instant Glow.</p>
+      </div>
+
+      <div class="hydra-grid">
+        <!-- LUXURY CARD -->
+        <div class="hydra-card">
+          <div class="plan-title">LUXURY</div>
+          <div class="plan-sub">Hydra Facial</div>
+          <div class="price-tag">₹3100/- <small>only</small></div>
+          <ul class="feature-list">
+            <li><i class="fas fa-check-circle"></i> Deep Cleansing</li>
+            <li><i class="fas fa-check-circle"></i> Hydration Boost</li>
+            <li><i class="fas fa-check-circle"></i> Anti-Aging Care</li>
+            <li><i class="fas fa-check-circle"></i> Brightens Skin</li>
+            <li><i class="fas fa-check-circle"></i> Minimizes Pores</li>
+            <li><i class="fas fa-check-circle"></i> Instant Glow</li>
+          </ul>
+          <button class="btn-hydra" onclick="bookHydra('LUXURY Hydra Facial ₹3100')"><i class="fab fa-whatsapp"></i> Book Now</button>
+        </div>
+
+        <!-- BASICS CARD -->
+        <div class="hydra-card">
+          <div class="plan-title">BASICS</div>
+          <div class="plan-sub">Hydra Facial</div>
+          <div class="price-tag">₹2000/- <small>only</small></div>
+          <ul class="feature-list">
+            <li><i class="fas fa-check-circle"></i> Deep Cleansing</li>
+            <li><i class="fas fa-check-circle"></i> Hydration</li>
+            <li><i class="fas fa-check-circle"></i> Oil Control</li>
+            <li><i class="fas fa-check-circle"></i> Refreshes Skin</li>
+            <li><i class="fas fa-check-circle"></i> Smooth Texture</li>
+            <li><i class="fas fa-check-circle"></i> Healthy Glow</li>
+          </ul>
+          <button class="btn-hydra" onclick="bookHydra('BASICS Hydra Facial ₹2000')"><i class="fab fa-whatsapp"></i> Book Now</button>
+        </div>
+      </div>
+
+      <!-- WHY CHOOSE -->
+      <div style="margin: 40px 0 20px; background: #fffcf9; padding: 20px; border-radius: 40px; border: 1px solid #f7ddd0;">
+        <h4 style="font-family: 'Playfair Display', serif; font-size: 1.4rem; text-align: center; margin-bottom: 14px;">WHY CHOOSE HYDRA FACIAL?</h4>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px,1fr)); gap: 10px;">
+          <div><i class="fas fa-check-circle" style="color:#d4845f;"></i> Deeply cleanses & removes impurities</div>
+          <div><i class="fas fa-check-circle" style="color:#d4845f;"></i> Provides intense hydration & elasticity</div>
+          <div><i class="fas fa-check-circle" style="color:#d4845f;"></i> Reduces fine lines & dullness</div>
+          <div><i class="fas fa-check-circle" style="color:#d4845f;"></i> Suited for all skin types</div>
+          <div><i class="fas fa-check-circle" style="color:#d4845f;"></i> Instant & visible results</div>
+        </div>
+      </div>
+
+      <div class="hydra-badge">
+        <i class="fas fa-bullhorn"></i> Hurray Up Guy's Book Your Appointment Now! 
+        <span style="background: #d4845f30; padding: 4px 18px; border-radius: 60px; margin-left: 10px;">LIMITED SLOTS ONLY!</span>
+        <br><br>
+        <i class="fas fa-phone-alt"></i> CALL / WHATSAPP <strong>8957553574</strong>
+        <span style="margin: 0 12px;">|</span>
+        <i class="fab fa-instagram"></i> <a href="#" style="color:white;">soumya_makeoverandacademy</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- SERVICES (kept same as original) -->
+  <div class="container" id="services">
+    <h2 class="section-title">Our Premium Services</h2>
+    <div class="services-category">
+      <div class="category"><h3><i class="fas fa-cut"></i> Hair Services</h3><div class="services-list">
+        <div class="service-item"><img src="https://placehold.co/200x200/f3dfd7/d4845f?text=Haircut" alt="haircut"><div class="service-info"><h4>Haircut</h4><p>Stylish precision cut</p><span class="price">₹499+</span></div></div>
+        <div class="service-item"><img src="https://placehold.co/200x200/f3dfd7/d4845f?text=Hairstyling" alt="styling"><div class="service-info"><h4>Hairstyling</h4><p>Blowdry / curls / updos</p><span class="price">₹799</span></div></div>
+        <div class="service-item"><img src="https://placehold.co/200x200/f3dfd7/d4845f?text=Shampoo" alt="condition"><div class="service-info"><h4>Shampoo & Conditioning</h4><p>Deep cleanse & hydration</p><span class="price">₹399</span></div></div>
+        <div class="service-item"><img src="https://placehold.co/200x200/f3dfd7/d4845f?text=Rebonding" alt="smoothing"><div class="service-info"><h4>Rebonding & Smoothing</h4><p>Straight & glossy finish</p><span class="price">₹2999</span></div></div>
+      </div></div>
+      <div class="category"><h3><i class="fas fa-fill-drip"></i> Skin & Beauty</h3><div class="services-list">
+        <div class="service-item"><img src="https://placehold.co/200x200/f3dfd7/d4845f?text=Facials" alt="facial"><div class="service-info"><h4>Facials</h4><p>Brightening / anti-aging</p><span class="price">₹1299</span></div></div>
+        <div class="service-item"><img src="https://placehold.co/200x200/f3dfd7/d4845f?text=Tanning" alt="tanning"><div class="service-info"><h4>Tanning</h4><p>Sun-kissed glow</p><span class="price">₹899</span></div></div>
+        <div class="service-item"><img src="https://placehold.co/200x200/f3dfd7/d4845f?text=SkinCare" alt="skincare"><div class="service-info"><h4>Skin Care</h4><p>Customised treatment</p><span class="price">₹1499</span></div></div>
+      </div></div>
+      <div class="category"><h3><i class="fas fa-hand-peace"></i> Hand & Feet</h3><div class="services-list">
+        <div class="service-item"><img src="https://placehold.co/200x200/f3dfd7/d4845f?text=Manicure" alt="manicure"><div class="service-info"><h4>Manicure</h4><p>Nail care & polish</p><span class="price">₹599</span></div></div>
+        <div class="service-item"><img src="https://placehold.co/200x200/f3dfd7/d4845f?text=Pedicure" alt="pedicure"><div class="service-info"><h4>Pedicure</h4><p>Relaxing foot spa</p><span class="price">₹699</span></div></div>
+      </div></div>
+      <div class="category"><h3><i class="fas fa-brush"></i> Makeup & Bridal</h3><div class="services-list">
+        <div class="service-item"><img src="https://placehold.co/200x200/f3dfd7/d4845f?text=Makeup" alt="makeup"><div class="service-info"><h4>Make-up Services</h4><p>Party / evening glam</p><span class="price">₹1999</span></div></div>
+        <div class="service-item"><img src="https://placehold.co/200x200/f3dfd7/d4845f?text=Bridal" alt="bridal"><div class="service-info"><h4>Bridal Services</h4><p>Full bridal trousseau</p><span class="price">₹9999+</span></div></div>
+        <div class="service-item"><img src="https://placehold.co/200x200/f3dfd7/d4845f?text=Wedding" alt="wedding"><div class="service-info"><h4>Wedding & Event Prep</h4><p>Pre-bridal packages</p><span class="price">₹5999</span></div></div>
+      </div></div>
+      <div class="category"><h3><i class="fas fa-leaf"></i> Body Care & Specials</h3><div class="services-list">
+        <div class="service-item"><img src="https://placehold.co/200x200/f3dfd7/d4845f?text=Waxing" alt="wax"><div class="service-info"><h4>Body Waxing</h4><p>Rica / Chocolate wax</p><span class="price">₹899</span></div></div>
+        <div class="service-item"><img src="https://placehold.co/200x200/f3dfd7/d4845f?text=Spa" alt="spa"><div class="service-info"><h4>Spa Services</h4><p>Aromatherapy massage</p><span class="price">₹1799</span></div></div>
+        <div class="service-item"><img src="https://placehold.co/200x200/f3dfd7/d4845f?text=Eyelashes" alt="lashes"><div class="service-info"><h4>Eyelashes</h4><p>Extensions & lift</p><span class="price">₹1499</span></div></div>
+      </div></div>
+    </div>
+  </div>
+
+  <!-- BOOKING (kept original) -->
+  <div class="container" id="booking">
+    <div class="booking-section">
+      <h2 class="section-title">📅 Book Your Slot</h2>
+      <form class="booking-form" id="bookingForm">
+        <select required id="serviceSelect"><option value="">Select Service</option><option>Haircut - ₹499</option><option>Bridal Makeup - ₹9999</option><option>Facials - ₹1299</option><option>Manicure & Pedicure - ₹1199</option><option>Rebonding - ₹2999</option><option>Spa Massage - ₹1799</option><option>LUXURY Hydra Facial ₹3100</option><option>BASICS Hydra Facial ₹2000</option></select>
+        <input type="date" id="bookingDate" required>
+        <input type="time" id="bookingTime" required>
+        <input type="text" placeholder="Your Name" id="userName" required>
+        <input type="tel" placeholder="Phone Number (WhatsApp)" id="userPhone" required>
+        <textarea rows="2" placeholder="Any special requests? (optional)"></textarea>
+        <button type="button" class="btn-primary" id="submitBookingBtn"><i class="fab fa-whatsapp"></i> Confirm via WhatsApp</button>
+        <div class="whatsapp-note"><i class="fab fa-whatsapp"></i> Instant confirmation on +91 8957553574</div>
+      </form>
+    </div>
+  </div>
+
+  <!-- GALLERY -->
+  <div class="container" id="gallery">
+    <h2 class="section-title">📸 Our Stunning Work</h2>
+    <div class="gallery-grid">
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1684868268327-7e5590bcfbd6?q=80&w=686&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Bridal Makeup">
+        <div class="gallery-overlay">✨ Bridal Glamour</div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://plus.unsplash.com/premium_photo-1706800175963-a59e71d1fd64?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Hairstyling">
+        <div class="gallery-overlay">💇‍♀️ Hair Magic</div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://plus.unsplash.com/premium_photo-1669675935483-01a22e5c88bf?q=80&w=688&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Before After Hair">
+        <div class="gallery-overlay">🔄 Hair Transformation</div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1519014816548-bf5fe059798b?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Manicure Art">
+        <div class="gallery-overlay">💅 Nail Perfection</div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1767027151400-fa6a3d905e7c?q=80&w=764&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Party Makeup">
+        <div class="gallery-overlay">🎉 Party Glam</div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://media.istockphoto.com/id/2226703848/photo/smiling-woman-lies-down-while-the-beautician-applies-cream-to-her-face.jpg?s=1024x1024&w=is&k=20&c=KmQ8-Hp53BIZuJleIXYip7xbQX0tIBOLS_OxEwePIOM=" alt="Facial Glow">
+        <div class="gallery-overlay">🌟 Glow Facial</div>
+      </div>
+    </div>
+    <p style="text-align: center; margin-top: -20px; font-size: 0.85rem; color: #b97a5c;"><i class="fas fa-camera"></i> Real transformations • Bridal • Hair • Nails</p>
+  </div>
+
+  <!-- REVIEWS -->
+  <div class="container" id="reviews">
+    <div class="testimonials">
+      <h2 class="section-title">⭐ Happy Clients</h2>
+      <div class="testi-grid">
+        <div class="testi-card"><i class="fas fa-quote-left"></i><div class="stars">★★★★★</div><p>"Absolutely stunning bridal makeup! Got so many compliments. Best decision ever."</p><h4>- Priyanka S.</h4></div>
+        <div class="testi-card"><i class="fas fa-quote-left"></i><div class="stars">★★★★★</div><p>"My hair rebonding was smooth and frizz-free even after 3 months. Great service!"</p><h4>- Anjali M.</h4></div>
+        <div class="testi-card"><i class="fas fa-quote-left"></i><div class="stars">★★★★★</div><p>"Luxurious pedicure and very hygienic. Love the staff and ambiance."</p><h4>- Ritu Verma</h4></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CONTACT -->
+  <div class="container" id="contact">
+    <div class="contact-section">
+      <div class="contact-details">
+        <h3 style="font-family:'Playfair Display';">📍 Visit Us</h3>
+        <div class="info-row"><i class="fas fa-map-pin" style="color:#d4845f; width:24px;"></i> FARENDA ROADS, FRONT OF RAPTI GOLD, MAHARJGANJ</div>
+        <div class="info-row"><i class="fas fa-phone-alt" style="color:#d4845f; width:24px;"></i> +91 8957553574</div>
+        <div class="info-row"><i class="fab fa-instagram" style="color:#d4845f; width:24px;"></i> @soumya_makeoverandacademy</div>
+        <div class="info-row"><i class="fab fa-whatsapp" style="color:#25d366; width:24px;"></i> WhatsApp: 8957553574</div>
+      </div>
+      <div class="map">
+        <iframe width="100%" height="280" style="border:0; border-radius:35px;" loading="lazy" allowfullscreen src="https://www.google.com/maps/embed/v1/place?q=Farinda+Road+Maharajganj&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"></iframe>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2025 soumya MAKEOVER & ACADEMY | FARENDA ROADS, FRONT OF RAPTI GOLD, MAHARJGANJ</p>
+    <p><i class="fas fa-heart" style="color:#d4845f;"></i> Call / WhatsApp: +918957753574</p>
+  </footer>
+</main>
+
+<script>
+  // Hydra book function
+  function bookHydra(service) {
+    const msg = `Hello Soumya Makeover & Academy! I want to book ${service}. Please confirm my appointment.`;
+    window.open(`https://wa.me/918957753574?text=${encodeURIComponent(msg)}`, '_blank');
+  }
+
+  // Booking form handler
+  const bookBtn = document.getElementById('submitBookingBtn');
+  if(bookBtn) {
+    bookBtn.addEventListener('click', function(){
+      const service = document.getElementById('serviceSelect').value;
+      const date = document.getElementById('bookingDate').value;
+      const time = document.getElementById('bookingTime').value;
+      const name = document.getElementById('userName').value.trim();
+      const phone = document.getElementById('userPhone').value.trim();
+      if(!service || !date || !time || !name || !phone){
+        alert("Please fill all fields: Service, Date, Time, Name & Phone");
+        return;
+      }
+      const msg = `Hello Soumya Makeover & Academy! 📅 New Booking:%0A👤 Name: ${name}%0A📞 Phone: ${phone}%0A💇 Service: ${service}%0A📆 Date: ${date}%0A⏰ Time: ${time}%0A📍 Location: FARENDA ROADS, FRONT OF RAPTI GOLD, MAHARJGANJ%0APlease confirm my appointment.`;
+      window.open(`https://wa.me/918957753574?text=${msg}`, '_blank');
+      alert("✅ Request sent! We'll confirm on WhatsApp.");
+    });
+  }
+
+  // Smooth scroll for nav links
+  document.querySelectorAll('.nav-links a, .book-now-nav, a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      const href = this.getAttribute('href');
+      if(href && href !== "#" && href.startsWith("#")) {
+        e.preventDefault();
+        const target = document.getElementById(href.substring(1));
+        if(target) target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+</script>
+</body>
+</html>
