@@ -843,7 +843,8 @@
         alert("Please fill all fields: Service, Date, Time, Name & Phone");
         return;
       }
-      const msg = `Hello Soumya Makeover & Academy! 📅 New Booking:%0A👤 Name: ${name}%0A📞 Phone: ${phone}%0A💇 Service: ${service}%0A📆 Date: ${date}%0A⏰ Time: ${time}%0A📍 Location: FARENDA ROADS, FRONT OF RAPTI GOLD, MAHARJGANJ%0APlease confirm.`;
+      // Full details with line breaks using %0A (URL encoded)
+      const msg = `Hello Soumya Makeover & Academy! 📅 New Booking:%0A%0A👤 Name: ${name}%0A📞 Phone: ${phone}%0A💇 Service: ${service}%0A📆 Date: ${date}%0A⏰ Time: ${time}%0A📍 Location: FARENDA ROADS, FRONT OF RAPTI GOLD, MAHARJGANJ%0A%0APlease confirm my appointment. Thank you!`;
       window.open(`https://wa.me/918957753574?text=${msg}`, '_blank');
       alert("✅ Request sent! We'll confirm on WhatsApp.");
     });
