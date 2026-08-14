@@ -35,7 +35,7 @@
 
     /* ----- navigation (glassmorphism) ----- */
     nav {
-      background: rgba(255, 248, 245, 0.85);
+      background: rgba(255, 248, 245, 0.92);
       backdrop-filter: blur(12px);
       -webkit-backdrop-filter: blur(12px);
       box-shadow: 0 4px 20px rgba(0,0,0,0.03);
@@ -371,7 +371,6 @@
       padding: 20px 16px;
       border-radius: 40px;
       text-align: center;
-      margin-top: 30px;
       font-weight: 500;
       letter-spacing: 0.3px;
       position: relative;
@@ -456,6 +455,127 @@
     .service-info p { font-size: 0.7rem; color: #7a5a4b; margin: 2px 0; }
     .price { font-weight: 700; color: #b76a4a; font-size: 0.85rem; }
 
+    /* ===== NEW: STUDENT ADMISSION SECTION ===== */
+    .admission-section {
+      background: linear-gradient(145deg, #faf3f0, #f5e8e0);
+      border-radius: 40px;
+      padding: 28px 18px 32px;
+      margin: 40px 0;
+      border: 1px solid #f0ded6;
+      position: relative;
+      overflow: hidden;
+    }
+    .admission-section::before {
+      content: '🎓';
+      position: absolute;
+      top: -30px;
+      right: -20px;
+      font-size: 120px;
+      opacity: 0.05;
+      pointer-events: none;
+      transform: rotate(10deg);
+    }
+    .admission-header {
+      text-align: center;
+      margin-bottom: 24px;
+    }
+    .admission-header h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      font-weight: 700;
+    }
+    .admission-header h2 small {
+      display: block;
+      font-size: 0.75rem;
+      font-weight: 400;
+      color: #b76a4a;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-family: 'Inter', sans-serif;
+      margin-top: 4px;
+    }
+    .admission-header p {
+      color: #5a433a;
+      max-width: 500px;
+      margin: 10px auto 0;
+    }
+    .admission-badge {
+      display: inline-block;
+      background: #b76a4a;
+      color: white;
+      padding: 6px 20px;
+      border-radius: 60px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+      margin-bottom: 12px;
+    }
+    .course-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 12px;
+      margin-bottom: 28px;
+    }
+    .course-tag {
+      background: white;
+      padding: 12px 8px;
+      border-radius: 20px;
+      text-align: center;
+      border: 1px solid #f0ded6;
+      font-weight: 600;
+      font-size: 0.85rem;
+      transition: 0.2s;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+    }
+    .course-tag i {
+      color: #b76a4a;
+      margin-right: 6px;
+    }
+    .course-tag:hover {
+      border-color: #b76a4a;
+      transform: translateY(-2px);
+    }
+
+    .admission-form {
+      max-width: 500px;
+      margin: 0 auto;
+      background: white;
+      padding: 24px 20px;
+      border-radius: 32px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.04);
+      border: 1px solid #f0ded6;
+    }
+    .admission-form input, .admission-form select {
+      padding: 14px 18px;
+      border-radius: 60px;
+      border: 1px solid #f0ded6;
+      font-family: 'Inter', sans-serif;
+      background: #fcf8f6;
+      font-size: 0.9rem;
+      width: 100%;
+      transition: 0.2s;
+      margin-bottom: 12px;
+    }
+    .admission-form input:focus, .admission-form select:focus {
+      outline: none;
+      border-color: #b76a4a;
+      box-shadow: 0 0 0 3px rgba(183,106,74,0.05);
+    }
+    .admission-form .btn-primary {
+      width: 100%;
+      justify-content: center;
+      text-align: center;
+    }
+    .whatsapp-note {
+      background: #f0f7f0;
+      padding: 10px;
+      text-align: center;
+      border-radius: 60px;
+      font-size: 0.8rem;
+      color: #1e1815;
+      margin-top: 12px;
+    }
+
     .booking-section {
       background: white;
       padding: 28px 18px;
@@ -479,15 +599,6 @@
       outline: none;
       border-color: #b76a4a;
       box-shadow: 0 0 0 3px rgba(183,106,74,0.05);
-    }
-    .whatsapp-note {
-      background: #f0f7f0;
-      padding: 10px;
-      text-align: center;
-      border-radius: 60px;
-      font-size: 0.8rem;
-      color: #1e1815;
-      margin-top: 12px;
     }
 
     .gallery-grid {
@@ -603,12 +714,14 @@
       .logo h1 { font-size: 1.6rem; }
       .gallery-grid { grid-template-columns: repeat(3, 1fr); }
       .gallery-item img { height: 280px; }
+      .admission-header h2 { font-size: 2.2rem; }
     }
     @media (max-width: 480px) {
       .hydra-card .plan-title { font-size: 1.5rem; }
       .hydra-card .price-tag { font-size: 1.5rem; }
       .hydra-header h2 { font-size: 1.3rem; }
       .why-grid { grid-template-columns: 1fr 1fr; }
+      .course-grid { grid-template-columns: 1fr 1fr; }
     }
   </style>
 </head>
@@ -619,6 +732,7 @@
   <i class="fab fa-whatsapp"></i>
 </a>
 
+<!-- ===== SINGLE NAVIGATION ===== -->
 <nav>
   <div class="container nav-flex">
     <div class="logo">
@@ -631,6 +745,7 @@
       <a href="#booking">Book</a>
       <a href="#gallery">Gallery</a>
       <a href="#reviews">Reviews</a>
+      <a href="#admission">Admission</a>
       <a href="#booking" class="book-now-nav">📅 Book</a>
     </div>
   </div>
@@ -732,6 +847,48 @@
         <i class="fas fa-phone-alt"></i> CALL / WHATSAPP <strong>8957553574</strong>
         <span style="margin:0 8px;">|</span>
         <i class="fab fa-instagram"></i> <a href="#">soumya_makeoverandacademy</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== NEW: STUDENT ADMISSION SECTION ===== -->
+  <div class="container" id="admission">
+    <div class="admission-section">
+      <div class="admission-header">
+        <span class="admission-badge"><i class="fas fa-graduation-cap"></i> Enroll Now</span>
+        <h2>
+          Learn from the Experts
+          <small>soumya MAKEOVER & ACADEMY</small>
+        </h2>
+        <p>Professional beauty & makeup courses. Get hands-on training from industry experts.</p>
+      </div>
+
+      <div class="course-grid">
+        <div class="course-tag"><i class="fas fa-brush"></i> Makeup Artistry</div>
+        <div class="course-tag"><i class="fas fa-cut"></i> Hair Styling</div>
+        <div class="course-tag"><i class="fas fa-spa"></i> Skin Care</div>
+        <div class="course-tag"><i class="fas fa-hand-sparkles"></i> Nail Art</div>
+        <div class="course-tag"><i class="fas fa-ring"></i> Bridal Makeup</div>
+        <div class="course-tag"><i class="fas fa-user-graduate"></i> Self Grooming</div>
+      </div>
+
+      <div class="admission-form" id="admissionForm">
+        <h4 style="text-align:center; font-family:'Playfair Display'; margin-bottom:16px; font-size:1.2rem;">📝 Student Admission Form</h4>
+        <input type="text" id="studentName" placeholder="Full Name" required>
+        <input type="tel" id="studentPhone" placeholder="Phone Number (WhatsApp)" required>
+        <input type="email" id="studentEmail" placeholder="Email Address (optional)">
+        <select id="studentCourse" required>
+          <option value="">Select Course</option>
+          <option>Makeup Artistry - ₹15,000</option>
+          <option>Hair Styling - ₹12,000</option>
+          <option>Skin Care Specialist - ₹10,000</option>
+          <option>Nail Art - ₹8,000</option>
+          <option>Bridal Makeup - ₹20,000</option>
+          <option>Self Grooming - ₹5,000</option>
+          <option>Full Beauty Course - ₹35,000</option>
+        </select>
+        <button type="button" class="btn-primary" id="submitAdmissionBtn"><i class="fab fa-whatsapp"></i> Enroll Now via WhatsApp</button>
+        <div class="whatsapp-note"><i class="fas fa-gift" style="color:#b76a4a;"></i> Enroll Now & Get <strong>20% Off</strong> on First Course!</div>
       </div>
     </div>
   </div>
@@ -855,13 +1012,11 @@
       const phone = document.getElementById('userPhone').value.trim();
       const special = document.getElementById('specialRequest').value.trim();
 
-      // Validation
       if(!service || !date || !time || !name || !phone){
         alert("❌ Please fill all fields: Service, Date, Time, Name & Phone");
         return;
       }
 
-      // Build WhatsApp message with ALL details
       let msg = `Hello Soumya Makeover & Academy! 📅 New Booking:%0A%0A`;
       msg += `👤 Name: ${name}%0A`;
       msg += `📞 Phone: ${phone}%0A`;
@@ -874,901 +1029,31 @@
       }
       msg += `%0APlease confirm my appointment. Thank you! 🙏`;
 
-      // Open WhatsApp with the message
       window.open(`https://wa.me/918957753574?text=${msg}`, '_blank');
     });
   }
 
-  // Smooth scroll for navigation links
-  document.querySelectorAll('.nav-links a, .book-now-nav, a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-      const href = this.getAttribute('href');
-      if(href && href !== "#" && href.startsWith("#")) {
-        e.preventDefault();
-        const target = document.getElementById(href.substring(1));
-        if(target) target.scrollIntoView({ behavior: 'smooth' });
-      }
-    });
-  });
-</script>
-</body>
-</html><!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes, viewport-fit=cover">
-  <title>soumya MAKEOVER & ACADEMY | Hydra Facial Offer</title>
-  <!-- Font Awesome 6 -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,500&display=swap" rel="stylesheet">
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+  // ===== NEW: Student Admission Form =====
+  const admissionBtn = document.getElementById('submitAdmissionBtn');
+  if(admissionBtn) {
+    admissionBtn.addEventListener('click', function(){
+      const name = document.getElementById('studentName').value.trim();
+      const phone = document.getElementById('studentPhone').value.trim();
+      const email = document.getElementById('studentEmail').value.trim();
+      const course = document.getElementById('studentCourse').value;
 
-    body {
-      font-family: 'Inter', sans-serif;
-      background: #fcf8f6;
-      color: #1e1815;
-      scroll-behavior: smooth;
-      -webkit-font-smoothing: antialiased;
-    }
-
-    h1, h2, h3, .logo-text, .serif {
-      font-family: 'Playfair Display', serif;
-    }
-
-    .container {
-      max-width: 1280px;
-      margin: 0 auto;
-      padding: 0 16px;
-    }
-
-    /* ----- navigation (glassmorphism) ----- */
-    nav {
-      background: rgba(255, 248, 245, 0.85);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      box-shadow: 0 4px 20px rgba(0,0,0,0.03);
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      padding: 12px 0;
-      border-bottom: 1px solid rgba(212, 132, 95, 0.08);
-    }
-
-    .nav-flex {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 8px;
-    }
-
-    .logo h1 {
-      font-size: 1.2rem;
-      letter-spacing: -0.3px;
-      color: #b76a4a;
-      font-weight: 700;
-    }
-    .logo .sub {
-      font-size: 0.55rem;
-      letter-spacing: 1.2px;
-      color: #8b6b5c;
-      font-weight: 400;
-      text-transform: uppercase;
-      opacity: 0.8;
-      margin-top: 2px;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 6px;
-      flex-wrap: wrap;
-      align-items: center;
-    }
-    .nav-links a {
-      text-decoration: none;
-      font-weight: 500;
-      font-size: 0.7rem;
-      color: #3d2b23;
-      padding: 6px 12px;
-      border-radius: 40px;
-      transition: 0.2s;
-      letter-spacing: 0.3px;
-    }
-    .nav-links a:hover {
-      background: rgba(212, 132, 95, 0.08);
-    }
-    .book-now-nav {
-      background: #b76a4a;
-      color: white !important;
-      padding: 6px 16px !important;
-      border-radius: 40px;
-      font-weight: 600;
-      box-shadow: 0 4px 10px rgba(183, 106, 74, 0.2);
-    }
-    .book-now-nav:hover {
-      background: #9f5a3e !important;
-      transform: translateY(-1px);
-    }
-
-    .btn-primary {
-      background: #b76a4a;
-      border: none;
-      padding: 14px 32px;
-      font-weight: 600;
-      border-radius: 60px;
-      color: white;
-      cursor: pointer;
-      display: inline-block;
-      text-decoration: none;
-      transition: all 0.25s ease;
-      box-shadow: 0 8px 24px rgba(183, 106, 74, 0.25);
-      font-size: 0.95rem;
-      letter-spacing: 0.3px;
-    }
-    .btn-primary:hover {
-      background: #9f5a3e;
-      transform: translateY(-3px);
-      box-shadow: 0 12px 28px rgba(183, 106, 74, 0.35);
-    }
-
-    .btn-outline {
-      background: transparent;
-      border: 2px solid #b76a4a;
-      padding: 10px 28px;
-      border-radius: 60px;
-      font-weight: 600;
-      color: #b76a4a;
-      cursor: pointer;
-      transition: 0.2s;
-    }
-    .btn-outline:hover {
-      background: #b76a4a;
-      color: white;
-    }
-
-    /* ----- hero (modern) ----- */
-    .hero {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 24px;
-      padding: 32px 0 20px;
-    }
-    .hero-content { text-align: center; }
-    .hero-content .badge {
-      background: rgba(183, 106, 74, 0.08);
-      padding: 4px 18px;
-      border-radius: 60px;
-      font-size: 0.7rem;
-      font-weight: 600;
-      letter-spacing: 1.5px;
-      color: #b76a4a;
-      display: inline-block;
-      text-transform: uppercase;
-    }
-    .hero-content h1 {
-      font-size: 2.2rem;
-      margin: 12px 0 8px;
-      line-height: 1.2;
-      font-weight: 700;
-    }
-    .hero-content p {
-      color: #5a433a;
-      font-size: 0.95rem;
-      max-width: 480px;
-      margin: 0 auto 24px;
-    }
-    .hero-banner {
-      width: 100%;
-      border-radius: 30px;
-      overflow: hidden;
-      box-shadow: 0 20px 40px -12px rgba(0,0,0,0.12);
-    }
-    .hero-banner img { width: 100%; height: auto; display: block; }
-
-    .quick-services { margin: 40px 0; }
-    .section-title {
-      text-align: center;
-      font-size: 1.6rem;
-      font-weight: 700;
-      margin-bottom: 28px;
-      letter-spacing: -0.3px;
-    }
-    .section-title:after {
-      content: '';
-      width: 50px;
-      height: 3px;
-      background: #b76a4a;
-      display: block;
-      margin: 12px auto 0;
-      border-radius: 4px;
-    }
-    .service-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-      gap: 14px;
-    }
-    .service-card {
-      background: white;
-      padding: 18px 10px;
-      border-radius: 24px;
-      text-align: center;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.02);
-      border: 1px solid #f0ded6;
-      transition: 0.2s;
-    }
-    .service-card i { font-size: 1.8rem; color: #b76a4a; margin-bottom: 8px; }
-    .service-card h3 { font-size: 1rem; font-weight: 600; }
-    .service-card p { font-size: 0.7rem; color: #7a5f51; }
-
-    /* ----- HYDRA OFFER (premium) ----- */
-    .hydra-offer {
-      background: linear-gradient(145deg, #fff9f6, #fef0ea);
-      border-radius: 40px;
-      padding: 28px 16px 32px;
-      margin: 40px 0;
-      box-shadow: 0 12px 32px rgba(183, 106, 74, 0.06);
-      border: 1px solid #f7ddd0;
-      position: relative;
-      overflow: hidden;
-    }
-    .hydra-offer::before {
-      content: '';
-      position: absolute;
-      top: -60px;
-      right: -60px;
-      width: 200px;
-      height: 200px;
-      background: radial-gradient(circle, rgba(183,106,74,0.04) 0%, transparent 70%);
-      border-radius: 50%;
-      pointer-events: none;
-    }
-    .hydra-header {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      align-items: center;
-      gap: 12px;
-      margin-bottom: 20px;
-      position: relative;
-      z-index: 2;
-    }
-    .hydra-header h2 {
-      font-size: 1.6rem;
-      color: #1e1815;
-      font-weight: 700;
-      line-height: 1.2;
-    }
-    .hydra-header h2 small {
-      display: block;
-      font-size: 0.7rem;
-      font-weight: 400;
-      color: #b76a4a;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      font-family: 'Inter', sans-serif;
-    }
-    .hydra-header .offer-dates {
-      background: #1e1815;
-      color: #fae1d4;
-      padding: 6px 20px;
-      border-radius: 60px;
-      font-weight: 600;
-      font-size: 0.8rem;
-      letter-spacing: 0.5px;
-      white-space: nowrap;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    }
-
-    .hydra-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 24px;
-      margin-top: 8px;
-      position: relative;
-      z-index: 2;
-    }
-    @media (min-width: 600px) {
-      .hydra-grid { grid-template-columns: 1fr 1fr; }
-    }
-
-    .hydra-card {
-      background: white;
-      border-radius: 32px;
-      padding: 24px 18px 20px;
-      text-align: center;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.02);
-      border: 1px solid #f0ded6;
-      transition: 0.25s ease;
-      backdrop-filter: blur(4px);
-    }
-    .hydra-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 16px 32px rgba(183, 106, 74, 0.06);
-    }
-    .hydra-card .plan-title {
-      font-family: 'Playfair Display', serif;
-      font-weight: 700;
-      font-size: 1.8rem;
-      color: #1e1815;
-      letter-spacing: 0.5px;
-    }
-    .hydra-card .plan-sub {
-      font-size: 0.65rem;
-      letter-spacing: 2px;
-      color: #8b6b5c;
-      text-transform: uppercase;
-      font-weight: 500;
-    }
-    .hydra-card .price-tag {
-      background: #fcf3ef;
-      padding: 10px 0;
-      border-radius: 60px;
-      margin: 14px 0;
-      font-size: 1.8rem;
-      font-weight: 700;
-      color: #b76a4a;
-    }
-    .hydra-card .price-tag small {
-      font-size: 0.9rem;
-      font-weight: 400;
-      color: #6b4f40;
-    }
-    .hydra-card .feature-list {
-      text-align: left;
-      padding-left: 4px;
-      list-style: none;
-      margin: 14px 0 18px;
-    }
-    .hydra-card .feature-list li {
-      padding: 6px 0;
-      font-size: 0.85rem;
-      border-bottom: 1px solid #f5e6de;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      font-weight: 400;
-    }
-    .hydra-card .feature-list li i {
-      color: #b76a4a;
-      width: 20px;
-      font-size: 0.9rem;
-    }
-    .hydra-card .btn-hydra {
-      background: #b76a4a;
-      border: none;
-      padding: 14px 18px;
-      border-radius: 60px;
-      color: white;
-      font-weight: 600;
-      cursor: pointer;
-      width: 100%;
-      transition: 0.2s;
-      font-size: 0.95rem;
-      letter-spacing: 0.3px;
-      box-shadow: 0 4px 12px rgba(183, 106, 74, 0.15);
-    }
-    .hydra-card .btn-hydra:hover {
-      background: #9f5a3e;
-      transform: scale(1.01);
-    }
-
-    .hydra-badge {
-      background: #1e1815;
-      color: white;
-      padding: 20px 16px;
-      border-radius: 40px;
-      text-align: center;
-      margin-top: 30px;
-      font-weight: 500;
-      letter-spacing: 0.3px;
-      position: relative;
-      z-index: 2;
-    }
-    .hydra-badge i { color: #25d366; margin: 0 4px; }
-    .hydra-badge a { color: #fae1d4; font-weight: 600; text-decoration: none; margin: 0 6px; }
-    .hydra-badge .highlight {
-      background: rgba(255,255,255,0.08);
-      padding: 2px 16px;
-      border-radius: 60px;
-      display: inline-block;
-      margin: 4px 0;
-    }
-
-    /* why choose */
-    .why-choose {
-      margin: 28px 0 12px;
-      background: rgba(255, 255, 255, 0.7);
-      backdrop-filter: blur(4px);
-      padding: 18px 14px;
-      border-radius: 32px;
-      border: 1px solid #f7ddd0;
-      position: relative;
-      z-index: 2;
-    }
-    .why-choose h4 {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.2rem;
-      text-align: center;
-      margin-bottom: 12px;
-      font-weight: 700;
-    }
-    .why-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 6px 16px;
-    }
-    .why-grid span {
-      font-size: 0.8rem;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      padding: 4px 0;
-      color: #2f241f;
-    }
-    .why-grid i { color: #b76a4a; width: 18px; }
-
-    /* services, gallery, etc (kept clean) */
-    .services-category { margin: 40px 0; }
-    .category { margin-bottom: 30px; }
-    .category h3 {
-      font-size: 1.3rem;
-      border-left: 4px solid #b76a4a;
-      padding-left: 14px;
-      margin-bottom: 16px;
-      font-weight: 600;
-    }
-    .services-list {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-      gap: 14px;
-    }
-    .service-item {
-      background: white;
-      border-radius: 24px;
-      display: flex;
-      gap: 12px;
-      padding: 12px 14px;
-      align-items: center;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.02);
-      border: 1px solid #f0ded6;
-    }
-    .service-item img {
-      width: 56px;
-      height: 56px;
-      border-radius: 18px;
-      object-fit: cover;
-      background: #f8e4db;
-    }
-    .service-info h4 { font-size: 0.95rem; font-weight: 600; }
-    .service-info p { font-size: 0.7rem; color: #7a5a4b; margin: 2px 0; }
-    .price { font-weight: 700; color: #b76a4a; font-size: 0.85rem; }
-
-    .booking-section {
-      background: white;
-      padding: 28px 18px;
-      border-radius: 40px;
-      margin: 40px 0;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.02);
-      border: 1px solid #f0ded6;
-    }
-    .booking-form input, .booking-form select, .booking-form textarea {
-      padding: 14px 18px;
-      border-radius: 60px;
-      border: 1px solid #f0ded6;
-      font-family: 'Inter', sans-serif;
-      background: #fcf8f6;
-      font-size: 0.9rem;
-      width: 100%;
-      transition: 0.2s;
-      margin-bottom: 12px;
-    }
-    .booking-form input:focus, .booking-form select:focus {
-      outline: none;
-      border-color: #b76a4a;
-      box-shadow: 0 0 0 3px rgba(183,106,74,0.05);
-    }
-    .whatsapp-note {
-      background: #f0f7f0;
-      padding: 10px;
-      text-align: center;
-      border-radius: 60px;
-      font-size: 0.8rem;
-      color: #1e1815;
-      margin-top: 12px;
-    }
-
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 18px;
-      margin: 30px 0;
-    }
-    .gallery-item {
-      border-radius: 28px;
-      overflow: hidden;
-      box-shadow: 0 12px 24px -8px rgba(0,0,0,0.06);
-      transition: 0.3s;
-      cursor: pointer;
-      position: relative;
-    }
-    .gallery-item:hover { transform: scale(1.02); }
-    .gallery-item img {
-      width: 100%;
-      height: 260px;
-      object-fit: cover;
-      display: block;
-    }
-    .gallery-overlay {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      background: linear-gradient(to top, rgba(0,0,0,0.6), transparent);
-      color: white;
-      padding: 16px 12px 10px;
-      text-align: center;
-      font-weight: 600;
-      font-size: 0.9rem;
-      backdrop-filter: blur(2px);
-    }
-
-    .testimonials {
-      background: #fff3ed;
-      padding: 32px 18px;
-      border-radius: 40px;
-      margin: 40px 0;
-    }
-    .testi-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
-      gap: 20px;
-    }
-    .testi-card {
-      background: white;
-      padding: 20px;
-      border-radius: 30px;
-      text-align: center;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.02);
-    }
-    .stars { color: #f5b042; margin: 8px 0; letter-spacing: 2px; }
-
-    .contact-section {
-      display: flex;
-      flex-direction: column;
-      gap: 24px;
-      margin: 40px 0;
-    }
-    .contact-details {
-      background: white;
-      padding: 20px;
-      border-radius: 32px;
-      border: 1px solid #f0ded6;
-    }
-    .info-row { margin: 14px 0; display: flex; align-items: center; gap: 12px; flex-wrap: wrap; font-size: 0.9rem; }
-    .map { width: 100%; height: 220px; border-radius: 32px; overflow: hidden; }
-
-    .whatsapp-float {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: #25d366;
-      width: 58px;
-      height: 58px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 32px;
-      color: white;
-      box-shadow: 0 8px 24px rgba(37, 211, 102, 0.3);
-      z-index: 99;
-      text-decoration: none;
-      transition: 0.2s;
-    }
-    .whatsapp-float:hover { transform: scale(1.06); }
-
-    footer {
-      text-align: center;
-      padding: 28px 16px;
-      background: #1e1815;
-      color: #d4c0b6;
-      font-size: 0.75rem;
-      border-radius: 40px 40px 0 0;
-      margin-top: 30px;
-    }
-    footer i { color: #b76a4a; }
-
-    @media (min-width: 768px) {
-      .hero { flex-direction: row; text-align: left; gap: 40px; }
-      .hero-content { text-align: left; }
-      .hero-content h1 { font-size: 3rem; }
-      .hero-content p { margin: 0 0 24px; }
-      .hydra-header h2 { font-size: 2.2rem; }
-      .why-grid { grid-template-columns: 1fr 1fr 1fr; }
-      .contact-section { flex-direction: row; }
-      .nav-links a { font-size: 0.8rem; }
-      .logo h1 { font-size: 1.6rem; }
-      .gallery-grid { grid-template-columns: repeat(3, 1fr); }
-      .gallery-item img { height: 280px; }
-    }
-    @media (max-width: 480px) {
-      .hydra-card .plan-title { font-size: 1.5rem; }
-      .hydra-card .price-tag { font-size: 1.5rem; }
-      .hydra-header h2 { font-size: 1.3rem; }
-      .why-grid { grid-template-columns: 1fr 1fr; }
-    }
-  </style>
-</head>
-<body>
-
-<!-- FLOATING WHATSAPP -->
-<a href="https://wa.me/918957753574?text=Hi%20Soumya%20Makeover%20%26%20Academy%2C%20I%20want%20to%20book%20Hydra%20Facial" class="whatsapp-float" target="_blank">
-  <i class="fab fa-whatsapp"></i>
-</a>
-
-<nav>
-  <div class="container nav-flex">
-    <div class="logo">
-      <h1>✨ soumya</h1>
-      <div class="sub">MAKEOVER & ACADEMY • FARENDA ROADS</div>
-    </div>
-    <div class="nav-links">
-      <a href="#home">Home</a>
-      <a href="#services">Services</a>
-      <a href="#booking">Book</a>
-      <a href="#gallery">Gallery</a>
-      <a href="#reviews">Reviews</a>
-      <a href="#booking" class="book-now-nav">📅 Book</a>
-    </div>
-  </div>
-</nav>
-
-<main>
-  <!-- HOME -->
-  <div class="container" id="home">
-    <div class="hero">
-      <div class="hero-content">
-        <div class="badge">✨ THIS SAWAN • TREAT YOURSELF</div>
-        <h1>Glow Like Never Before</h1>
-        <p>Hydra Facial — Deep Cleanse, Deep Hydration, Instant Glow.</p>
-        <a href="#hydra-offer" class="btn-primary"><i class="fas fa-spa"></i> Explore Hydra Offer</a>
-      </div>
-      <div class="hero-banner">
-        <img src="https://images.unsplash.com/photo-1629397685944-7073f5589754?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Salon">
-      </div>
-    </div>
-
-    <div class="quick-services">
-      <h2 class="section-title">✨ Signature Services</h2>
-      <div class="service-grid">
-        <div class="service-card"><i class="fas fa-cut"></i><h3>Hair Styling</h3><p>Trendy cuts & blow-dry</p></div>
-        <div class="service-card"><i class="fas fa-spa"></i><h3>Bridal Makeup</h3><p>Airbrush & HD finish</p></div>
-        <div class="service-card"><i class="fas fa-hand-sparkles"></i><h3>Manicure/Pedicure</h3><p>Spa for hands & feet</p></div>
-        <div class="service-card"><i class="fas fa-smile"></i><h3>Facial & Glow</h3><p>Organic & brightening</p></div>
-      </div>
-    </div>
-  </div>
-
-  <!-- ===== HYDRA FACIAL OFFER ===== -->
-  <div class="container" id="hydra-offer">
-    <div class="hydra-offer">
-      <div class="hydra-header">
-        <h2>
-          <small>#soumya MAKEOVER & ACADEMY</small>
-          This SAWAN<br>Treat Yourself
-        </h2>
-        <span class="offer-dates"><i class="far fa-calendar-alt"></i> 27 JULY – 1 AUG</span>
-      </div>
-
-      <div style="text-align:center; margin-bottom:16px;">
-        <span style="background: rgba(183,106,74,0.08); padding:4px 20px; border-radius:60px; font-weight:600; color:#b76a4a; font-size:0.8rem; letter-spacing:1px;">GLOW LIKE NEVER BEFORE</span>
-        <h3 style="font-family:'Playfair Display',serif; font-size:2rem; margin:6px 0 2px;">HYDRA FACIAL</h3>
-        <p style="color:#6b4f40; font-size:0.85rem;">Deep Cleanse. Deep Hydration. Instant Glow.</p>
-      </div>
-
-      <div class="hydra-grid">
-        <!-- LUXURY -->
-        <div class="hydra-card">
-          <div class="plan-title">LUXURY</div>
-          <div class="plan-sub">Hydra Facial</div>
-          <div class="price-tag">₹3100/- <small>only</small></div>
-          <ul class="feature-list">
-            <li><i class="fas fa-check-circle"></i> Deep Cleansing</li>
-            <li><i class="fas fa-check-circle"></i> Hydration Boost</li>
-            <li><i class="fas fa-check-circle"></i> Anti-Aging Care</li>
-            <li><i class="fas fa-check-circle"></i> Brightens Skin</li>
-            <li><i class="fas fa-check-circle"></i> Minimizes Pores</li>
-            <li><i class="fas fa-check-circle"></i> Instant Glow</li>
-          </ul>
-          <button class="btn-hydra" onclick="bookHydra('LUXURY Hydra Facial ₹3100')"><i class="fab fa-whatsapp"></i> Book Now</button>
-        </div>
-
-        <!-- BASICS -->
-        <div class="hydra-card">
-          <div class="plan-title">BASICS</div>
-          <div class="plan-sub">Hydra Facial</div>
-          <div class="price-tag">₹2000/- <small>only</small></div>
-          <ul class="feature-list">
-            <li><i class="fas fa-check-circle"></i> Deep Cleansing</li>
-            <li><i class="fas fa-check-circle"></i> Hydration</li>
-            <li><i class="fas fa-check-circle"></i> Oil Control</li>
-            <li><i class="fas fa-check-circle"></i> Refreshes Skin</li>
-            <li><i class="fas fa-check-circle"></i> Smooth Texture</li>
-            <li><i class="fas fa-check-circle"></i> Healthy Glow</li>
-          </ul>
-          <button class="btn-hydra" onclick="bookHydra('BASICS Hydra Facial ₹2000')"><i class="fab fa-whatsapp"></i> Book Now</button>
-        </div>
-      </div>
-
-      <!-- WHY CHOOSE -->
-      <div class="why-choose">
-        <h4>WHY CHOOSE HYDRA FACIAL?</h4>
-        <div class="why-grid">
-          <span><i class="fas fa-check-circle"></i> Deeply cleanses & removes impurities</span>
-          <span><i class="fas fa-check-circle"></i> Provides intense hydration & elasticity</span>
-          <span><i class="fas fa-check-circle"></i> Reduces fine lines & dullness</span>
-          <span><i class="fas fa-check-circle"></i> Suited for all skin types</span>
-          <span><i class="fas fa-check-circle"></i> Instant & visible results</span>
-        </div>
-      </div>
-
-      <div class="hydra-badge">
-        <i class="fas fa-bullhorn"></i> Hurray Up Guy's Book Your Appointment Now! 
-        <span class="highlight">LIMITED SLOTS ONLY!</span>
-        <br><br>
-        <i class="fas fa-phone-alt"></i> CALL / WHATSAPP <strong>8957553574</strong>
-        <span style="margin:0 8px;">|</span>
-        <i class="fab fa-instagram"></i> <a href="#">soumya_makeoverandacademy</a>
-      </div>
-    </div>
-  </div>
-
-  <!-- SERVICES -->
-  <div class="container" id="services">
-    <h2 class="section-title">Our Premium Services</h2>
-    <div class="services-category">
-      <div class="category"><h3><i class="fas fa-cut"></i> Hair</h3><div class="services-list">
-        <div class="service-item"><img src="https://placehold.co/200x200/f3dfd7/b76a4a?text=Haircut" alt="haircut"><div class="service-info"><h4>Haircut</h4><p>Precision cut</p><span class="price">₹499+</span></div></div>
-        <div class="service-item"><img src="https://placehold.co/200x200/f3dfd7/b76a4a?text=Hairstyling" alt="styling"><div class="service-info"><h4>Hairstyling</h4><p>Blowdry / curls</p><span class="price">₹799</span></div></div>
-        <div class="service-item"><img src="https://placehold.co/200x200/f3dfd7/b76a4a?text=Shampoo" alt="condition"><div class="service-info"><h4>Shampoo & Conditioning</h4><p>Deep cleanse</p><span class="price">₹399</span></div></div>
-        <div class="service-item"><img src="https://placehold.co/200x200/f3dfd7/b76a4a?text=Rebonding" alt="smoothing"><div class="service-info"><h4>Rebonding</h4><p>Straight & glossy</p><span class="price">₹2999</span></div></div>
-      </div></div>
-      <div class="category"><h3><i class="fas fa-fill-drip"></i> Skin & Beauty</h3><div class="services-list">
-        <div class="service-item"><img src="https://placehold.co/200x200/f3dfd7/b76a4a?text=Facials" alt="facial"><div class="service-info"><h4>Facials</h4><p>Brightening / anti-aging</p><span class="price">₹1299</span></div></div>
-        <div class="service-item"><img src="https://placehold.co/200x200/f3dfd7/b76a4a?text=Tanning" alt="tanning"><div class="service-info"><h4>Tanning</h4><p>Sun-kissed glow</p><span class="price">₹899</span></div></div>
-        <div class="service-item"><img src="https://placehold.co/200x200/f3dfd7/b76a4a?text=SkinCare" alt="skincare"><div class="service-info"><h4>Skin Care</h4><p>Customised</p><span class="price">₹1499</span></div></div>
-      </div></div>
-      <div class="category"><h3><i class="fas fa-hand-peace"></i> Hand & Feet</h3><div class="services-list">
-        <div class="service-item"><img src="https://placehold.co/200x200/f3dfd7/b76a4a?text=Manicure" alt="manicure"><div class="service-info"><h4>Manicure</h4><p>Nail care</p><span class="price">₹599</span></div></div>
-        <div class="service-item"><img src="https://placehold.co/200x200/f3dfd7/b76a4a?text=Pedicure" alt="pedicure"><div class="service-info"><h4>Pedicure</h4><p>Foot spa</p><span class="price">₹699</span></div></div>
-      </div></div>
-      <div class="category"><h3><i class="fas fa-brush"></i> Makeup & Bridal</h3><div class="services-list">
-        <div class="service-item"><img src="https://placehold.co/200x200/f3dfd7/b76a4a?text=Makeup" alt="makeup"><div class="service-info"><h4>Make-up</h4><p>Party / evening</p><span class="price">₹1999</span></div></div>
-        <div class="service-item"><img src="https://placehold.co/200x200/f3dfd7/b76a4a?text=Bridal" alt="bridal"><div class="service-info"><h4>Bridal</h4><p>Full trousseau</p><span class="price">₹9999+</span></div></div>
-        <div class="service-item"><img src="https://placehold.co/200x200/f3dfd7/b76a4a?text=Wedding" alt="wedding"><div class="service-info"><h4>Wedding Prep</h4><p>Pre-bridal</p><span class="price">₹5999</span></div></div>
-      </div></div>
-    </div>
-  </div>
-
-  <!-- BOOKING -->
-  <div class="container" id="booking">
-    <div class="booking-section">
-      <h2 class="section-title">📅 Book Your Slot</h2>
-      <form class="booking-form" id="bookingForm" onsubmit="return false;">
-        <select required id="serviceSelect">
-          <option value="">Select Service</option>
-          <option>Haircut - ₹499</option>
-          <option>Bridal Makeup - ₹9999</option>
-          <option>Facials - ₹1299</option>
-          <option>Manicure & Pedicure - ₹1199</option>
-          <option>Rebonding - ₹2999</option>
-          <option>Spa Massage - ₹1799</option>
-          <option>LUXURY Hydra Facial ₹3100</option>
-          <option>BASICS Hydra Facial ₹2000</option>
-        </select>
-        <input type="date" id="bookingDate" required>
-        <input type="time" id="bookingTime" required>
-        <input type="text" placeholder="Your Name" id="userName" required>
-        <input type="tel" placeholder="Phone Number (WhatsApp)" id="userPhone" required>
-        <textarea rows="2" placeholder="Special requests? (optional)" id="specialRequest"></textarea>
-        <button type="button" class="btn-primary" id="submitBookingBtn"><i class="fab fa-whatsapp"></i> Confirm via WhatsApp</button>
-        <div class="whatsapp-note"><i class="fab fa-whatsapp"></i> Instant confirmation on +91 8957553574</div>
-      </form>
-    </div>
-  </div>
-
-  <!-- GALLERY -->
-  <div class="container" id="gallery">
-    <h2 class="section-title">📸 Our Stunning Work</h2>
-    <div class="gallery-grid">
-      <div class="gallery-item"><img src="https://images.unsplash.com/photo-1684868268327-7e5590bcfbd6?q=80&w=686&auto=format&fit=crop" alt="Bridal"><div class="gallery-overlay">✨ Bridal Glamour</div></div>
-      <div class="gallery-item"><img src="https://plus.unsplash.com/premium_photo-1706800175963-a59e71d1fd64?q=80&w=687&auto=format&fit=crop" alt="Hair"><div class="gallery-overlay">💇‍♀️ Hair Magic</div></div>
-      <div class="gallery-item"><img src="https://plus.unsplash.com/premium_photo-1669675935483-01a22e5c88bf?q=80&w=688&auto=format&fit=crop" alt="Before After"><div class="gallery-overlay">🔄 Transformation</div></div>
-      <div class="gallery-item"><img src="https://images.unsplash.com/photo-1519014816548-bf5fe059798b?q=80&w=1470&auto=format&fit=crop" alt="Nails"><div class="gallery-overlay">💅 Nail Perfection</div></div>
-      <div class="gallery-item"><img src="https://images.unsplash.com/photo-1767027151400-fa6a3d905e7c?q=80&w=764&auto=format&fit=crop" alt="Party"><div class="gallery-overlay">🎉 Party Glam</div></div>
-      <div class="gallery-item"><img src="https://media.istockphoto.com/id/2226703848/photo/smiling-woman-lies-down-while-the-beautician-applies-cream-to-her-face.jpg?s=1024x1024&w=is&k=20&c=KmQ8-Hp53BIZuJleIXYip7xbQX0tIBOLS_OxEwePIOM=" alt="Facial"><div class="gallery-overlay">🌟 Glow Facial</div></div>
-    </div>
-  </div>
-
-  <!-- REVIEWS -->
-  <div class="container" id="reviews">
-    <div class="testimonials">
-      <h2 class="section-title">⭐ Happy Clients</h2>
-      <div class="testi-grid">
-        <div class="testi-card"><i class="fas fa-quote-left"></i><div class="stars">★★★★★</div><p>"Stunning bridal makeup! Got so many compliments."</p><h4>- Priyanka S.</h4></div>
-        <div class="testi-card"><i class="fas fa-quote-left"></i><div class="stars">★★★★★</div><p>"Rebonding smooth & frizz-free even after 3 months."</p><h4>- Anjali M.</h4></div>
-        <div class="testi-card"><i class="fas fa-quote-left"></i><div class="stars">★★★★★</div><p>"Luxurious pedicure, very hygienic. Love the staff."</p><h4>- Ritu Verma</h4></div>
-      </div>
-    </div>
-  </div>
-
-  <!-- CONTACT -->
-  <div class="container" id="contact">
-    <div class="contact-section">
-      <div class="contact-details">
-        <h3 style="font-family:'Playfair Display';">📍 Visit Us</h3>
-        <div class="info-row"><i class="fas fa-map-pin" style="color:#b76a4a; width:24px;"></i> FARENDA ROADS, FRONT OF RAPTI GOLD, MAHARJGANJ</div>
-        <div class="info-row"><i class="fas fa-phone-alt" style="color:#b76a4a; width:24px;"></i> +91 8957553574</div>
-        <div class="info-row"><i class="fab fa-instagram" style="color:#b76a4a; width:24px;"></i> @soumya_makeoverandacademy</div>
-        <div class="info-row"><i class="fab fa-whatsapp" style="color:#25d366; width:24px;"></i> WhatsApp: 8957553574</div>
-      </div>
-      <div class="map">
-        <iframe width="100%" height="220" style="border:0; border-radius:32px;" loading="lazy" allowfullscreen src="https://www.google.com/maps/embed/v1/place?q=Farinda+Road+Maharajganj&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"></iframe>
-      </div>
-    </div>
-  </div>
-
-  <footer>
-    <p>© 2026 soumya MAKEOVER & ACADEMY | FARENDA ROADS, FRONT OF RAPTI GOLD, MAHARJGANJ</p>
-    <p><i class="fas fa-heart" style="color:#b76a4a;"></i> Call / WhatsApp: +918957753574</p>
-  </footer>
-</main>
-
-<script>
-  // Hydra offer direct booking
-  function bookHydra(service) {
-    const msg = `Hello Soumya Makeover & Academy! I want to book ${service}. Please confirm.`;
-    window.open(`https://wa.me/918957753574?text=${encodeURIComponent(msg)}`, '_blank');
-  }
-
-  // Main booking form - ALL data goes to WhatsApp
-  const bookBtn = document.getElementById('submitBookingBtn');
-  if(bookBtn) {
-    bookBtn.addEventListener('click', function(){
-      const service = document.getElementById('serviceSelect').value;
-      const date = document.getElementById('bookingDate').value;
-      const time = document.getElementById('bookingTime').value;
-      const name = document.getElementById('userName').value.trim();
-      const phone = document.getElementById('userPhone').value.trim();
-      const special = document.getElementById('specialRequest').value.trim();
-
-      // Validation
-      if(!service || !date || !time || !name || !phone){
-        alert("❌ Please fill all fields: Service, Date, Time, Name & Phone");
+      if(!name || !phone || !course){
+        alert("❌ Please fill Name, Phone Number & Select a Course.");
         return;
       }
 
-      // Build WhatsApp message with ALL details
-      let msg = `Hello Soumya Makeover & Academy! 📅 New Booking:%0A%0A`;
+      let msg = `Hello Soumya Makeover & Academy! 🎓 New Student Admission Enquiry:%0A%0A`;
       msg += `👤 Name: ${name}%0A`;
       msg += `📞 Phone: ${phone}%0A`;
-      msg += `💇 Service: ${service}%0A`;
-      msg += `📆 Date: ${date}%0A`;
-      msg += `⏰ Time: ${time}%0A`;
-      msg += `📍 Location: FARENDA ROADS, FRONT OF RAPTI GOLD, MAHARJGANJ%0A`;
-      if(special) {
-        msg += `%0A📝 Special Request: ${special}%0A`;
-      }
-      msg += `%0APlease confirm my appointment. Thank you! 🙏`;
+      if(email) msg += `📧 Email: ${email}%0A`;
+      msg += `📚 Course: ${course}%0A`;
+      msg += `%0AI want to enroll. Please share more details. 🙏`;
 
-      // Open WhatsApp with the message
       window.open(`https://wa.me/918957753574?text=${msg}`, '_blank');
     });
   }
