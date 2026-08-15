@@ -4,6 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes, viewport-fit=cover">
   <title>soumya MAKEOVER & ACADEMY | Luxury Beauty</title>
+  
+  <!-- ===== FAVICON FIX ===== -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💄</text></svg>">
+  <link rel="shortcut icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💄</text></svg>">
+  
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,500&display=swap" rel="stylesheet">
   <style>
@@ -1066,12 +1071,12 @@
   </footer>
 </main>
 
-<!-- ===== JAVASCRIPT - FULLY DEBUGGED ===== -->
+<!-- ===== JAVASCRIPT ===== -->
 <script>
   // ===== HYDRA BOOKING =====
   function bookHydra(service) {
-    const msg = 'Hello Soumya Makeover & Academy! I want to book ' + service + '. Please confirm.';
-    const url = 'https://wa.me/918957753574?text=' + encodeURIComponent(msg);
+    var msg = 'Hello Soumya Makeover & Academy! I want to book ' + service + '. Please confirm.';
+    var url = 'https://wa.me/918957753574?text=' + encodeURIComponent(msg);
     window.open(url, '_blank');
   }
 
@@ -1079,22 +1084,22 @@
   document.addEventListener('DOMContentLoaded', function() {
     
     // ===== CUSTOMER BOOKING =====
-    const bookBtn = document.getElementById('bookSubmit');
+    var bookBtn = document.getElementById('bookSubmit');
     if (bookBtn) {
       bookBtn.addEventListener('click', function() {
-        const service = document.getElementById('bookService').value;
-        const date = document.getElementById('bookDate').value;
-        const time = document.getElementById('bookTime').value;
-        const name = document.getElementById('bookName').value.trim();
-        const phone = document.getElementById('bookPhone').value.trim();
-        const request = document.getElementById('bookRequest').value.trim();
+        var service = document.getElementById('bookService').value;
+        var date = document.getElementById('bookDate').value;
+        var time = document.getElementById('bookTime').value;
+        var name = document.getElementById('bookName').value.trim();
+        var phone = document.getElementById('bookPhone').value.trim();
+        var request = document.getElementById('bookRequest').value.trim();
 
         if (!service || !date || !time || !name || !phone) {
           alert('❌ Please fill all required fields: Service, Date, Time, Name & Phone');
           return;
         }
 
-        let msg = 'Hello Soumya Makeover & Academy! 📅 New Booking:%0A%0A';
+        var msg = 'Hello Soumya Makeover & Academy! 📅 New Booking:%0A%0A';
         msg += '👤 Name: ' + name + '%0A';
         msg += '📞 Phone: ' + phone + '%0A';
         msg += '💇 Service: ' + service + '%0A';
@@ -1106,26 +1111,26 @@
         }
         msg += '%0APlease confirm my appointment. Thank you! 🙏';
 
-        const url = 'https://wa.me/918957753574?text=' + msg;
+        var url = 'https://wa.me/918957753574?text=' + msg;
         window.open(url, '_blank');
       });
     }
 
     // ===== STUDENT ADMISSION =====
-    const admitBtn = document.getElementById('admissionSubmit');
+    var admitBtn = document.getElementById('admissionSubmit');
     if (admitBtn) {
       admitBtn.addEventListener('click', function() {
-        const name = document.getElementById('studentName').value.trim();
-        const phone = document.getElementById('studentPhone').value.trim();
-        const email = document.getElementById('studentEmail').value.trim();
-        const course = document.getElementById('studentCourse').value;
+        var name = document.getElementById('studentName').value.trim();
+        var phone = document.getElementById('studentPhone').value.trim();
+        var email = document.getElementById('studentEmail').value.trim();
+        var course = document.getElementById('studentCourse').value;
 
         if (!name || !phone || !course) {
           alert('❌ Please fill Name, Phone Number & Select a Course.');
           return;
         }
 
-        let msg = 'Hello Soumya Makeover & Academy! 🎓 New Student Admission Enquiry:%0A%0A';
+        var msg = 'Hello Soumya Makeover & Academy! 🎓 New Student Admission Enquiry:%0A%0A';
         msg += '👤 Name: ' + name + '%0A';
         msg += '📞 Phone: ' + phone + '%0A';
         if (email) {
@@ -1134,12 +1139,12 @@
         msg += '📚 Course: ' + course + '%0A';
         msg += '%0AI want to enroll. Please share more details. 🙏';
 
-        const url = 'https://wa.me/918957753574?text=' + msg;
+        var url = 'https://wa.me/918957753574?text=' + msg;
         window.open(url, '_blank');
       });
     }
 
-  }); // end DOMContentLoaded
+  });
 
   // ===== SMOOTH SCROLL =====
   document.querySelectorAll('.nav-links a, a[href^="#"]').forEach(function(anchor) {
