@@ -3,47 +3,40 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes, viewport-fit=cover">
-  <title>soumya MAKEOVER & ACADEMY | Hydra Facial Offer</title>
-  <!-- Font Awesome 6 -->
+  <title>soumya MAKEOVER & ACADEMY | Luxury Beauty</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,500&display=swap" rel="stylesheet">
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
 
     body {
       font-family: 'Inter', sans-serif;
-      background: #faf5f2;
-      color: #2d1b14;
+      background: #faf6f2;
+      color: #2c1810;
       scroll-behavior: smooth;
       -webkit-font-smoothing: antialiased;
     }
 
-    h1, h2, h3, .logo-text, .serif {
+    h1, h2, h3, h4, .serif {
       font-family: 'Playfair Display', serif;
     }
 
     .container {
       max-width: 1280px;
       margin: 0 auto;
-      padding: 0 16px;
+      padding: 0 18px;
     }
 
     /* ===== NAVIGATION ===== */
     nav {
-      background: rgba(255, 248, 245, 0.92);
-      backdrop-filter: blur(14px);
-      -webkit-backdrop-filter: blur(14px);
-      box-shadow: 0 4px 30px rgba(107, 46, 46, 0.08);
+      background: rgba(255, 252, 250, 0.92);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
       position: sticky;
       top: 0;
       z-index: 1000;
-      padding: 10px 0;
-      border-bottom: 2px solid rgba(212, 165, 116, 0.2);
+      padding: 14px 0;
+      border-bottom: 1px solid rgba(201, 160, 126, 0.15);
     }
 
     .nav-flex {
@@ -51,22 +44,22 @@
       justify-content: space-between;
       align-items: center;
       flex-wrap: wrap;
-      gap: 8px;
+      gap: 10px;
     }
 
     .logo h1 {
-      font-size: 1.2rem;
-      letter-spacing: -0.3px;
-      color: #6b2e2e;
+      font-size: 1.3rem;
+      color: #2c1810;
       font-weight: 800;
+      letter-spacing: -0.5px;
     }
+    .logo h1 span { color: #c9a07e; }
     .logo .sub {
       font-size: 0.5rem;
-      letter-spacing: 1.5px;
-      color: #8b6b5c;
-      font-weight: 500;
+      letter-spacing: 2px;
+      color: #8a6e5d;
       text-transform: uppercase;
-      opacity: 0.8;
+      font-weight: 600;
       margin-top: 2px;
     }
 
@@ -79,71 +72,86 @@
     .nav-links a {
       text-decoration: none;
       font-weight: 600;
-      font-size: 0.65rem;
-      color: #3d2b23;
-      padding: 6px 12px;
-      border-radius: 40px;
+      font-size: 0.7rem;
+      color: #2c1810;
+      padding: 8px 14px;
+      border-radius: 50px;
       transition: 0.3s;
       letter-spacing: 0.3px;
     }
     .nav-links a:hover {
-      background: rgba(212, 165, 116, 0.15);
-      color: #6b2e2e;
+      background: rgba(201, 160, 126, 0.12);
+      color: #c9a07e;
     }
-    .book-now-nav {
-      background: linear-gradient(135deg, #d4a574, #c4916a);
-      color: white !important;
-      padding: 6px 18px !important;
-      border-radius: 40px;
+    .nav-cta {
+      background: linear-gradient(135deg, #c9a07e, #b88966);
+      color: #fff !important;
+      padding: 8px 20px !important;
       font-weight: 700;
-      box-shadow: 0 4px 15px rgba(212, 165, 116, 0.3);
+      box-shadow: 0 4px 20px rgba(201, 160, 126, 0.3);
     }
-    .book-now-nav:hover {
-      background: linear-gradient(135deg, #c4916a, #b07d5a) !important;
+    .nav-cta:hover {
+      background: linear-gradient(135deg, #b88966, #a67856) !important;
       transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(212, 165, 116, 0.4);
+      box-shadow: 0 8px 30px rgba(201, 160, 126, 0.4);
     }
 
     /* ===== BUTTONS ===== */
     .btn-primary {
-      background: linear-gradient(135deg, #d4a574, #c4916a);
+      background: linear-gradient(135deg, #c9a07e, #b88966);
       border: none;
-      padding: 16px 36px;
+      padding: 16px 38px;
       font-weight: 700;
       border-radius: 60px;
-      color: white;
+      color: #fff;
       cursor: pointer;
       display: inline-block;
       text-decoration: none;
       transition: all 0.3s ease;
-      box-shadow: 0 8px 30px rgba(212, 165, 116, 0.35);
+      box-shadow: 0 8px 30px rgba(201, 160, 126, 0.3);
       font-size: 1rem;
       letter-spacing: 0.5px;
       border: 1px solid rgba(255,255,255,0.1);
     }
     .btn-primary:hover {
-      transform: translateY(-4px) scale(1.02);
-      box-shadow: 0 12px 40px rgba(212, 165, 116, 0.45);
-      background: linear-gradient(135deg, #c4916a, #b07d5a);
+      transform: translateY(-4px);
+      box-shadow: 0 14px 45px rgba(201, 160, 126, 0.4);
     }
 
     .btn-secondary {
-      background: #6b2e2e;
+      background: #2c1810;
       border: none;
       padding: 14px 32px;
       font-weight: 700;
       border-radius: 60px;
-      color: white;
+      color: #fff;
       cursor: pointer;
       transition: all 0.3s ease;
       font-size: 0.95rem;
       letter-spacing: 0.5px;
-      box-shadow: 0 8px 25px rgba(107, 46, 46, 0.25);
+      box-shadow: 0 8px 25px rgba(44, 24, 16, 0.2);
     }
     .btn-secondary:hover {
       transform: translateY(-3px);
-      box-shadow: 0 12px 35px rgba(107, 46, 46, 0.35);
-      background: #5a2626;
+      box-shadow: 0 12px 35px rgba(44, 24, 16, 0.3);
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 2rem;
+      font-weight: 800;
+      margin-bottom: 36px;
+      color: #2c1810;
+      letter-spacing: -0.5px;
+    }
+    .section-title:after {
+      content: '';
+      width: 60px;
+      height: 3px;
+      background: linear-gradient(90deg, #c9a07e, #b88966);
+      display: block;
+      margin: 14px auto 0;
+      border-radius: 4px;
     }
 
     /* ===== HERO ===== */
@@ -151,208 +159,146 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 28px;
-      padding: 40px 0 30px;
-      position: relative;
+      gap: 30px;
+      padding: 50px 0 30px;
     }
-    .hero::before {
-      content: '';
-      position: absolute;
-      top: -100px;
-      right: -100px;
-      width: 400px;
-      height: 400px;
-      background: radial-gradient(circle, rgba(212,165,116,0.06) 0%, transparent 70%);
-      border-radius: 50%;
-      pointer-events: none;
-    }
-    .hero-content { 
-      text-align: center;
-      position: relative;
-      z-index: 2;
-    }
+    .hero-content { text-align: center; }
     .hero-content .badge {
-      background: linear-gradient(135deg, rgba(212, 165, 116, 0.15), rgba(107, 46, 46, 0.08));
-      padding: 6px 22px;
+      background: rgba(201, 160, 126, 0.12);
+      padding: 6px 24px;
       border-radius: 60px;
       font-size: 0.7rem;
       font-weight: 700;
       letter-spacing: 2px;
-      color: #6b2e2e;
+      color: #c9a07e;
       display: inline-block;
       text-transform: uppercase;
-      border: 1px solid rgba(212, 165, 116, 0.2);
     }
     .hero-content h1 {
-      font-size: 2.4rem;
-      margin: 14px 0 10px;
+      font-size: 2.6rem;
+      margin: 16px 0 12px;
       line-height: 1.15;
       font-weight: 800;
-      color: #2d1b14;
+      color: #2c1810;
     }
-    .hero-content h1 span {
-      color: #d4a574;
-      position: relative;
-    }
-    .hero-content h1 span::after {
+    .hero-content h1 .highlight { color: #c9a07e; position: relative; }
+    .hero-content h1 .highlight::after {
       content: '';
       position: absolute;
       bottom: 0;
       left: 0;
       right: 0;
       height: 4px;
-      background: linear-gradient(90deg, #d4a574, #c4916a);
+      background: linear-gradient(90deg, #c9a07e, #b88966);
       border-radius: 4px;
     }
     .hero-content p {
       color: #5a433a;
-      font-size: 1rem;
+      font-size: 1.05rem;
       max-width: 480px;
-      margin: 0 auto 28px;
-      line-height: 1.6;
+      margin: 0 auto 30px;
+      line-height: 1.7;
     }
-    .hero-banner {
+    .hero-image {
       width: 100%;
-      border-radius: 30px;
+      border-radius: 32px;
       overflow: hidden;
-      box-shadow: 0 25px 50px -12px rgba(0,0,0,0.15);
-      position: relative;
-      z-index: 2;
+      box-shadow: 0 30px 60px -20px rgba(0,0,0,0.15);
     }
-    .hero-banner img { 
-      width: 100%; 
-      height: auto; 
-      display: block;
-      transition: transform 0.5s ease;
-    }
-    .hero-banner:hover img {
-      transform: scale(1.02);
-    }
+    .hero-image img { width: 100%; height: auto; display: block; }
 
     /* ===== QUICK SERVICES ===== */
-    .quick-services { margin: 50px 0 20px; }
-    .section-title {
-      text-align: center;
-      font-size: 1.8rem;
-      font-weight: 800;
-      margin-bottom: 32px;
-      letter-spacing: -0.5px;
-      color: #2d1b14;
-    }
-    .section-title:after {
-      content: '';
-      width: 60px;
-      height: 4px;
-      background: linear-gradient(90deg, #d4a574, #c4916a);
-      display: block;
-      margin: 14px auto 0;
-      border-radius: 4px;
-    }
+    .quick-services { margin: 50px 0; }
     .service-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-      gap: 16px;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 18px;
     }
     .service-card {
-      background: white;
-      padding: 24px 14px;
+      background: #fff;
+      padding: 28px 16px;
       border-radius: 28px;
       text-align: center;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.04);
-      border: 1px solid rgba(212, 165, 116, 0.15);
-      transition: all 0.3s ease;
-      cursor: pointer;
+      box-shadow: 0 4px 25px rgba(0,0,0,0.04);
+      border: 1px solid rgba(201, 160, 126, 0.1);
+      transition: 0.3s ease;
     }
     .service-card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 12px 35px rgba(212, 165, 116, 0.12);
-      border-color: #d4a574;
+      transform: translateY(-8px);
+      box-shadow: 0 16px 45px rgba(201, 160, 126, 0.08);
+      border-color: #c9a07e;
     }
-    .service-card i { 
-      font-size: 2.2rem; 
-      background: linear-gradient(135deg, #d4a574, #c4916a);
+    .service-card i {
+      font-size: 2.4rem;
+      background: linear-gradient(135deg, #c9a07e, #b88966);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      margin-bottom: 10px;
+      margin-bottom: 12px;
       display: inline-block;
     }
-    .service-card h3 { font-size: 1rem; font-weight: 700; color: #2d1b14; }
-    .service-card p { font-size: 0.7rem; color: #7a5f51; margin-top: 4px; }
+    .service-card h3 { font-size: 1.05rem; font-weight: 700; color: #2c1810; }
+    .service-card p { font-size: 0.75rem; color: #8a6e5d; margin-top: 4px; }
 
     /* ===== HYDRA OFFER ===== */
-    .hydra-offer {
-      background: linear-gradient(145deg, #fff9f6, #fef0ea);
-      border-radius: 40px;
-      padding: 32px 20px 36px;
+    .hydra-section {
+      background: linear-gradient(145deg, #fff9f5, #fef1ea);
+      border-radius: 44px;
+      padding: 36px 24px 40px;
       margin: 40px 0;
-      box-shadow: 0 15px 45px rgba(212, 165, 116, 0.08);
-      border: 1px solid rgba(212, 165, 116, 0.2);
+      border: 1px solid rgba(201, 160, 126, 0.15);
       position: relative;
       overflow: hidden;
     }
-    .hydra-offer::before {
+    .hydra-section::before {
       content: '✨';
       position: absolute;
-      top: -40px;
-      right: -30px;
-      font-size: 180px;
+      top: -50px;
+      right: -20px;
+      font-size: 200px;
       opacity: 0.04;
-      pointer-events: none;
       transform: rotate(15deg);
     }
-    .hydra-offer::after {
-      content: '';
-      position: absolute;
-      bottom: -80px;
-      left: -80px;
-      width: 300px;
-      height: 300px;
-      background: radial-gradient(circle, rgba(212,165,116,0.05) 0%, transparent 70%);
-      border-radius: 50%;
-      pointer-events: none;
-    }
+
     .hydra-header {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
       align-items: center;
-      gap: 12px;
+      gap: 14px;
       margin-bottom: 24px;
       position: relative;
       z-index: 2;
     }
     .hydra-header h2 {
-      font-size: 1.8rem;
-      color: #2d1b14;
+      font-size: 2rem;
       font-weight: 800;
+      color: #2c1810;
       line-height: 1.15;
     }
     .hydra-header h2 small {
       display: block;
       font-size: 0.7rem;
       font-weight: 600;
-      color: #d4a574;
+      color: #c9a07e;
       letter-spacing: 2.5px;
       text-transform: uppercase;
       font-family: 'Inter', sans-serif;
     }
-    .hydra-header .offer-dates {
-      background: linear-gradient(135deg, #6b2e2e, #4d2020);
+    .hydra-header .date-tag {
+      background: #2c1810;
       color: #fae1d4;
-      padding: 8px 22px;
+      padding: 8px 24px;
       border-radius: 60px;
       font-weight: 700;
       font-size: 0.8rem;
-      letter-spacing: 0.5px;
       white-space: nowrap;
-      box-shadow: 0 4px 20px rgba(107, 46, 46, 0.2);
+      box-shadow: 0 4px 20px rgba(44, 24, 16, 0.15);
     }
 
     .hydra-grid {
       display: grid;
       grid-template-columns: 1fr;
       gap: 24px;
-      margin-top: 12px;
       position: relative;
       z-index: 2;
     }
@@ -364,104 +310,74 @@
       background: rgba(255,255,255,0.85);
       backdrop-filter: blur(8px);
       border-radius: 32px;
-      padding: 28px 20px 24px;
+      padding: 30px 22px 26px;
       text-align: center;
-      box-shadow: 0 8px 30px rgba(0,0,0,0.04);
-      border: 1px solid rgba(212, 165, 116, 0.15);
-      transition: all 0.4s ease;
+      border: 1px solid rgba(201, 160, 126, 0.12);
+      transition: 0.4s ease;
     }
     .hydra-card:hover {
       transform: translateY(-8px);
-      box-shadow: 0 20px 50px rgba(212, 165, 116, 0.12);
-      border-color: #d4a574;
+      box-shadow: 0 20px 60px rgba(201, 160, 126, 0.1);
+      border-color: #c9a07e;
     }
-    .hydra-card .plan-title {
-      font-family: 'Playfair Display', serif;
-      font-weight: 800;
-      font-size: 2rem;
-      color: #2d1b14;
-      letter-spacing: 0.5px;
-    }
-    .hydra-card .plan-sub {
-      font-size: 0.65rem;
-      letter-spacing: 2.5px;
-      color: #8b6b5c;
-      text-transform: uppercase;
-      font-weight: 600;
-    }
-    .hydra-card .price-tag {
-      background: linear-gradient(135deg, rgba(212, 165, 116, 0.12), rgba(107, 46, 46, 0.06));
+    .hydra-card .plan { font-size: 2rem; font-weight: 800; color: #2c1810; font-family: 'Playfair Display', serif; }
+    .hydra-card .plan-sub { font-size: 0.65rem; letter-spacing: 2.5px; color: #8a6e5d; text-transform: uppercase; font-weight: 600; }
+    .hydra-card .price {
+      background: linear-gradient(135deg, rgba(201, 160, 126, 0.1), rgba(44, 24, 16, 0.04));
       padding: 12px 0;
       border-radius: 60px;
       margin: 16px 0;
-      font-size: 2rem;
+      font-size: 2.2rem;
       font-weight: 800;
-      color: #6b2e2e;
+      color: #2c1810;
     }
-    .hydra-card .price-tag small {
-      font-size: 0.9rem;
-      font-weight: 500;
-      color: #6b4f40;
-    }
-    .hydra-card .feature-list {
-      text-align: left;
-      padding-left: 4px;
+    .hydra-card .price small { font-size: 0.9rem; font-weight: 500; color: #8a6e5d; }
+    .hydra-card .features {
       list-style: none;
-      margin: 16px 0 20px;
+      text-align: left;
+      margin: 16px 0 22px;
     }
-    .hydra-card .feature-list li {
+    .hydra-card .features li {
       padding: 8px 0;
       font-size: 0.85rem;
-      border-bottom: 1px solid rgba(212, 165, 116, 0.1);
+      border-bottom: 1px solid rgba(201, 160, 126, 0.08);
       display: flex;
       align-items: center;
       gap: 12px;
       font-weight: 500;
       color: #3d2b23;
     }
-    .hydra-card .feature-list li i {
-      color: #d4a574;
-      width: 22px;
-      font-size: 1rem;
-    }
-    .hydra-card .btn-hydra {
-      background: linear-gradient(135deg, #d4a574, #c4916a);
+    .hydra-card .features li i { color: #c9a07e; width: 22px; }
+    .hydra-card .btn-book {
+      background: linear-gradient(135deg, #c9a07e, #b88966);
       border: none;
-      padding: 16px 20px;
+      padding: 16px;
       border-radius: 60px;
-      color: white;
+      color: #fff;
       font-weight: 700;
       cursor: pointer;
       width: 100%;
-      transition: all 0.3s ease;
+      transition: 0.3s;
       font-size: 1rem;
-      letter-spacing: 0.5px;
-      box-shadow: 0 6px 25px rgba(212, 165, 116, 0.25);
+      box-shadow: 0 6px 25px rgba(201, 160, 126, 0.2);
     }
-    .hydra-card .btn-hydra:hover {
-      background: linear-gradient(135deg, #c4916a, #b07d5a);
+    .hydra-card .btn-book:hover {
       transform: scale(1.02);
-      box-shadow: 0 8px 35px rgba(212, 165, 116, 0.35);
+      box-shadow: 0 10px 35px rgba(201, 160, 126, 0.3);
     }
 
-    .why-choose {
-      margin: 28px 0 16px;
+    /* ===== WHY CHOOSE ===== */
+    .why-box {
+      margin: 24px 0 16px;
       background: rgba(255,255,255,0.7);
-      backdrop-filter: blur(6px);
-      padding: 22px 18px;
+      backdrop-filter: blur(4px);
+      padding: 24px 20px;
       border-radius: 32px;
-      border: 1px solid rgba(212, 165, 116, 0.15);
+      border: 1px solid rgba(201, 160, 126, 0.1);
       position: relative;
       z-index: 2;
     }
-    .why-choose h4 {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.3rem;
-      text-align: center;
-      margin-bottom: 16px;
-      font-weight: 700;
-      color: #2d1b14;
-    }
+    .why-box h4 { font-size: 1.3rem; text-align: center; margin-bottom: 16px; font-weight: 700; color: #2c1810; }
     .why-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -473,33 +389,25 @@
       align-items: center;
       gap: 10px;
       padding: 6px 0;
-      color: #2f241f;
       font-weight: 500;
+      color: #3d2b23;
     }
-    .why-grid i { 
-      background: linear-gradient(135deg, #d4a574, #c4916a);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      width: 20px;
-      font-size: 1rem;
-    }
+    .why-grid i { color: #c9a07e; width: 20px; }
 
-    .hydra-badge {
-      background: linear-gradient(135deg, #6b2e2e, #4d2020);
+    .hydra-banner {
+      background: linear-gradient(135deg, #2c1810, #1a0f0a);
       color: #fae1d4;
-      padding: 24px 18px;
+      padding: 24px 20px;
       border-radius: 40px;
       text-align: center;
       font-weight: 600;
-      letter-spacing: 0.3px;
       position: relative;
       z-index: 2;
       border: 1px solid rgba(255,255,255,0.05);
     }
-    .hydra-badge i { color: #25d366; margin: 0 4px; }
-    .hydra-badge a { color: #d4a574; font-weight: 700; text-decoration: none; margin: 0 6px; }
-    .hydra-badge .highlight {
-      background: rgba(255,255,255,0.1);
+    .hydra-banner i { color: #25d366; }
+    .hydra-banner .tag {
+      background: rgba(255,255,255,0.08);
       padding: 4px 20px;
       border-radius: 60px;
       display: inline-block;
@@ -508,68 +416,58 @@
       border: 1px solid rgba(255,255,255,0.05);
     }
 
-    /* ===== STUDENT ADMISSION ===== */
-    .admission-section {
-      background: linear-gradient(145deg, #faf5f2, #f5ece6);
-      border-radius: 40px;
-      padding: 32px 20px 36px;
+    /* ===== ADMISSION ===== */
+    .admission-wrap {
+      background: linear-gradient(145deg, #faf5f2, #f3e9e2);
+      border-radius: 44px;
+      padding: 36px 24px 40px;
       margin: 40px 0;
-      border: 1px solid rgba(212, 165, 116, 0.2);
+      border: 1px solid rgba(201, 160, 126, 0.15);
       position: relative;
       overflow: hidden;
     }
-    .admission-section::before {
+    .admission-wrap::before {
       content: '🎓';
       position: absolute;
       top: -30px;
-      right: -10px;
-      font-size: 140px;
+      right: 0;
+      font-size: 150px;
       opacity: 0.04;
-      pointer-events: none;
       transform: rotate(10deg);
     }
-    .admission-header {
+
+    .admission-head {
       text-align: center;
       margin-bottom: 28px;
       position: relative;
       z-index: 2;
     }
-    .admission-header .admission-badge {
+    .admission-head .label {
       display: inline-block;
-      background: linear-gradient(135deg, #d4a574, #c4916a);
-      color: white;
+      background: linear-gradient(135deg, #c9a07e, #b88966);
+      color: #fff;
       padding: 6px 24px;
       border-radius: 60px;
       font-size: 0.7rem;
       font-weight: 700;
       letter-spacing: 1.5px;
-      margin-bottom: 12px;
       text-transform: uppercase;
+      margin-bottom: 12px;
     }
-    .admission-header h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: 2rem;
-      font-weight: 800;
-      color: #2d1b14;
-    }
-    .admission-header h2 small {
+    .admission-head h2 { font-size: 2.2rem; font-weight: 800; color: #2c1810; }
+    .admission-head h2 small {
       display: block;
       font-size: 0.75rem;
       font-weight: 500;
-      color: #d4a574;
+      color: #c9a07e;
       letter-spacing: 2px;
       text-transform: uppercase;
       font-family: 'Inter', sans-serif;
       margin-top: 4px;
     }
-    .admission-header p {
-      color: #5a433a;
-      max-width: 500px;
-      margin: 10px auto 0;
-      font-weight: 400;
-    }
+    .admission-head p { color: #5a433a; max-width: 500px; margin: 10px auto 0; }
 
-    .course-grid {
+    .course-list {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
       gap: 12px;
@@ -578,28 +476,21 @@
       z-index: 2;
     }
     .course-tag {
-      background: white;
+      background: #fff;
       padding: 14px 12px;
       border-radius: 24px;
       text-align: center;
-      border: 1px solid rgba(212, 165, 116, 0.12);
+      border: 1px solid rgba(201, 160, 126, 0.1);
       font-weight: 600;
       font-size: 0.85rem;
-      transition: all 0.3s ease;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.02);
-      color: #2d1b14;
-      cursor: default;
+      transition: 0.3s;
+      color: #2c1810;
     }
-    .course-tag i {
-      background: linear-gradient(135deg, #d4a574, #c4916a);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      margin-right: 8px;
-    }
+    .course-tag i { color: #c9a07e; margin-right: 8px; }
     .course-tag:hover {
-      border-color: #d4a574;
+      border-color: #c9a07e;
       transform: translateY(-4px);
-      box-shadow: 0 8px 25px rgba(212, 165, 116, 0.1);
+      box-shadow: 0 8px 25px rgba(201, 160, 126, 0.08);
     }
 
     .admission-form {
@@ -607,70 +498,69 @@
       margin: 0 auto;
       background: rgba(255,255,255,0.9);
       backdrop-filter: blur(8px);
-      padding: 28px 24px;
+      padding: 30px 24px;
       border-radius: 32px;
-      box-shadow: 0 8px 30px rgba(0,0,0,0.04);
-      border: 1px solid rgba(212, 165, 116, 0.12);
+      border: 1px solid rgba(201, 160, 126, 0.1);
       position: relative;
       z-index: 2;
     }
     .admission-form h4 {
       text-align: center;
       font-family: 'Playfair Display', serif;
-      margin-bottom: 18px;
       font-size: 1.3rem;
-      color: #2d1b14;
+      margin-bottom: 18px;
+      color: #2c1810;
     }
-    .admission-form input, .admission-form select {
+    .admission-form input,
+    .admission-form select {
       padding: 16px 20px;
       border-radius: 60px;
-      border: 2px solid rgba(212, 165, 116, 0.15);
+      border: 2px solid rgba(201, 160, 126, 0.12);
       font-family: 'Inter', sans-serif;
       background: #fcf8f6;
       font-size: 0.9rem;
       width: 100%;
       transition: 0.3s;
       margin-bottom: 14px;
-      color: #2d1b14;
+      color: #2c1810;
     }
-    .admission-form input:focus, .admission-form select:focus {
+    .admission-form input:focus,
+    .admission-form select:focus {
       outline: none;
-      border-color: #d4a574;
-      box-shadow: 0 0 0 4px rgba(212, 165, 116, 0.08);
-      background: white;
+      border-color: #c9a07e;
+      box-shadow: 0 0 0 4px rgba(201, 160, 126, 0.06);
     }
-    .admission-form .btn-primary {
-      width: 100%;
-      justify-content: center;
-      text-align: center;
-    }
+    .admission-form .btn-primary { width: 100%; }
 
     /* ===== BOOKING ===== */
-    .booking-section {
-      background: white;
-      padding: 32px 20px;
-      border-radius: 40px;
+    .booking-wrap {
+      background: #fff;
+      padding: 36px 24px 40px;
+      border-radius: 44px;
       margin: 40px 0;
-      box-shadow: 0 8px 30px rgba(0,0,0,0.04);
-      border: 1px solid rgba(212, 165, 116, 0.12);
+      border: 1px solid rgba(201, 160, 126, 0.1);
+      box-shadow: 0 8px 30px rgba(0,0,0,0.02);
     }
-    .booking-form input, .booking-form select, .booking-form textarea {
+    .booking-form input,
+    .booking-form select,
+    .booking-form textarea {
       padding: 16px 20px;
       border-radius: 60px;
-      border: 2px solid rgba(212, 165, 116, 0.15);
+      border: 2px solid rgba(201, 160, 126, 0.12);
       font-family: 'Inter', sans-serif;
       background: #fcf8f6;
       font-size: 0.9rem;
       width: 100%;
       transition: 0.3s;
       margin-bottom: 14px;
-      color: #2d1b14;
+      color: #2c1810;
     }
-    .booking-form input:focus, .booking-form select:focus, .booking-form textarea:focus {
+    .booking-form input:focus,
+    .booking-form select:focus,
+    .booking-form textarea:focus {
       outline: none;
-      border-color: #d4a574;
-      box-shadow: 0 0 0 4px rgba(212, 165, 116, 0.08);
-      background: white;
+      border-color: #c9a07e;
+      box-shadow: 0 0 0 4px rgba(201, 160, 126, 0.06);
     }
     .booking-form textarea {
       border-radius: 28px;
@@ -678,61 +568,47 @@
       min-height: 70px;
     }
 
-    .whatsapp-note {
-      background: rgba(37, 211, 102, 0.06);
-      padding: 12px;
-      text-align: center;
-      border-radius: 60px;
-      font-size: 0.8rem;
-      color: #1e1815;
-      margin-top: 14px;
-      border: 1px solid rgba(37, 211, 102, 0.1);
-      font-weight: 500;
-    }
-    .whatsapp-note i { color: #25d366; margin-right: 6px; }
-
     /* ===== SERVICES LIST ===== */
-    .services-category { margin: 40px 0; }
-    .category { margin-bottom: 32px; }
-    .category h3 {
+    .services-wrap { margin: 40px 0; }
+    .cat { margin-bottom: 32px; }
+    .cat h3 {
       font-size: 1.3rem;
-      border-left: 5px solid #d4a574;
+      border-left: 4px solid #c9a07e;
       padding-left: 16px;
       margin-bottom: 18px;
       font-weight: 700;
-      color: #2d1b14;
+      color: #2c1810;
     }
-    .services-list {
+    .svc-list {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-      gap: 16px;
+      gap: 14px;
     }
-    .service-item {
-      background: white;
+    .svc-item {
+      background: #fff;
       border-radius: 24px;
       display: flex;
       gap: 14px;
       padding: 14px 16px;
       align-items: center;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.03);
-      border: 1px solid rgba(212, 165, 116, 0.1);
-      transition: all 0.3s ease;
+      border: 1px solid rgba(201, 160, 126, 0.08);
+      transition: 0.3s;
     }
-    .service-item:hover {
-      border-color: #d4a574;
+    .svc-item:hover {
+      border-color: #c9a07e;
       transform: translateX(4px);
-      box-shadow: 0 4px 20px rgba(212, 165, 116, 0.06);
+      box-shadow: 0 4px 20px rgba(201, 160, 126, 0.06);
     }
-    .service-item img {
+    .svc-item img {
       width: 56px;
       height: 56px;
       border-radius: 18px;
       object-fit: cover;
-      background: #f8e4db;
+      background: #f3e9e2;
     }
-    .service-info h4 { font-size: 0.95rem; font-weight: 700; color: #2d1b14; }
-    .service-info p { font-size: 0.7rem; color: #7a5a4b; margin: 2px 0; }
-    .price { font-weight: 800; color: #6b2e2e; font-size: 0.85rem; }
+    .svc-info h4 { font-size: 0.95rem; font-weight: 700; color: #2c1810; }
+    .svc-info p { font-size: 0.7rem; color: #8a6e5d; margin: 2px 0; }
+    .svc-price { font-weight: 800; color: #c9a07e; font-size: 0.85rem; }
 
     /* ===== GALLERY ===== */
     .gallery-grid {
@@ -744,14 +620,13 @@
     .gallery-item {
       border-radius: 28px;
       overflow: hidden;
-      box-shadow: 0 12px 30px -8px rgba(0,0,0,0.06);
-      transition: all 0.4s ease;
-      cursor: pointer;
+      box-shadow: 0 12px 35px -10px rgba(0,0,0,0.06);
+      transition: 0.4s;
       position: relative;
     }
-    .gallery-item:hover { 
+    .gallery-item:hover {
       transform: scale(1.03);
-      box-shadow: 0 20px 45px -8px rgba(0,0,0,0.12);
+      box-shadow: 0 20px 50px -10px rgba(0,0,0,0.12);
     }
     .gallery-item img {
       width: 100%;
@@ -759,115 +634,91 @@
       object-fit: cover;
       display: block;
     }
-    .gallery-overlay {
+    .gallery-item .overlay {
       position: absolute;
       bottom: 0;
       left: 0;
       right: 0;
-      background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
-      color: white;
+      background: linear-gradient(to top, rgba(0,0,0,0.6), transparent);
+      color: #fff;
       padding: 20px 14px 14px;
       text-align: center;
       font-weight: 700;
       font-size: 0.95rem;
       backdrop-filter: blur(2px);
-      letter-spacing: 0.5px;
     }
 
     /* ===== TESTIMONIALS ===== */
-    .testimonials {
-      background: linear-gradient(145deg, #fff9f6, #fef0ea);
+    .testi-wrap {
+      background: linear-gradient(145deg, #fff9f5, #fef1ea);
       padding: 36px 20px;
-      border-radius: 40px;
+      border-radius: 44px;
       margin: 40px 0;
-      border: 1px solid rgba(212, 165, 116, 0.12);
+      border: 1px solid rgba(201, 160, 126, 0.1);
     }
     .testi-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 20px;
     }
     .testi-card {
-      background: white;
+      background: #fff;
       padding: 24px 20px;
       border-radius: 30px;
       text-align: center;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.03);
-      border: 1px solid rgba(212, 165, 116, 0.06);
-      transition: all 0.3s ease;
+      border: 1px solid rgba(201, 160, 126, 0.06);
+      transition: 0.3s;
     }
     .testi-card:hover {
       transform: translateY(-4px);
-      box-shadow: 0 12px 35px rgba(212, 165, 116, 0.08);
+      box-shadow: 0 12px 40px rgba(201, 160, 126, 0.06);
     }
-    .testi-card i.fa-quote-left { 
-      color: #d4a574; 
-      font-size: 1.2rem;
-      opacity: 0.4;
-    }
-    .stars { color: #f5b042; margin: 8px 0; letter-spacing: 3px; font-size: 1.1rem; }
+    .testi-card .quote { color: #c9a07e; opacity: 0.4; font-size: 1.2rem; }
+    .testi-card .stars { color: #f5b042; margin: 8px 0; letter-spacing: 3px; font-size: 1.1rem; }
     .testi-card p { font-size: 0.9rem; color: #5a433a; line-height: 1.5; margin: 8px 0; }
-    .testi-card h4 { font-weight: 700; color: #2d1b14; margin-top: 6px; }
+    .testi-card h4 { font-weight: 700; color: #2c1810; margin-top: 6px; }
 
     /* ===== CONTACT ===== */
-    .contact-section {
+    .contact-wrap {
       display: flex;
       flex-direction: column;
       gap: 24px;
       margin: 40px 0;
     }
     .contact-details {
-      background: white;
+      background: #fff;
       padding: 24px 20px;
       border-radius: 32px;
-      border: 1px solid rgba(212, 165, 116, 0.12);
-      transition: all 0.3s ease;
+      border: 1px solid rgba(201, 160, 126, 0.1);
     }
-    .contact-details:hover {
-      border-color: #d4a574;
-      box-shadow: 0 4px 20px rgba(212, 165, 116, 0.06);
-    }
-    .contact-details h3 {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.4rem;
-      color: #2d1b14;
-      margin-bottom: 16px;
-    }
-    .info-row { 
-      margin: 14px 0; 
-      display: flex; 
-      align-items: center; 
-      gap: 14px; 
-      flex-wrap: wrap; 
+    .contact-details h3 { font-family: 'Playfair Display', serif; font-size: 1.4rem; color: #2c1810; margin-bottom: 16px; }
+    .info-row {
+      margin: 14px 0;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
       font-size: 0.9rem;
-      color: #3d2b23;
       font-weight: 500;
+      color: #3d2b23;
     }
-    .info-row i { 
-      width: 24px;
-      font-size: 1.1rem;
-      text-align: center;
-    }
-    .info-row i.fa-map-pin { color: #d4a574; }
-    .info-row i.fa-phone-alt { color: #6b2e2e; }
-    .info-row i.fa-instagram { color: #d4a574; }
-    .info-row i.fa-whatsapp { color: #25d366; }
+    .info-row i { width: 24px; font-size: 1.1rem; }
+    .info-row .pin { color: #c9a07e; }
+    .info-row .phone { color: #2c1810; }
+    .info-row .insta { color: #c9a07e; }
+    .info-row .wa { color: #25d366; }
 
-    .map { 
-      width: 100%; 
-      height: 220px; 
-      border-radius: 32px; 
+    .map-wrap {
+      width: 100%;
+      height: 220px;
+      border-radius: 32px;
       overflow: hidden;
       box-shadow: 0 4px 20px rgba(0,0,0,0.04);
     }
-    .map iframe {
-      width: 100%;
-      height: 100%;
-      border: none;
-    }
+    .map-wrap iframe { width: 100%; height: 100%; border: none; }
 
-    /* ===== FLOATING WHATSAPP ===== */
-    .whatsapp-float {
+    /* ===== WHATSAPP FLOAT ===== */
+    .wa-float {
       position: fixed;
       bottom: 24px;
       right: 24px;
@@ -879,85 +730,85 @@
       align-items: center;
       justify-content: center;
       font-size: 34px;
-      color: white;
-      box-shadow: 0 8px 30px rgba(37, 211, 102, 0.35);
+      color: #fff;
+      box-shadow: 0 8px 35px rgba(37, 211, 102, 0.35);
       z-index: 999;
       text-decoration: none;
-      transition: all 0.3s ease;
+      transition: 0.3s;
       border: 2px solid rgba(255,255,255,0.1);
     }
-    .whatsapp-float:hover { 
+    .wa-float:hover {
       transform: scale(1.1) rotate(-5deg);
-      box-shadow: 0 12px 40px rgba(37, 211, 102, 0.45);
+      box-shadow: 0 12px 45px rgba(37, 211, 102, 0.45);
     }
 
     /* ===== FOOTER ===== */
     footer {
       text-align: center;
       padding: 32px 20px;
-      background: linear-gradient(135deg, #2d1b14, #1a0f0a);
+      background: linear-gradient(135deg, #2c1810, #1a0f0a);
       color: #d4c0b6;
       font-size: 0.75rem;
       border-radius: 40px 40px 0 0;
       margin-top: 30px;
-      border-top: 2px solid rgba(212, 165, 116, 0.1);
+      border-top: 2px solid rgba(201, 160, 126, 0.08);
     }
     footer p { margin: 4px 0; }
-    footer i { color: #d4a574; }
+    footer i { color: #c9a07e; }
     footer .heart { color: #e74c3c; }
 
     /* ===== RESPONSIVE ===== */
     @media (min-width: 768px) {
-      .hero { 
-        flex-direction: row; 
-        text-align: left; 
+      .hero {
+        flex-direction: row;
+        text-align: left;
         gap: 50px;
         padding: 60px 0 40px;
       }
       .hero-content { text-align: left; }
-      .hero-content h1 { font-size: 3.2rem; }
-      .hero-content p { margin: 0 0 28px; }
+      .hero-content h1 { font-size: 3.4rem; }
+      .hero-content p { margin: 0 0 30px; }
       .hydra-header h2 { font-size: 2.4rem; }
       .why-grid { grid-template-columns: 1fr 1fr 1fr; }
-      .contact-section { flex-direction: row; }
-      .contact-section > * { flex: 1; }
-      .nav-links a { font-size: 0.8rem; }
-      .logo h1 { font-size: 1.6rem; }
+      .contact-wrap { flex-direction: row; }
+      .contact-wrap > * { flex: 1; }
       .gallery-grid { grid-template-columns: repeat(3, 1fr); }
       .gallery-item img { height: 300px; }
-      .admission-header h2 { font-size: 2.4rem; }
-      .admission-section::before { font-size: 200px; }
+      .nav-links a { font-size: 0.8rem; }
+      .logo h1 { font-size: 1.6rem; }
+      .admission-head h2 { font-size: 2.6rem; }
     }
 
     @media (max-width: 480px) {
-      .hydra-card .plan-title { font-size: 1.6rem; }
-      .hydra-card .price-tag { font-size: 1.6rem; }
+      .hero-content h1 { font-size: 1.8rem; }
+      .section-title { font-size: 1.5rem; }
+      .hydra-card .plan { font-size: 1.6rem; }
+      .hydra-card .price { font-size: 1.8rem; }
       .hydra-header h2 { font-size: 1.4rem; }
       .why-grid { grid-template-columns: 1fr 1fr; }
-      .course-grid { grid-template-columns: 1fr 1fr; }
-      .hero-content h1 { font-size: 1.8rem; }
-      .section-title { font-size: 1.4rem; }
-      .admission-header h2 { font-size: 1.6rem; }
+      .course-list { grid-template-columns: 1fr 1fr; }
       .service-grid { grid-template-columns: repeat(2, 1fr); }
-      .services-list { grid-template-columns: 1fr; }
+      .svc-list { grid-template-columns: 1fr; }
       .gallery-grid { grid-template-columns: 1fr 1fr; }
       .gallery-item img { height: 180px; }
-      .whatsapp-float { width: 54px; height: 54px; font-size: 28px; bottom: 16px; right: 16px; }
+      .wa-float { width: 54px; height: 54px; font-size: 28px; bottom: 16px; right: 16px; }
+      .nav-links a { font-size: 0.6rem; padding: 6px 10px; }
     }
 
     @media (max-width: 380px) {
-      .nav-links a { font-size: 0.55rem; padding: 4px 8px; }
+      .nav-links a { font-size: 0.5rem; padding: 4px 8px; }
       .logo h1 { font-size: 1rem; }
       .hydra-grid { grid-template-columns: 1fr; }
-      .course-grid { grid-template-columns: 1fr; }
+      .course-list { grid-template-columns: 1fr; }
       .gallery-grid { grid-template-columns: 1fr; }
+      .service-grid { grid-template-columns: 1fr 1fr; }
     }
   </style>
 </head>
 <body>
 
-<!-- ===== FLOATING WHATSAPP ===== -->
-<a href="https://wa.me/918957753574?text=Hi%20Soumya%20Makeover%20%26%20Academy%2C%20I%20want%20to%20book%20Hydra%20Facial" class="whatsapp-float" target="_blank" aria-label="WhatsApp">
+<!-- ===== WHATSAPP FLOATING ===== -->
+<a href="https://wa.me/918957753574" class="wa-float" target="_blank" aria-label="WhatsApp">
   <i class="fab fa-whatsapp"></i>
 </a>
 
@@ -965,8 +816,8 @@
 <nav>
   <div class="container nav-flex">
     <div class="logo">
-      <h1>✨ soumya</h1>
-      <div class="sub">MAKEOVER & ACADEMY • FARENDA ROADS</div>
+      <h1>soumya<span>.</span></h1>
+      <div class="sub">MAKEOVER & ACADEMY</div>
     </div>
     <div class="nav-links">
       <a href="#home">Home</a>
@@ -975,27 +826,26 @@
       <a href="#gallery">Gallery</a>
       <a href="#reviews">Reviews</a>
       <a href="#admission">Admission</a>
-      <a href="#booking" class="book-now-nav">📅 Book</a>
+      <a href="#booking" class="nav-cta">📅 Book</a>
     </div>
   </div>
 </nav>
 
 <main>
-  <!-- ===== HOME / HERO ===== -->
+  <!-- ===== HOME ===== -->
   <div class="container" id="home">
     <div class="hero">
       <div class="hero-content">
-        <div class="badge">✨ THIS SAWAN • TREAT YOURSELF</div>
-        <h1>Glow Like <span>Never Before</span></h1>
+        <div class="badge">✨ This Sawan • Treat Yourself</div>
+        <h1>Glow Like <span class="highlight">Never Before</span></h1>
         <p>Hydra Facial — Deep Cleanse, Deep Hydration, Instant Glow. Experience the luxury your skin deserves.</p>
-        <a href="#hydra-offer" class="btn-primary"><i class="fas fa-spa" style="margin-right:10px;"></i> Explore Hydra Offer</a>
+        <a href="#hydra" class="btn-primary"><i class="fas fa-spa" style="margin-right:10px;"></i> Explore Hydra Offer</a>
       </div>
-      <div class="hero-banner">
-        <img src="https://images.unsplash.com/photo-1629397685944-7073f5589754?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Salon">
+      <div class="hero-image">
+        <img src="https://images.unsplash.com/photo-1629397685944-7073f5589754?q=80&w=1470&auto=format&fit=crop" alt="Salon">
       </div>
     </div>
 
-    <!-- Quick Services -->
     <div class="quick-services">
       <h2 class="section-title">✨ Signature Services</h2>
       <div class="service-grid">
@@ -1007,30 +857,29 @@
     </div>
   </div>
 
-  <!-- ===== HYDRA FACIAL OFFER ===== -->
-  <div class="container" id="hydra-offer">
-    <div class="hydra-offer">
+  <!-- ===== HYDRA OFFER ===== -->
+  <div class="container" id="hydra">
+    <div class="hydra-section">
       <div class="hydra-header">
         <h2>
           <small>#soumya MAKEOVER & ACADEMY</small>
-          This SAWAN<br>Treat Yourself
+          This Sawan<br>Treat Yourself
         </h2>
-        <span class="offer-dates"><i class="far fa-calendar-alt" style="margin-right:6px;"></i> 27 JULY – 1 AUG</span>
+        <span class="date-tag"><i class="far fa-calendar-alt" style="margin-right:6px;"></i> 27 JULY – 1 AUG</span>
       </div>
 
-      <div style="text-align:center; margin-bottom:18px; position:relative; z-index:2;">
-        <span style="background: linear-gradient(135deg, rgba(212,165,116,0.12), rgba(107,46,46,0.06)); padding:6px 24px; border-radius:60px; font-weight:700; color:#6b2e2e; font-size:0.8rem; letter-spacing:1.5px; border:1px solid rgba(212,165,116,0.15);">GLOW LIKE NEVER BEFORE</span>
-        <h3 style="font-family:'Playfair Display',serif; font-size:2.2rem; margin:8px 0 2px; color:#2d1b14;">HYDRA FACIAL</h3>
-        <p style="color:#6b4f40; font-size:0.9rem; font-weight:500;">Deep Cleanse • Deep Hydration • Instant Glow</p>
+      <div style="text-align:center; margin-bottom:20px; position:relative; z-index:2;">
+        <span style="background:rgba(201,160,126,0.1); padding:6px 24px; border-radius:60px; font-weight:700; color:#c9a07e; font-size:0.8rem; letter-spacing:1.5px;">GLOW LIKE NEVER BEFORE</span>
+        <h3 style="font-family:'Playfair Display',serif; font-size:2.2rem; margin:8px 0 2px; color:#2c1810;">HYDRA FACIAL</h3>
+        <p style="color:#8a6e5d; font-weight:500;">Deep Cleanse • Deep Hydration • Instant Glow</p>
       </div>
 
       <div class="hydra-grid">
-        <!-- LUXURY -->
         <div class="hydra-card">
-          <div class="plan-title">LUXURY</div>
+          <div class="plan">LUXURY</div>
           <div class="plan-sub">Hydra Facial</div>
-          <div class="price-tag">₹3100/- <small>only</small></div>
-          <ul class="feature-list">
+          <div class="price">₹3100/- <small>only</small></div>
+          <ul class="features">
             <li><i class="fas fa-check-circle"></i> Deep Cleansing</li>
             <li><i class="fas fa-check-circle"></i> Hydration Boost</li>
             <li><i class="fas fa-check-circle"></i> Anti-Aging Care</li>
@@ -1038,15 +887,14 @@
             <li><i class="fas fa-check-circle"></i> Minimizes Pores</li>
             <li><i class="fas fa-check-circle"></i> Instant Glow</li>
           </ul>
-          <button class="btn-hydra" onclick="bookHydra('LUXURY Hydra Facial ₹3100')"><i class="fab fa-whatsapp" style="margin-right:10px;"></i> Book Now</button>
+          <button class="btn-book" onclick="bookHydra('LUXURY Hydra Facial ₹3100')"><i class="fab fa-whatsapp" style="margin-right:10px;"></i> Book Now</button>
         </div>
 
-        <!-- BASICS -->
         <div class="hydra-card">
-          <div class="plan-title">BASICS</div>
+          <div class="plan">BASICS</div>
           <div class="plan-sub">Hydra Facial</div>
-          <div class="price-tag">₹2000/- <small>only</small></div>
-          <ul class="feature-list">
+          <div class="price">₹2000/- <small>only</small></div>
+          <ul class="features">
             <li><i class="fas fa-check-circle"></i> Deep Cleansing</li>
             <li><i class="fas fa-check-circle"></i> Hydration</li>
             <li><i class="fas fa-check-circle"></i> Oil Control</li>
@@ -1054,12 +902,11 @@
             <li><i class="fas fa-check-circle"></i> Smooth Texture</li>
             <li><i class="fas fa-check-circle"></i> Healthy Glow</li>
           </ul>
-          <button class="btn-hydra" onclick="bookHydra('BASICS Hydra Facial ₹2000')"><i class="fab fa-whatsapp" style="margin-right:10px;"></i> Book Now</button>
+          <button class="btn-book" onclick="bookHydra('BASICS Hydra Facial ₹2000')"><i class="fab fa-whatsapp" style="margin-right:10px;"></i> Book Now</button>
         </div>
       </div>
 
-      <!-- WHY CHOOSE -->
-      <div class="why-choose">
+      <div class="why-box">
         <h4>WHY CHOOSE HYDRA FACIAL?</h4>
         <div class="why-grid">
           <span><i class="fas fa-check-circle"></i> Deeply cleanses & removes impurities</span>
@@ -1071,30 +918,30 @@
         </div>
       </div>
 
-      <div class="hydra-badge">
-        <i class="fas fa-bullhorn"></i> Hurry Up! Book Your Appointment Now! 
-        <span class="highlight">🔥 LIMITED SLOTS ONLY!</span>
+      <div class="hydra-banner">
+        <i class="fas fa-bullhorn"></i> Hurry Up! Book Your Appointment Now!
+        <span class="tag">🔥 LIMITED SLOTS ONLY!</span>
         <br><br>
         <i class="fas fa-phone-alt"></i> CALL / WHATSAPP <strong>8957553574</strong>
         <span style="margin:0 10px;">|</span>
-        <i class="fab fa-instagram"></i> <a href="#">soumya_makeoverandacademy</a>
+        <i class="fab fa-instagram"></i> <a href="#" style="color:#c9a07e; text-decoration:none;">soumya_makeoverandacademy</a>
       </div>
     </div>
   </div>
 
   <!-- ===== STUDENT ADMISSION ===== -->
   <div class="container" id="admission">
-    <div class="admission-section">
-      <div class="admission-header">
-        <span class="admission-badge"><i class="fas fa-graduation-cap" style="margin-right:8px;"></i> Enroll Now</span>
+    <div class="admission-wrap">
+      <div class="admission-head">
+        <span class="label"><i class="fas fa-graduation-cap" style="margin-right:8px;"></i> Enroll Now</span>
         <h2>
           Learn from the Experts
           <small>soumya MAKEOVER & ACADEMY</small>
         </h2>
-        <p>Professional beauty & makeup courses. Get hands-on training from industry experts with certification.</p>
+        <p>Professional beauty & makeup courses. Hands-on training with certification.</p>
       </div>
 
-      <div class="course-grid">
+      <div class="course-list">
         <div class="course-tag"><i class="fas fa-brush"></i> Makeup Artistry</div>
         <div class="course-tag"><i class="fas fa-cut"></i> Hair Styling</div>
         <div class="course-tag"><i class="fas fa-spa"></i> Skin Care</div>
@@ -1104,10 +951,10 @@
       </div>
 
       <div class="admission-form">
-        <h4>📝 Student Admission Form</h4>
+        <h4>📝 Student Admission</h4>
         <input type="text" id="studentName" placeholder="Full Name" required>
         <input type="tel" id="studentPhone" placeholder="Phone Number (WhatsApp)" required>
-        <input type="email" id="studentEmail" placeholder="Email Address (optional)">
+        <input type="email" id="studentEmail" placeholder="Email (optional)">
         <select id="studentCourse" required>
           <option value="">Select Course</option>
           <option>Makeup Artistry - ₹15,000</option>
@@ -1118,9 +965,9 @@
           <option>Self Grooming - ₹5,000</option>
           <option>Full Beauty Course - ₹35,000</option>
         </select>
-        <button type="button" class="btn-primary" id="submitAdmissionBtn"><i class="fab fa-whatsapp" style="margin-right:10px;"></i> Enroll Now via WhatsApp</button>
-        <div class="whatsapp-note" style="background: rgba(212,165,116,0.08); border-color: rgba(212,165,116,0.15);">
-          <i class="fas fa-gift" style="color:#d4a574;"></i> Enroll Now & Get <strong>20% Off</strong> on First Course!
+        <button type="button" class="btn-primary" id="admissionSubmit"><i class="fab fa-whatsapp" style="margin-right:10px;"></i> Enroll via WhatsApp</button>
+        <div style="background:rgba(201,160,126,0.08); padding:12px; border-radius:60px; text-align:center; font-size:0.8rem; margin-top:14px; border:1px solid rgba(201,160,126,0.08);">
+          <i class="fas fa-gift" style="color:#c9a07e;"></i> Enroll Now & Get <strong>20% Off</strong> on First Course!
         </div>
       </div>
     </div>
@@ -1129,33 +976,33 @@
   <!-- ===== SERVICES ===== -->
   <div class="container" id="services">
     <h2 class="section-title">Our Premium Services</h2>
-    <div class="services-category">
-      <div class="category"><h3><i class="fas fa-cut" style="color:#d4a574; margin-right:10px;"></i> Hair</h3>
-        <div class="services-list">
-          <div class="service-item"><img src="https://placehold.co/200x200/f3dfd7/b76a4a?text=Haircut" alt="haircut"><div class="service-info"><h4>Haircut</h4><p>Precision cut</p><span class="price">₹499+</span></div></div>
-          <div class="service-item"><img src="https://placehold.co/200x200/f3dfd7/b76a4a?text=Hairstyling" alt="styling"><div class="service-info"><h4>Hairstyling</h4><p>Blowdry / curls</p><span class="price">₹799</span></div></div>
-          <div class="service-item"><img src="https://placehold.co/200x200/f3dfd7/b76a4a?text=Shampoo" alt="condition"><div class="service-info"><h4>Shampoo & Conditioning</h4><p>Deep cleanse</p><span class="price">₹399</span></div></div>
-          <div class="service-item"><img src="https://placehold.co/200x200/f3dfd7/b76a4a?text=Rebonding" alt="smoothing"><div class="service-info"><h4>Rebonding</h4><p>Straight & glossy</p><span class="price">₹2999</span></div></div>
+    <div class="services-wrap">
+      <div class="cat"><h3><i class="fas fa-cut" style="color:#c9a07e; margin-right:10px;"></i> Hair</h3>
+        <div class="svc-list">
+          <div class="svc-item"><img src="https://placehold.co/200x200/f3e9e2/c9a07e?text=Haircut" alt=""><div class="svc-info"><h4>Haircut</h4><p>Precision cut</p><span class="svc-price">₹499+</span></div></div>
+          <div class="svc-item"><img src="https://placehold.co/200x200/f3e9e2/c9a07e?text=Styling" alt=""><div class="svc-info"><h4>Hairstyling</h4><p>Blowdry / curls</p><span class="svc-price">₹799</span></div></div>
+          <div class="svc-item"><img src="https://placehold.co/200x200/f3e9e2/c9a07e?text=Shampoo" alt=""><div class="svc-info"><h4>Shampoo & Conditioning</h4><p>Deep cleanse</p><span class="svc-price">₹399</span></div></div>
+          <div class="svc-item"><img src="https://placehold.co/200x200/f3e9e2/c9a07e?text=Rebonding" alt=""><div class="svc-info"><h4>Rebonding</h4><p>Straight & glossy</p><span class="svc-price">₹2999</span></div></div>
         </div>
       </div>
-      <div class="category"><h3><i class="fas fa-fill-drip" style="color:#d4a574; margin-right:10px;"></i> Skin & Beauty</h3>
-        <div class="services-list">
-          <div class="service-item"><img src="https://placehold.co/200x200/f3dfd7/b76a4a?text=Facials" alt="facial"><div class="service-info"><h4>Facials</h4><p>Brightening / anti-aging</p><span class="price">₹1299</span></div></div>
-          <div class="service-item"><img src="https://placehold.co/200x200/f3dfd7/b76a4a?text=Tanning" alt="tanning"><div class="service-info"><h4>Tanning</h4><p>Sun-kissed glow</p><span class="price">₹899</span></div></div>
-          <div class="service-item"><img src="https://placehold.co/200x200/f3dfd7/b76a4a?text=SkinCare" alt="skincare"><div class="service-info"><h4>Skin Care</h4><p>Customised</p><span class="price">₹1499</span></div></div>
+      <div class="cat"><h3><i class="fas fa-fill-drip" style="color:#c9a07e; margin-right:10px;"></i> Skin & Beauty</h3>
+        <div class="svc-list">
+          <div class="svc-item"><img src="https://placehold.co/200x200/f3e9e2/c9a07e?text=Facials" alt=""><div class="svc-info"><h4>Facials</h4><p>Brightening / anti-aging</p><span class="svc-price">₹1299</span></div></div>
+          <div class="svc-item"><img src="https://placehold.co/200x200/f3e9e2/c9a07e?text=Tanning" alt=""><div class="svc-info"><h4>Tanning</h4><p>Sun-kissed glow</p><span class="svc-price">₹899</span></div></div>
+          <div class="svc-item"><img src="https://placehold.co/200x200/f3e9e2/c9a07e?text=SkinCare" alt=""><div class="svc-info"><h4>Skin Care</h4><p>Customised</p><span class="svc-price">₹1499</span></div></div>
         </div>
       </div>
-      <div class="category"><h3><i class="fas fa-hand-peace" style="color:#d4a574; margin-right:10px;"></i> Hand & Feet</h3>
-        <div class="services-list">
-          <div class="service-item"><img src="https://placehold.co/200x200/f3dfd7/b76a4a?text=Manicure" alt="manicure"><div class="service-info"><h4>Manicure</h4><p>Nail care</p><span class="price">₹599</span></div></div>
-          <div class="service-item"><img src="https://placehold.co/200x200/f3dfd7/b76a4a?text=Pedicure" alt="pedicure"><div class="service-info"><h4>Pedicure</h4><p>Foot spa</p><span class="price">₹699</span></div></div>
+      <div class="cat"><h3><i class="fas fa-hand-peace" style="color:#c9a07e; margin-right:10px;"></i> Hand & Feet</h3>
+        <div class="svc-list">
+          <div class="svc-item"><img src="https://placehold.co/200x200/f3e9e2/c9a07e?text=Manicure" alt=""><div class="svc-info"><h4>Manicure</h4><p>Nail care</p><span class="svc-price">₹599</span></div></div>
+          <div class="svc-item"><img src="https://placehold.co/200x200/f3e9e2/c9a07e?text=Pedicure" alt=""><div class="svc-info"><h4>Pedicure</h4><p>Foot spa</p><span class="svc-price">₹699</span></div></div>
         </div>
       </div>
-      <div class="category"><h3><i class="fas fa-brush" style="color:#d4a574; margin-right:10px;"></i> Makeup & Bridal</h3>
-        <div class="services-list">
-          <div class="service-item"><img src="https://placehold.co/200x200/f3dfd7/b76a4a?text=Makeup" alt="makeup"><div class="service-info"><h4>Make-up</h4><p>Party / evening</p><span class="price">₹1999</span></div></div>
-          <div class="service-item"><img src="https://placehold.co/200x200/f3dfd7/b76a4a?text=Bridal" alt="bridal"><div class="service-info"><h4>Bridal</h4><p>Full trousseau</p><span class="price">₹9999+</span></div></div>
-          <div class="service-item"><img src="https://placehold.co/200x200/f3dfd7/b76a4a?text=Wedding" alt="wedding"><div class="service-info"><h4>Wedding Prep</h4><p>Pre-bridal</p><span class="price">₹5999</span></div></div>
+      <div class="cat"><h3><i class="fas fa-brush" style="color:#c9a07e; margin-right:10px;"></i> Makeup & Bridal</h3>
+        <div class="svc-list">
+          <div class="svc-item"><img src="https://placehold.co/200x200/f3e9e2/c9a07e?text=Makeup" alt=""><div class="svc-info"><h4>Make-up</h4><p>Party / evening</p><span class="svc-price">₹1999</span></div></div>
+          <div class="svc-item"><img src="https://placehold.co/200x200/f3e9e2/c9a07e?text=Bridal" alt=""><div class="svc-info"><h4>Bridal</h4><p>Full trousseau</p><span class="svc-price">₹9999+</span></div></div>
+          <div class="svc-item"><img src="https://placehold.co/200x200/f3e9e2/c9a07e?text=Wedding" alt=""><div class="svc-info"><h4>Wedding Prep</h4><p>Pre-bridal</p><span class="svc-price">₹5999</span></div></div>
         </div>
       </div>
     </div>
@@ -1163,10 +1010,10 @@
 
   <!-- ===== BOOKING ===== -->
   <div class="container" id="booking">
-    <div class="booking-section">
+    <div class="booking-wrap">
       <h2 class="section-title">📅 Book Your Slot</h2>
-      <form class="booking-form" id="bookingForm" onsubmit="return false;">
-        <select required id="serviceSelect">
+      <form class="booking-form" onsubmit="return false;">
+        <select required id="bookService">
           <option value="">Select Service</option>
           <option>Haircut - ₹499</option>
           <option>Bridal Makeup - ₹9999</option>
@@ -1177,13 +1024,15 @@
           <option>LUXURY Hydra Facial ₹3100</option>
           <option>BASICS Hydra Facial ₹2000</option>
         </select>
-        <input type="date" id="bookingDate" required>
-        <input type="time" id="bookingTime" required>
-        <input type="text" placeholder="Your Name" id="userName" required>
-        <input type="tel" placeholder="Phone Number (WhatsApp)" id="userPhone" required>
-        <textarea rows="2" placeholder="Special requests? (optional)" id="specialRequest"></textarea>
-        <button type="button" class="btn-primary" id="submitBookingBtn"><i class="fab fa-whatsapp" style="margin-right:10px;"></i> Confirm via WhatsApp</button>
-        <div class="whatsapp-note"><i class="fab fa-whatsapp"></i> Instant confirmation on +91 8957553574</div>
+        <input type="date" id="bookDate" required>
+        <input type="time" id="bookTime" required>
+        <input type="text" id="bookName" placeholder="Your Name" required>
+        <input type="tel" id="bookPhone" placeholder="Phone Number (WhatsApp)" required>
+        <textarea rows="2" id="bookRequest" placeholder="Special requests? (optional)"></textarea>
+        <button type="button" class="btn-primary" id="bookSubmit"><i class="fab fa-whatsapp" style="margin-right:10px;"></i> Confirm via WhatsApp</button>
+        <div style="background:rgba(37,211,102,0.06); padding:12px; border-radius:60px; text-align:center; font-size:0.8rem; margin-top:14px; border:1px solid rgba(37,211,102,0.08);">
+          <i class="fab fa-whatsapp" style="color:#25d366;"></i> Instant confirmation on +91 8957553574
+        </div>
       </form>
     </div>
   </div>
@@ -1192,38 +1041,38 @@
   <div class="container" id="gallery">
     <h2 class="section-title">📸 Our Stunning Work</h2>
     <div class="gallery-grid">
-      <div class="gallery-item"><img src="https://images.unsplash.com/photo-1684868268327-7e5590bcfbd6?q=80&w=686&auto=format&fit=crop" alt="Bridal"><div class="gallery-overlay">✨ Bridal Glamour</div></div>
-      <div class="gallery-item"><img src="https://plus.unsplash.com/premium_photo-1706800175963-a59e71d1fd64?q=80&w=687&auto=format&fit=crop" alt="Hair"><div class="gallery-overlay">💇‍♀️ Hair Magic</div></div>
-      <div class="gallery-item"><img src="https://plus.unsplash.com/premium_photo-1669675935483-01a22e5c88bf?q=80&w=688&auto=format&fit=crop" alt="Before After"><div class="gallery-overlay">🔄 Transformation</div></div>
-      <div class="gallery-item"><img src="https://images.unsplash.com/photo-1519014816548-bf5fe059798b?q=80&w=1470&auto=format&fit=crop" alt="Nails"><div class="gallery-overlay">💅 Nail Perfection</div></div>
-      <div class="gallery-item"><img src="https://images.unsplash.com/photo-1767027151400-fa6a3d905e7c?q=80&w=764&auto=format&fit=crop" alt="Party"><div class="gallery-overlay">🎉 Party Glam</div></div>
-      <div class="gallery-item"><img src="https://media.istockphoto.com/id/2226703848/photo/smiling-woman-lies-down-while-the-beautician-applies-cream-to-her-face.jpg?s=1024x1024&w=is&k=20&c=KmQ8-Hp53BIZuJleIXYip7xbQX0tIBOLS_OxEwePIOM=" alt="Facial"><div class="gallery-overlay">🌟 Glow Facial</div></div>
+      <div class="gallery-item"><img src="https://images.unsplash.com/photo-1684868268327-7e5590bcfbd6?q=80&w=686&auto=format&fit=crop" alt="Bridal"><div class="overlay">✨ Bridal Glamour</div></div>
+      <div class="gallery-item"><img src="https://plus.unsplash.com/premium_photo-1706800175963-a59e71d1fd64?q=80&w=687&auto=format&fit=crop" alt="Hair"><div class="overlay">💇‍♀️ Hair Magic</div></div>
+      <div class="gallery-item"><img src="https://plus.unsplash.com/premium_photo-1669675935483-01a22e5c88bf?q=80&w=688&auto=format&fit=crop" alt="Transformation"><div class="overlay">🔄 Transformation</div></div>
+      <div class="gallery-item"><img src="https://images.unsplash.com/photo-1519014816548-bf5fe059798b?q=80&w=1470&auto=format&fit=crop" alt="Nails"><div class="overlay">💅 Nail Perfection</div></div>
+      <div class="gallery-item"><img src="https://images.unsplash.com/photo-1767027151400-fa6a3d905e7c?q=80&w=764&auto=format&fit=crop" alt="Party"><div class="overlay">🎉 Party Glam</div></div>
+      <div class="gallery-item"><img src="https://media.istockphoto.com/id/2226703848/photo/smiling-woman-lies-down-while-the-beautician-applies-cream-to-her-face.jpg?s=1024x1024&w=is&k=20&c=KmQ8-Hp53BIZuJleIXYip7xbQX0tIBOLS_OxEwePIOM=" alt="Facial"><div class="overlay">🌟 Glow Facial</div></div>
     </div>
   </div>
 
   <!-- ===== TESTIMONIALS ===== -->
   <div class="container" id="reviews">
-    <div class="testimonials">
+    <div class="testi-wrap">
       <h2 class="section-title">⭐ Happy Clients</h2>
       <div class="testi-grid">
-        <div class="testi-card"><i class="fas fa-quote-left"></i><div class="stars">★★★★★</div><p>"Stunning bridal makeup! Got so many compliments."</p><h4>- Priyanka S.</h4></div>
-        <div class="testi-card"><i class="fas fa-quote-left"></i><div class="stars">★★★★★</div><p>"Rebonding smooth & frizz-free even after 3 months."</p><h4>- Anjali M.</h4></div>
-        <div class="testi-card"><i class="fas fa-quote-left"></i><div class="stars">★★★★★</div><p>"Luxurious pedicure, very hygienic. Love the staff."</p><h4>- Ritu Verma</h4></div>
+        <div class="testi-card"><div class="quote"><i class="fas fa-quote-left"></i></div><div class="stars">★★★★★</div><p>"Stunning bridal makeup! Got so many compliments."</p><h4>- Priyanka S.</h4></div>
+        <div class="testi-card"><div class="quote"><i class="fas fa-quote-left"></i></div><div class="stars">★★★★★</div><p>"Rebonding smooth & frizz-free even after 3 months."</p><h4>- Anjali M.</h4></div>
+        <div class="testi-card"><div class="quote"><i class="fas fa-quote-left"></i></div><div class="stars">★★★★★</div><p>"Luxurious pedicure, very hygienic. Love the staff."</p><h4>- Ritu Verma</h4></div>
       </div>
     </div>
   </div>
 
   <!-- ===== CONTACT ===== -->
   <div class="container" id="contact">
-    <div class="contact-section">
+    <div class="contact-wrap">
       <div class="contact-details">
         <h3>📍 Visit Us</h3>
-        <div class="info-row"><i class="fas fa-map-pin"></i> FARENDA ROADS, FRONT OF RAPTI GOLD, MAHARJGANJ</div>
-        <div class="info-row"><i class="fas fa-phone-alt"></i> +91 8957553574</div>
-        <div class="info-row"><i class="fab fa-instagram"></i> @soumya_makeoverandacademy</div>
-        <div class="info-row"><i class="fab fa-whatsapp"></i> WhatsApp: 8957553574</div>
+        <div class="info-row"><i class="fas fa-map-pin pin"></i> FARENDA ROADS, FRONT OF RAPTI GOLD, MAHARJGANJ</div>
+        <div class="info-row"><i class="fas fa-phone-alt phone"></i> +91 8957553574</div>
+        <div class="info-row"><i class="fab fa-instagram insta"></i> @soumya_makeoverandacademy</div>
+        <div class="info-row"><i class="fab fa-whatsapp wa"></i> WhatsApp: 8957553574</div>
       </div>
-      <div class="map">
+      <div class="map-wrap">
         <iframe loading="lazy" allowfullscreen src="https://www.google.com/maps/embed/v1/place?q=Farinda+Road+Maharajganj&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"></iframe>
       </div>
     </div>
@@ -1238,75 +1087,69 @@
 
 <!-- ===== JAVASCRIPT ===== -->
 <script>
-  // Hydra offer direct booking
+  // ===== HYDRA BOOKING =====
   function bookHydra(service) {
     const msg = `Hello Soumya Makeover & Academy! I want to book ${service}. Please confirm.`;
     window.open(`https://wa.me/918957753574?text=${encodeURIComponent(msg)}`, '_blank');
   }
 
-  // Main booking form
-  const bookBtn = document.getElementById('submitBookingBtn');
-  if(bookBtn) {
-    bookBtn.addEventListener('click', function(){
-      const service = document.getElementById('serviceSelect').value;
-      const date = document.getElementById('bookingDate').value;
-      const time = document.getElementById('bookingTime').value;
-      const name = document.getElementById('userName').value.trim();
-      const phone = document.getElementById('userPhone').value.trim();
-      const special = document.getElementById('specialRequest').value.trim();
+  // ===== CUSTOMER BOOKING =====
+  document.getElementById('bookSubmit').addEventListener('click', function() {
+    const service = document.getElementById('bookService').value;
+    const date = document.getElementById('bookDate').value;
+    const time = document.getElementById('bookTime').value;
+    const name = document.getElementById('bookName').value.trim();
+    const phone = document.getElementById('bookPhone').value.trim();
+    const request = document.getElementById('bookRequest').value.trim();
 
-      if(!service || !date || !time || !name || !phone){
-        alert("❌ Please fill all fields: Service, Date, Time, Name & Phone");
-        return;
-      }
+    if (!service || !date || !time || !name || !phone) {
+      alert('❌ Please fill all required fields: Service, Date, Time, Name & Phone');
+      return;
+    }
 
-      let msg = `Hello Soumya Makeover & Academy! 📅 New Booking:%0A%0A`;
-      msg += `👤 Name: ${name}%0A`;
-      msg += `📞 Phone: ${phone}%0A`;
-      msg += `💇 Service: ${service}%0A`;
-      msg += `📆 Date: ${date}%0A`;
-      msg += `⏰ Time: ${time}%0A`;
-      msg += `📍 Location: FARENDA ROADS, FRONT OF RAPTI GOLD, MAHARJGANJ%0A`;
-      if(special) msg += `%0A📝 Special Request: ${special}%0A`;
-      msg += `%0APlease confirm my appointment. Thank you! 🙏`;
+    let msg = `Hello Soumya Makeover & Academy! 📅 New Booking:%0A%0A`;
+    msg += `👤 Name: ${name}%0A`;
+    msg += `📞 Phone: ${phone}%0A`;
+    msg += `💇 Service: ${service}%0A`;
+    msg += `📆 Date: ${date}%0A`;
+    msg += `⏰ Time: ${time}%0A`;
+    msg += `📍 Location: FARENDA ROADS, FRONT OF RAPTI GOLD, MAHARJGANJ%0A`;
+    if (request) msg += `%0A📝 Special Request: ${request}%0A`;
+    msg += `%0APlease confirm my appointment. Thank you! 🙏`;
 
-      window.open(`https://wa.me/918957753574?text=${msg}`, '_blank');
-    });
-  }
+    window.open(`https://wa.me/918957753574?text=${msg}`, '_blank');
+  });
 
-  // Student Admission Form
-  const admissionBtn = document.getElementById('submitAdmissionBtn');
-  if(admissionBtn) {
-    admissionBtn.addEventListener('click', function(){
-      const name = document.getElementById('studentName').value.trim();
-      const phone = document.getElementById('studentPhone').value.trim();
-      const email = document.getElementById('studentEmail').value.trim();
-      const course = document.getElementById('studentCourse').value;
+  // ===== STUDENT ADMISSION =====
+  document.getElementById('admissionSubmit').addEventListener('click', function() {
+    const name = document.getElementById('studentName').value.trim();
+    const phone = document.getElementById('studentPhone').value.trim();
+    const email = document.getElementById('studentEmail').value.trim();
+    const course = document.getElementById('studentCourse').value;
 
-      if(!name || !phone || !course){
-        alert("❌ Please fill Name, Phone Number & Select a Course.");
-        return;
-      }
+    if (!name || !phone || !course) {
+      alert('❌ Please fill Name, Phone Number & Select a Course.');
+      return;
+    }
 
-      let msg = `Hello Soumya Makeover & Academy! 🎓 New Student Admission Enquiry:%0A%0A`;
-      msg += `👤 Name: ${name}%0A`;
-      msg += `📞 Phone: ${phone}%0A`;
-      if(email) msg += `📧 Email: ${email}%0A`;
-      msg += `📚 Course: ${course}%0A`;
-      msg += `%0AI want to enroll. Please share more details. 🙏`;
+    let msg = `Hello Soumya Makeover & Academy! 🎓 New Student Admission Enquiry:%0A%0A`;
+    msg += `👤 Name: ${name}%0A`;
+    msg += `📞 Phone: ${phone}%0A`;
+    if (email) msg += `📧 Email: ${email}%0A`;
+    msg += `📚 Course: ${course}%0A`;
+    msg += `%0AI want to enroll. Please share more details. 🙏`;
 
-      window.open(`https://wa.me/918957753574?text=${msg}`, '_blank');
-    });
-  }
+    window.open(`https://wa.me/918957753574?text=${msg}`, '_blank');
+  });
 
-  // Smooth scroll for navigation
-  document.querySelectorAll('.nav-links a, .book-now-nav, a[href^="#"]').forEach(anchor => {
+  // ===== SMOOTH SCROLL =====
+  document.querySelectorAll('.nav-links a, a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
       const href = this.getAttribute('href');
-      if(href && href !== "#" && href.startsWith("#")) {
+      if (href && href !== '#' && href.startsWith('#')) {
         e.preventDefault();
         const target = document.getElementById(href.substring(1));
-        if(target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
       }
     });
   });
