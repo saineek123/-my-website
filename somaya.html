@@ -1093,7 +1093,7 @@
     window.open(`https://wa.me/918957753574?text=${encodeURIComponent(msg)}`, '_blank');
   }
 
-  // ===== CUSTOMER BOOKING =====
+  // ===== CUSTOMER BOOKING - FIXED =====
   document.getElementById('bookSubmit').addEventListener('click', function() {
     const service = document.getElementById('bookService').value;
     const date = document.getElementById('bookDate').value;
@@ -1102,11 +1102,13 @@
     const phone = document.getElementById('bookPhone').value.trim();
     const request = document.getElementById('bookRequest').value.trim();
 
+    // Validation
     if (!service || !date || !time || !name || !phone) {
       alert('❌ Please fill all required fields: Service, Date, Time, Name & Phone');
       return;
     }
 
+    // Build complete message with ALL details
     let msg = `Hello Soumya Makeover & Academy! 📅 New Booking:%0A%0A`;
     msg += `👤 Name: ${name}%0A`;
     msg += `📞 Phone: ${phone}%0A`;
@@ -1114,32 +1116,42 @@
     msg += `📆 Date: ${date}%0A`;
     msg += `⏰ Time: ${time}%0A`;
     msg += `📍 Location: FARENDA ROADS, FRONT OF RAPTI GOLD, MAHARJGANJ%0A`;
-    if (request) msg += `%0A📝 Special Request: ${request}%0A`;
+    if (request) {
+      msg += `%0A📝 Special Request: ${request}%0A`;
+    }
     msg += `%0APlease confirm my appointment. Thank you! 🙏`;
 
-    window.open(`https://wa.me/918957753574?text=${msg}`, '_blank');
+    // Send to WhatsApp
+    const url = `https://wa.me/918957753574?text=${msg}`;
+    window.open(url, '_blank');
   });
 
-  // ===== STUDENT ADMISSION =====
+  // ===== STUDENT ADMISSION - FIXED =====
   document.getElementById('admissionSubmit').addEventListener('click', function() {
     const name = document.getElementById('studentName').value.trim();
     const phone = document.getElementById('studentPhone').value.trim();
     const email = document.getElementById('studentEmail').value.trim();
     const course = document.getElementById('studentCourse').value;
 
+    // Validation
     if (!name || !phone || !course) {
       alert('❌ Please fill Name, Phone Number & Select a Course.');
       return;
     }
 
+    // Build complete message with ALL details
     let msg = `Hello Soumya Makeover & Academy! 🎓 New Student Admission Enquiry:%0A%0A`;
     msg += `👤 Name: ${name}%0A`;
     msg += `📞 Phone: ${phone}%0A`;
-    if (email) msg += `📧 Email: ${email}%0A`;
+    if (email) {
+      msg += `📧 Email: ${email}%0A`;
+    }
     msg += `📚 Course: ${course}%0A`;
     msg += `%0AI want to enroll. Please share more details. 🙏`;
 
-    window.open(`https://wa.me/918957753574?text=${msg}`, '_blank');
+    // Send to WhatsApp
+    const url = `https://wa.me/918957753574?text=${msg}`;
+    window.open(url, '_blank');
   });
 
   // ===== SMOOTH SCROLL =====
@@ -1149,7 +1161,9 @@
       if (href && href !== '#' && href.startsWith('#')) {
         e.preventDefault();
         const target = document.getElementById(href.substring(1));
-        if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
       }
     });
   });
